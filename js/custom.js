@@ -25,7 +25,7 @@ $(function(){
 
     /* start navigation top js */
     $(window).scroll(function(){
-        if($(this).scrollTop()>58){
+        if($(this).scrollTop()>18){
             $(".templatemo-nav").addClass("sticky");
         }
         else{
@@ -49,6 +49,6 @@ $(function(){
 
 /* start preloader */
 $(window).load(function(){
-	$('.preloader').fadeOut(1000); // set duration in brackets    
+	$('.preloader').fadeOut(100); // set duration in brackets    
 });
 /* end preloader */
