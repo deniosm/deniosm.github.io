@@ -1,1 +1,0 @@
-  ** Denios Gnu/Linux **
