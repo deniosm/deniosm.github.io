@@ -83,45 +83,45 @@
 <section id="wizard">
 <h2>Wizard<a class="headerlink" href="#wizard" title="Permalink to this heading"></a></h2>
 <p>Upon starting up VirtualBox, select “New” (Machine -&gt; New).</p>
-<img alt="../../_images/vb-01.png" src="../../_images/vb-01.png" />
+<img alt="../../assets/images/vb-01.png" src="../../assets/images/vb-01.png" />
 <p>The next screen is “Name and operating system” which is where you name the VM. This name is also used in any filenames (such as the configuration, hard disk and snapshot - which isn’t changed from this point).
 For the “Type”, we set it as Linux. For the “Version”, we are going to be using the x64 desktop image, so we are going to select Debian (64-bit).</p>
-<img alt="../../_images/vb-02.png" src="../../_images/vb-02.png" />
+<img alt="../../assets/images/vb-02.png" src="../../assets/images/vb-02.png" />
 <p>“Memory size” is the next section, where we can define how much RAM to use. Again, the higher the amount of RAM, the more applications can be open and at increased performance. Various tools inside of Denios can be demanding of resources. When we make the general VMs, we select 2048 MB (2GB) for RAM, but we often increase this for our personal machines as we have high-performing devices with spare RAM which Denios can utilize.</p>
-<img alt="../../_images/vb-03.png" src="../../_images/vb-03.png" />
+<img alt="../../assets/images/vb-03.png" src="../../assets/images/vb-03.png" />
 <p>This screen below, “Hard disk”, allows us to Create a new virtual disk now.</p>
-<img alt="../../_images/vb-04.png" src="../../_images/vb-04.png" />
+<img alt="../../assets/images/vb-04.png" src="../../assets/images/vb-04.png" />
 <p>For the “Hard disk file type”, we select VDI (VirtualBox Disk Image) (and its the default option).</p>
-<img alt="../../_images/vb-05.png" src="../../_images/vb-05.png" />
+<img alt="../../assets/images/vb-05.png" src="../../assets/images/vb-05.png" />
 <p>For the following screen, “Storage on physical hard disk”, we go with the default option of Dynamically allocated.</p>
-<img alt="../../_images/vb-06.png" src="../../_images/vb-06.png" />
+<img alt="../../assets/images/vb-06.png" src="../../assets/images/vb-06.png" />
 <p>Now with “File location and size”, we can now define how large the virtual hard disk will be. We use 80.00 GB for our VMs.</p>
-<img alt="../../_images/vb-07.png" src="../../_images/vb-07.png" />
+<img alt="../../assets/images/vb-07.png" src="../../assets/images/vb-07.png" />
 <p>After clicking on “Create”, the wizard is complete.
 Now we click on “Settings”, to customize the VM further.</p>
-<img alt="../../_images/vb-08.png" src="../../_images/vb-08.png" />
+<img alt="../../assets/images/vb-08.png" src="../../assets/images/vb-08.png" />
 <p>In “General” -&gt; “Advanced”, we make sure to set “Shared Clipboard” to bidirectional, as well as “Drag’n’Drop” to bidirectional</p>
-<img alt="../../_images/vb-09.png" src="../../_images/vb-09.png" />
+<img alt="../../assets/images/vb-09.png" src="../../assets/images/vb-09.png" />
 <p>In “System” -&gt; “Motherboard”, we change the “Boot Order” to make sure Hard Disk is top and Optical is the second. Everything else is disabled.</p>
-<img alt="../../_images/vb-10.png" src="../../_images/vb-10.png" />
+<img alt="../../assets/images/vb-10.png" src="../../assets/images/vb-10.png" />
 <p>In “System” -&gt; “Processor”, we increase the “Processor(s)” to be 2.
 At the same time, we also enable “Extended Features” for Enable PAE/NX.</p>
-<img alt="../../_images/vb-11.png" src="../../_images/vb-11.png" />
+<img alt="../../assets/images/vb-11.png" src="../../assets/images/vb-11.png" />
 <p>In “Display” -&gt; “Screen”, we make sure to have “Video Memory” set to 128 MB
 Another item to point out is to make sure that “Accelerated 3D graphics” is disabled, as people have reported that causes issues.</p>
-<img alt="../../_images/vb-12.png" src="../../_images/vb-12.png" />
+<img alt="../../assets/images/vb-12.png" src="../../assets/images/vb-12.png" />
 <p>The final settings view looks like the following:</p>
-<img alt="../../_images/vb-13.png" src="../../_images/vb-13.png" />
+<img alt="../../assets/images/vb-13.png" src="../../assets/images/vb-13.png" />
 <p>When we are ready to go, press “Start”.
 The first time we run it, we will get a prompt saying do we wish to mount an image to use as a “start-up disk”.
 We want to use our Denios image, rather than a physical drive, so we select the icon to the side of the drop down.</p>
-<img alt="../../_images/vb-14.png" src="../../_images/vb-14.png" />
+<img alt="../../assets/images/vb-14.png" src="../../assets/images/vb-14.png" />
 <p>A new pop up will open, “Optical Disk Selector”. We will now press “Add”, then navigate to where our ISO is located.</p>
-<img alt="../../_images/vb-15.png" src="../../_images/vb-15.png" />
+<img alt="../../assets/images/vb-15.png" src="../../assets/images/vb-15.png" />
 <p>After pressing “Open”, we can see its been added, so we make sure its selected and press “Choose”.</p>
-<img alt="../../_images/vb-16.png" src="../../_images/vb-16.png" />
+<img alt="../../assets/images/vb-16.png" src="../../assets/images/vb-16.png" />
 <p>All that is left now to do is press “Start”.</p>
-<img alt="../../_images/vb-17.png" src="../../_images/vb-17.png" />
+<img alt="../../assets/images/vb-17.png" src="../../assets/images/vb-17.png" />
 <p>During Denios Linux setup process, the install wizard should detect if its inside a VM.
 If it is, should then automatically install any additional tools (such as virtualbox-guest-x11) to give a better user experience.
 If you want to manually re-install it, you can see our VirtualBox Guest Guide.</p>
