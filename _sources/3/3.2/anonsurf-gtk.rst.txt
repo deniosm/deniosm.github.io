@@ -1,0 +1,59 @@
+Chapter 3.2 Anonsurf-GTK
+=========================
+
+Usage
+------
+The default password for the root user is : toor
+For opening Anonsurf window:
+- open a terminal window by using Ctrl+Alt+T or Alt+T and type:
+
+.. code:: 
+
+   sudo anonsurf-gtk 
+
+.. image:: anonsurf-gtk.png
+
+To start, click on the start button :
+
+.. image:: anonsurf-start-gtk.png
+
+In the next window it is better to choose the option:
+ - Kill
+
+This will close all applications that are currently using the network and empty the cache. 
+
+.. image:: anonsurf-gtk-kill.png
+
+And that's it Anonsurf is launched:
+
+.. image:: anonsurf-gtk-run.png
+
+To check your current IP address, click on the :
+
+.. image:: anonsurf-gtk-myip.png
+
+To change your identity, click on the:
+
+.. image:: anonsurf-gtk-change.png
+
+To stop anonsurf, click on the:
+
+.. image:: anonsurf-gtk-stop.png
+
+To restart Anonsurf, click on the:
+
+.. image:: anonsurf-gtk-restart.png
+
+For more information about the network, bandwidth, etc., click on:
+
+.. image:: anonsurf-gtk-stats.png
+
+For information about the program, link to the source code page, click on the first icon in the left corner:
+
+.. image:: anonsurf-gtk-about.png
+
+For additional options and settings, click on:
+
+.. image:: anonsurf-gtk-settings.png
+
+.

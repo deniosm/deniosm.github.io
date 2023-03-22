@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1.3 Installation &mdash; Denios Gnu/Linux Manual 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chapter 2 Virtualization" href="../../2/Virtualization.html" />
+    <link rel="prev" title="Chapter 1.2 Booting the Image" href="../1.2/booting_the_image.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Denios Gnu/Linux Manual
+            <img src="../../_static/manual64.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../Installing_denios.html">Chapter 1 Installing Denios</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1.1/downloading_the_image.html">Chapter 1.1 Download Denios-OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1.2/booting_the_image.html">Chapter 1.2 Booting the Image</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 1.3 Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../2/Virtualization.html">Chapter 2 Virtualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3/Anonsurf.html">Chapter 3 Anonsurf</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Denios Gnu/Linux Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../Installing_denios.html">Chapter 1 Installing Denios</a></li>
+      <li class="breadcrumb-item active">Chapter 1.3 Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/1/1.3/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-1-3-installation">
+<h1>Chapter 1.3 Installation<a class="headerlink" href="#chapter-1-3-installation" title="Permalink to this heading"></a></h1>
+<p>This guide will help you install ParrotOS (latest version) on your computer step-by-step through the default official installer: Calamares.
+This guide applies to all Denios-OS versions.
+Any problems or missing details, please report it <a class="reference external" href="https://github.com/deniosm/denios-calamares/issues">HERE</a>.</p>
+<section id="starting-the-installer">
+<h2>Starting the installer<a class="headerlink" href="#starting-the-installer" title="Permalink to this heading"></a></h2>
+<p>At the start of the boot process a grub splash screen will be shown. To install select <span class="menuselection">Try or Install Denios</span>. If Denios has a problem with your graphics card like newer nvidia cards select <span class="menuselection">Denios (safe graphics)</span>. To test your ram select <span class="menuselection">Test memory</span>.</p>
+<img alt="../../_images/grubsplash.png" src="../../_images/grubsplash.png" />
+<p>Once you have booted into the live session, feel free to explore Denios and make sure all your hardware works. Once you are ready to install Denios, double click the icon in the top-left corner of the desktop <span class="guilabel">Install Denios 1.0</span> or :menuselection:` System Tools –&gt; Install Denios 1.0`.</p>
+<img alt="../../_images/live_session.png" src="../../_images/live_session.png" />
+<p>The next step is selecting the system’s language <span class="guilabel">Language</span> from drop down box. Choose your language and click on Next <span class="guilabel">Next</span> button will move you on to the next task. To cancel an installation press the <span class="guilabel">Cancel</span> button.</p>
+<img alt="../../_images/welcome_installer.png" src="../../_images/welcome_installer.png" />
+</section>
+<section id="selecting-your-location">
+<h2>Selecting Your location<a class="headerlink" href="#selecting-your-location" title="Permalink to this heading"></a></h2>
+<p>The next screen will show you a map of the world where you can choose your location. Your location will be used to set your time zone and download server. To see what region you have chosen use the <span class="guilabel">Region</span> drop down menu. The <span class="guilabel">Zone</span> field should have a major city with the same time as you. If you want to get to the your time zone manually faster you can type in the name of a big city in the same time zone. Towards the bottom you can to change your system language by pressing the upper <span class="guilabel">Change</span> button. To change the how numbers and dates appear on your system press the lower <span class="guilabel">Change</span> button. To move to the next step once again press the <span class="guilabel">Next</span> button. To move back to selecting your language to change your language press the <span class="guilabel">Back</span> button.</p>
+<img alt="../../_images/location.png" src="../../_images/location.png" />
+</section>
+<section id="selecting-keyboard-layout">
+<h2>Selecting Keyboard Layout<a class="headerlink" href="#selecting-keyboard-layout" title="Permalink to this heading"></a></h2>
+<p>Next select your keyboard layout, you can check your keyboard matches the keyboard shown picture shown. The <span class="guilabel">Keyboard Model</span> menu lets you choose different variants, the left column lets you change language, and the right column gets different variants. At the bottom you can type to make sure your layout is correct. When you have selected your keyboard layout press the <span class="guilabel">Next</span> button to move on.</p>
+<img alt="../../_images/keyboard.png" src="../../_images/keyboard.png" />
+</section>
+<section id="setting-up-partitions">
+<h2>Setting up partitions<a class="headerlink" href="#setting-up-partitions" title="Permalink to this heading"></a></h2>
+<p>If all you want is Denios on your machine, you can select the <span class="guilabel">Erase disk</span> button. This will format the disk and <strong>delete all data on the disk</strong>,  which is why having your data backed up before this point is extremely important. If you choose to do this you can continue on to user setup. To change the storage device to install Denios on use the <span class="guilabel">Select Storage device</span> drop down menu. To choose to use a swap file under <span class="guilabel">Erase disk</span> keep <span class="menuselection">Swap to file</span> or to not use swap choose <span class="menuselection">No Swap</span>. If you want to encrypt your drive press the <span class="guilabel">Encrypt system</span> checkbox and then you will need to enter the encryption passphrase twice make sure you have it typed in correctly. It is strongly advised to write down this passphrase and keep it somewhere safe.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Erasing your entire disk or partition may cause you to lose data so please backup beforehand.</p>
+</div>
+<img alt="../../_images/partitioning.png" src="../../_images/partitioning.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you had a previous Linux install with swap you will need to unmount the swap. To do this run</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">swapoff</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>which will unmount them and any swap partitions. This will not work if you have data partition mounted open PCManFM-Qt and press the upward pointed arrow on each partition in the <span class="guilabel">Places</span> sidebar to unmount all data partitions.</p>
+<p>To move back to Selecting your keyboard layout press the <span class="guilabel">Back</span> button. To advance to the setting up users press the <span class="guilabel">Next</span> button.</p>
+</section>
+<section id="user-setup">
+<h2>User Setup<a class="headerlink" href="#user-setup" title="Permalink to this heading"></a></h2>
+<p>The user setup section creates a user profile, consisting of typing your name into the <span class="guilabel">What is your name?</span> field. Next type your username in the <span class="guilabel">What name do you want to use to log in?</span>. Put what you want your hostname of your computer to be in the <span class="guilabel">what is the name of this computer?</span> field. The last thing you need to enter is your password in the <span class="guilabel">Choose a password to keep your account safe</span>.  Enter your password twice to make sure you have not mistyped it. If a name can actually be used as a username or hostname a green checkmark will appear to the right of it if you cannot a red x will appear. Pressing the <span class="guilabel">Next</span> button will give you a summary screen, showing you the settings before the install begins. Once you have checked the summary click the <span class="guilabel">Install</span> button to begin the installation.</p>
+<img alt="../../_images/user_setup.png" src="../../_images/user_setup.png" />
+<p>The summary screen shows what settings will be installed and you can double check everything is how you want it. After pressing the <span class="guilabel">Install</span> button a dialog will pop up to confirm installation. To actually install press the <span class="guilabel">Install now</span> button. To not start installing and go back press the <span class="guilabel">Go back</span> button.</p>
+<img alt="../../_images/installsummary.png" src="../../_images/installsummary.png" />
+</section>
+<section id="the-install">
+<h2>The Install<a class="headerlink" href="#the-install" title="Permalink to this heading"></a></h2>
+<p>The Denios installer provides some useful information while the installer is running. On the bottom of the window is a progress bar. On the right end of the progress bar is the percentage of the installation complete. To see command line output of the install press the <span class="guilabel">Toggle log</span> button. Once Denios is installed you have a checkbox <span class="guilabel">Reboot now</span> after your Denios is installed and is now finished. There is a slideshow while you install and to move to the next slide left click and to move to the previous slide right click.</p>
+<img alt="../../_images/installer_screen.png" src="../../_images/installer_screen.png" />
+</section>
+<section id="rebooting-into-the-finished-install">
+<h2>Rebooting into the finished install<a class="headerlink" href="#rebooting-into-the-finished-install" title="Permalink to this heading"></a></h2>
+<p>After the install is finished you will need to reboot your system into your new install. If you want to continue using the live system but end the installer uncheck the <span class="guilabel">Reboot now</span> checkbox. To close the installer press the <span class="guilabel">Done</span> button. After this your computer will reboot and you should remove your install media.</p>
+</section>
+<section id="manual-partitioning">
+<h2>Manual partitioning<a class="headerlink" href="#manual-partitioning" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Trying to use nonlinux filesystems such as NTFS or FAT as your root filesystem will result in a broken system.</p>
+</div>
+<p>If you wish to manual set up partitions, as an advanced option you will have to choose which file-system you want. A file-system controls how your files are accessed at lower levels on the disk. If you are booting your computer in UEFI mode a more modern firmware compared to BIOS you will need to create an EFI system partition (see <a class="reference external" href="https://en.wikipedia.org/wiki/EFI_System_partition">efi system partition Wikipedia</a> for more detail). To create this partition you will need a FAT32 file-system with the ESP flag to be mounted at /boot/efi/ under the mount point. You will also need a root (/) file-system, several file-systems included for Denios are Ext4, XFS, and Btrfs. Denios 22.04 has bug with installing BTRFS and <a class="reference external" href="https://discourse.denios.me/t/getting-denios-22-04-to-install-with-btrfs/3273/">This guide on Denios discourse</a></p>
+<img alt="../../_images/manpartitioning.png" src="../../_images/manpartitioning.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Creating a new partition table will erase all data on the drive and deleting a partition will delete all data on the partition.</p>
+</div>
+<p>If you have a new hard disc or solid state drive press the <span class="guilabel">New Partition table</span> button but this will delete the whole disc if you have any data on it. After pressing this button you will get a dialog saying what kind of partition table to use. The <span class="guilabel">Master Boot Record</span> button will create an old partition table but will only allow 4 primary partitions and partitions up to 2 Terabytes. The <span class="guilabel">GUID Partition Table</span> button works for large discs but may not be recognized by legacy operating systems. To get back to your main partitioning window press the <span class="guilabel">OK</span> button.</p>
+<p>To change what disc you are partitioning use the <span class="guilabel">Storage device</span> drop down menu.</p>
+<p>You can create partition by clicking the <span class="guilabel">Create</span> button which will bring up a dialog. The file system field is a drop down menu, select which file-system you want. You also need to select where you want to mount the partition in the <span class="guilabel">Mount Point</span> drop down menu. To change how big to make the partition change the <span class="guilabel">Size</span> field. To change the size or type of a partition after initially creating it press the <span class="guilabel">Edit</span> button. To delete a partition press the <span class="guilabel">Delete</span> button. You will need at least one root (/) partition and if you are booting an EFI system you will also need a /boot/efi mounted partition. Another common option is to have all your data on its own partition, which can even be on its own separate physical disk this can be mounted at /home. If you want to encrypt your your filesystem check the <span class="guilabel">Encrypt</span> checkbox. Then two fields will appear to get write type your encryption passphrase twice to confirm it. To add a label for this partition enter it into the <span class="guilabel">FS Label</span> field.</p>
+<img alt="../../_images/manpartition-create.png" src="../../_images/manpartition-create.png" />
+<p>To go back on all your changes to the previous state press the <span class="guilabel">Revert All Changes</span> button. To change what device your computer will boot off of you will need to use the <span class="guilabel">Install boot loader on</span> drop down menu to select which disc to boot off of.</p>
+<p>In the center of the manual partitioning window shows you what name of the partition is. What type of filesystem is displayed in the <span class="guilabel">File System</span> column. To see where your partition is mounted are shown in the <span class="guilabel">Mount Point</span> column. The size of the system is shown in the <span class="guilabel">Size</span> Column.</p>
+<p>The top of the manual partitioning window shows a visual bar showing size of your partitions on top. Below it shows each partition on your drive with the color it is in the bar graph and the size of the partition.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../1.2/booting_the_image.html" class="btn btn-neutral float-left" title="Chapter 1.2 Booting the Image" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../2/Virtualization.html" class="btn btn-neutral float-right" title="Chapter 2 Virtualization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023, Denios Gnu/Linux..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

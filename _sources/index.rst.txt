@@ -1,0 +1,29 @@
+Welcome to the Denios-OS Manual!
+=================================
+
+This is the official reference book for using Denios-OS. This manual covers many topics, such as installation instructions, applications Denios provides, and much more!
+
+D3NIOS GNU/LINUX
+----------------
+
+Denios Gnu/Linux offers you the experience of using the OS in a more secure and private way. The system is built entirely from its own, independently developed source forked from the Debian test/unstable branch, with carefully selected features and optimizations to improve system and user stability and security, while offering full customization and a growing collection of packages not found in official debian repositories.
+All included software is free and open source, compatible with DFSG and GNU guidelines.
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   1/Installing_denios
+   2/Virtualization
+   3/Anonsurf
+
+
+Thank you!
+----------
+
+Thank you for choosing to use Denios Gnu/Linux!
+
+:Authors: D3NIOS GNU/LINUX
