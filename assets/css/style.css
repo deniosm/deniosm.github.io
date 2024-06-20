@@ -1,0 +1,257 @@
+/* === STARTPAGE === */
+
+/* ---------- new
+## css test
+----------------- */
+
+.middle--content_wrapper{
+    font-family: var(--body-font);
+
+     border-left: none;
+  }
+
+.row-startpage{
+    font-family: "Nunito","Helvetica", "Arial";
+    width: 366px;
+    margin: 10px 10px ;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px white,
+    0px 0px 1px black;
+    
+}
+
+.row-startpage:hover{
+    box-shadow: 0px 0px 2px dodgerblue,
+    0px 0px 2px dodgerblue;
+}
+
+.--main-bar{
+    font-size: var(--normal-font-size);
+    text-transform: capitalize;
+	font-weight: normal;
+    font-family: var(--body-font);
+
+}
+
+.bar--title_section{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.bars--section{
+    display: flex;
+    line-height: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: var(--body-font);
+
+}
+
+.block--bars{
+    display: block;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: normal;
+    color: black;
+    font-family: var(--body-font);
+
+}
+
+.block--bars p{
+    text-align: center;
+    font-family: var(--body-font);
+
+}
+.number{
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family: var(--body-font);
+
+    font-size: 1.2rem;
+}
+
+.flex-- {
+    display: flex;
+    font-family: var(--body-font);
+
+    justify-content: center;
+}
+.st-bar--title_section1 img{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin-left: 151px;
+    margin-right: 151px;
+    margin-bottom: 20px;
+}
+
+.st-bar--title_section2 img{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin-left: 151px;
+    margin-right: 151px;
+    margin-bottom: 20px;
+}
+
+.st-bar--title_section3 img{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin-left: 151px;
+    margin-right: 151px;
+    margin-bottom: 20px;
+}
+
+.st-bar--title_section4 img{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin-left: 151px;
+    margin-right: 151px;
+    margin-bottom: 20px;
+}
+
+
+.card_main-title--level_1{
+    text-align: center;
+    margin: 50px 0;
+    margin-bottom: 4px;
+    padding: 1%;
+    margin-right: 150px;
+    margin-left: 150px;
+    background: #1c23357d;
+
+}
+
+.card_panel--level_1 h2{
+    font-family: "Nunito","Helvetica", "Arial";
+    font-weight: normal;
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+}
+
+#cold_glow{
+
+    color: #45a8ffb0;
+    padding: 1%;
+}
+.line2{
+    margin-top: 10px;
+    /* color: white; */
+    /* background: #ffffff; */
+    border: 1px solid #9e9eff;
+    box-shadow: 0px 0px 20px #0289ff;
+   
+}
+
+
+.line_2{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+.card_section--level_1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card--level_1{
+    margin: 15px;
+    width: 380px;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 2px #ffffff,
+                0px 0px 2px black;
+	transition: all 0.3s ease;
+}
+
+.card_image--level_1 img{
+    object-fit: cover;
+    margin-left:158px;
+    margin-right:158px;
+    margin-top:30px;
+}
+
+.card_panel--level_1{
+
+    padding: 1.6rem 1rem 1rem 1rem;
+}
+
+.card_main_title--level_1 h2{
+    text-align: center;
+    color: black;
+
+}
+
+.card_para--level_1{
+    padding-top: 1rem;
+}
+
+.card_para--level_1 p {
+    color: black;
+    margin-bottom: 2%;
+    display: block;
+    margin: 4px;
+    font-size: 1rem;
+    font-weight: normal;
+    color: black;
+    font-family: var(--body-font);
+
+}
+
+.card_readmore--level_1{
+
+    margin-top: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+
+    background-color: #175aa7;
+    width: fit-content;
+}
+.tags_section--level_1 ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags_section--level_1 ul li{
+    margin: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #172659;
+    letter-spacing: 1px;
+    width: fit-content;
+}
+
+.card--level_1:hover{
+    box-shadow: 0px 0px 2px dodgerblue,
+                0px 0px 2px dodgerblue;
+
+	/*
+    transform: scale(1.03); */
+
+
+
+}
+@media only screen and (max-width: 1200px) {
+
+    .card_section--level_1{
+
+        justify-content: space-evenly;
+    }
+    
+}
+
