@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+   <msapplication>
+     <tile>
+        <square70x70logo src="/assets/favicon/144x144.png"/>
+        <square150x150logo src="/assets/favicon/favicon.png"/>
+        <TileColor>#00bcd4</TileColor>
+     </tile>
+     <notification>
+        <polling-uri  src="https://bosniana.org/rss.xml"/>
+        <frequency>30</frequency>
+        <cycle>1</cycle>
+     </notification>
+   </msapplication>
+</browserconfig>

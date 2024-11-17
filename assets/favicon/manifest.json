@@ -1,0 +1,41 @@
+{
+
+  "manifest_version": 2,
+
+  "version": "2",
+
+  "name": "OpenBosniana OS",
+
+  "short_name": "OpenBosniana OS",
+
+  "description": "Free, Private, Secure",
+
+  "default_locale": "en",
+
+  "icons": [
+
+    {
+
+      "src": "/assets/favicon/144x144.png",
+
+      "sizes": "144x144",
+
+      "type": "image/png"
+
+    }
+
+  ],
+
+  "start_url": "/",
+
+  "display": "browser",
+
+  "background_color": "#00bcd4",
+
+  "theme_color": "#00bcd4",
+
+  "orientation": "any"
+
+}
+
+
