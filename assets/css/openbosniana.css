@@ -124,9 +124,9 @@ h6 {
     padding: 0;
     border: 0;
     border-bottom: 2px solid transparent;
-    border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, transparent 20%, #00bcd4 50%, transparent 80%) 1;
     }
+
 .nav-vendor-wrap{
   margin:0;  position: relative;
 
@@ -897,6 +897,46 @@ footer {
     margin-left:10%;
     margin-right:10%;
 }
-.margin-vrh{
-    height:6rem;height:60px;
+.about-menu {
+    margin-left: -20px;
+    margin-right: -15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.navbar-color{
+    background-color:#354a53;
+}
+
+.about-menu ul li{
+    padding: 13px 0 13px 25px;
+    color: white;
+}
+.about-menu ul li:hover{
+    background-color: #e1e1e1;color:grey
+}
+.about-active {
+    background-color:rgb(0, 0, 0, 0.2)
+}
+.bodymargin{
+    height: 60px;
+}
+.aboutmargin{
+    height: 35px;
+}
+.abouttext{
+    font-family: 'Nunito';
+    color:#111111; text-align: justify;
+    font-size:larger;
+    margin:20px 0 20px 0;
+}
+.abouttext-normal{
+    font-family: 'Nunito';
+    font-size: 17px;
+    color:#111111;
+}
+
+.reqtext{
+    font-family: 'Nunito';
+    color:#111111; text-align: justify;
+    font-size: 15px;
 }
