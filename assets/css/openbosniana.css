@@ -930,16 +930,16 @@ footer {
     font-size:larger;
     margin:20px 0 20px 0;
 }
-.abouttext-normal{
+.abouttext-men{
     font-family: 'Nunito';
     font-size: 14px;
     color:#111111;
 
 }
-.abouttext-normal li a{
+.abouttext-men li a{
     color: white;padding:0 16px 2px 16px;
 }
-.abouttext-normal li a:hover{
+.abouttext-men li a:hover{
     background-color: rgb(0, 0, 0, 0.1);color:#2ac3ff;
 }
 
@@ -948,3 +948,8 @@ footer {
     color:#111111; text-align: justify;
     font-size: 15px;
 }
+.abouttext-normal{
+    font-family: 'Nunito';
+    font-size: 17px;
+    color:#111111;}
+
