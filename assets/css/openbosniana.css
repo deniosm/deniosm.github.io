@@ -903,6 +903,7 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
 .navbar-color{
     background-color:#354a53;
 }
@@ -931,8 +932,15 @@ footer {
 }
 .abouttext-normal{
     font-family: 'Nunito';
-    font-size: 17px;
+    font-size: 14px;
     color:#111111;
+
+}
+.abouttext-normal li a{font-family: 'Nunito';
+    color: white;padding:0 16px 2px 16px;
+}
+.abouttext-normal li a:hover{font-family: 'Nunito';
+    background-color: rgb(0, 0, 0, 0.1);color:#2ac3ff;
 }
 
 .reqtext{
