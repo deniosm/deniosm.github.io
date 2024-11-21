@@ -936,10 +936,10 @@ footer {
     color:#111111;
 
 }
-.abouttext-normal li a{font-family: 'Nunito';
+.abouttext-normal li a{
     color: white;padding:0 16px 2px 16px;
 }
-.abouttext-normal li a:hover{font-family: 'Nunito';
+.abouttext-normal li a:hover{
     background-color: rgb(0, 0, 0, 0.1);color:#2ac3ff;
 }
 
