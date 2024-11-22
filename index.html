@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OpenBosniana | OpenBosniana OS | Free, Private, Secure | Free Linux Operating System </title>
+    <title> OpenBosniana OS | Free, Private, Secure | Free Linux Operating System </title>
     <meta name="description" content="OpenBosniana OS is a free, secure, multipurpose operating system...">
     <meta name="keywords" content="openBosniana OS, Bosniana OS, Debian Distro, Security,linux pentest, linux, lightweight, kde, distro, operating system, free operating system, linux download, windows linux, linux install, software linux, linux kernel, linux light, linux operating system, linux laptop, linux ubuntu, linux apps, linux basics, free software, free software foundation, open source, open source projects, linux mint, gaming linux, distro linux, linux desktop, linux os, easy to use, linuxlite, linux operating system download, download linux operating system, linux free, free os" />
     <meta name="author" content="Denis Maslo">
@@ -32,6 +32,37 @@
     <link rel="stylesheet" href="assets/css/openbosniana-styles.css">
     <link rel="stylesheet" href="assets/css/openbosniana.css">
     <link href="assets/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        #networks{display:block;max-width:none;overflow:hidden;padding:0
+         }#networks>div{display:block;margin:auto;padding:0 24px;width:100%
+         }#networks p{margin:auto;max-width:600px
+         }#networks #networks-index{padding:48px 0
+         }#networks #networks-index>div{padding:0 28px
+         }#networks #networks-grid{list-style:none;margin:auto;max-width:800px;padding:0;text-align:center
+         }#networks #networks-grid li{display:inline-block;margin:16px;padding:0
+         }@media(min-width:320px){#networks #networks-grid li{margin:26px
+         }
+         }@media(min-width:425px){#networks #networks-grid li{margin:32px
+         }
+         }#networks #networks-grid img{display:block;margin:12px;width:64px
+         }#networks #networks-grid a{color:inherit
+         }#networks .networks-tab .app-display{flex-direction:column
+         }#networks .networks-tab .app-display__description{display:flex;flex-wrap:wrap;justify-content:center;padding:0 0 16px
+         }#networks .networks-tab .app-display__description>*{padding:8px;text-align:left
+         }#networks .networks-tab .app-display__description>img{height:80px;width:80px
+         }@media(min-width:1000px){#networks .networks-tab .app-display__description{flex-wrap:nowrap;padding-bottom:0
+         }
+         }#networks.initialized>div.networks-tab>.networks-back{background-position:50%;background-repeat:no-repeat;cursor:pointer;height:100%;left:0;position:absolute;top:0;width:64px
+         }#networks.initialized{background-color:#3689e6;background-position:50%;background-size:cover;color:#fff;position:relative;text-shadow:0 0 6px #000;transition:height .25s ease-in-out
+         }#networks.initialized>div{position:absolute;top:0;transition:transform .25s ease-in-out;width:100%;will-change:transform
+         }#networks.initialized>div h2::-moz-selection,#networks.initialized>div p::-moz-selection{background-color:#d3d3d3;color:#000;text-shadow:none
+         }#networks.initialized>div h2::selection,#networks.initialized>div p::selection{background-color:#d3d3d3;color:#000;text-shadow:none
+         }#networks.initialized>div#networks-index{left:-100%;padding:48px 0
+         }#networks.initialized>div#networks-index.active{transform:translate3d(100%,0,0)
+         }#networks.initialized>div.networks-tab{left:100%;padding:32px 24px 32px 64px
+         }#networks.initialized>div.networks-tab.active{transform:translate3d(-100%,0,0)
+         }
+    </style>
 </head>
 
 
@@ -555,85 +586,21 @@
     </div>
 </div>
 
-<div class="trans-bckgr-1 pb-2">
-    <div class="container-fluid pt-2 pb-2">
-        <div class="pt-2">
-            <div class="row pt-2">
-                <!-- First Card: Codeberg -->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card card-info tabela-okvir">
-                        <a href="https://codeberg.org" target="_blank">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img-avatar-circle-logo">
-                                        <img src="assets/img/codeberg.svg" alt="Codeberg logo">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <h4 class="text-info-c"><b class="logos-b">codeberg.org</b></h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Second Card: SourceForge -->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card card-warning tabela-okvir">
-                        <a href="https://sourceforge.net" target="_blank">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img-avatar-circle-logo">
-                                        <img src="assets/img/sf.svg" alt="SourceForge logo">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <h4 class="color-warning"><b class="logos-b">sf.net</b></h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Third Card: GitHub -->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card card-dark tabela-okvir">
-                        <a href="https://github.com" target="_blank">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img-avatar-circle-logo">
-                                        <img src="assets/img/github-logo.svg" alt="GitHub logo">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <h4 class="color-dark"><b class="logos-b">github.com</b></h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Fourth Card: Kernel.org -->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card card-danger tabela-okvir">
-                        <a href="https://kernel.org" target="_blank">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img-avatar-circle-logo">
-                                        <img src="assets/img/linux-tux.svg" alt="Linux Kernel logo">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <h4 class="color-danger"><b class="logos-b">kernel.org</b></h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+    <div class="trans-bckgr-1">
+        <section>
+          <div id="networks">
+            <div id="networks-index">
+              <ul id="networks-grid">
+                <a href="https://github.com" target="_blank"><li class="read-more"><img src="assets/img/github-logo.svg" alt="GitHub logo">GitHub</li></a>
+                <a href="https://kernel.org" target="_blank"><li class="read-more"><img src="assets/img/linux-tux.svg" alt="Linux Kernel logo">Kernel</li></a>
+                <a href="https://sourceforge.net" target="_blank"><li class="read-more"><img src="assets/img/sf.svg" alt="SourceForge logo">SourceForge</li></a>
+                <a href="https://gitlab.com" target="_blank"><li class="read-more"><img src="assets/img/gitlab_logo.svg" alt="GitLab">GitLab</li></a>
+                <a href="https://codeberg.org" target="_blank"><li class="read-more"><img src="assets/img/codeberg.svg" alt="Codeberg logo">Codeberg</li></a>
+              </ul>
             </div>
-        </div>
+          </div>
+        </section>
     </div>
-</div>
 
 
     <div class="ms-slidebar " id="ms-slidebar">
