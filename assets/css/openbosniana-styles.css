@@ -520,9 +520,7 @@
 }
 .navbar{background-color:#03a9f4;border:0;border-radius:0
 }
-.navbar .navbar-brand{position:relative;height:60px;line-height:30px;color:inherit
-}
-.navbar .navbar-brand:hover,.navbar .navbar-brand:focus{color:inherit;background-color:transparent
+.navbar .navbar-brand{height:60px;
 }
 .navbar .navbar-text{color:inherit;margin-top:20px;margin-bottom:20px
 }
@@ -701,7 +699,7 @@
 .navbar.navbar-royal .dropdown-menu .active>a:hover,.navbar.navbar-royal .dropdown-menu .active>a:focus{color:rgba(255,255,255,.84)
 }
 .navbar-inverse{background-color:#3f51b5
-}@media(max-width:1199px){.navbar .navbar-brand{height:50px;padding:10px 15px
+}@media(max-width:1199px){.navbar .navbar-brand{height:60px;
 }
 .navbar .navbar-form{margin-top:10px
 }
@@ -1873,17 +1871,10 @@ fami
 
 .ms-navbar .container,.ms-lead-navbar .container{position:relative
 }
-.ms-navbar .navbar-header,.ms-lead-navbar .navbar-header{display:none;height:50px
+.ms-navbar .navbar-header .navbar-brand,.ms-lead-navbar .navbar-header .navbar-brand{-ms-flex-align:start;align-items:start;display:-ms-flexbox;display:flex;
 }
-.ms-navbar .navbar-header .navbar-brand,.ms-lead-navbar .navbar-header .navbar-brand{-ms-flex-align:center;align-items:center;padding:0 10px;padding:0 1rem;height:auto;display:-ms-flexbox;display:flex;font-weight:300;word-spacing:-4px;font-size:20px;margin:0;color:#f5f5f5;white-space:nowrap
-}
-.ms-navbar .navbar-header .navbar-brand img,.ms-lead-navbar .navbar-header .navbar-brand img{display:inline-block;margin-right:10px
-}
-.ms-navbar .navbar-header .navbar-brand .ms-title strong,.ms-lead-navbar .navbar-header .navbar-brand .ms-title strong{display:inline-block;font-weight:400
-}
-.ms-navbar .navbar-header .navbar-brand .ms-logo,.ms-lead-navbar .navbar-header .navbar-brand .ms-logo{margin-right:10px
-}
-.ms-navbar .navbar-collapse,.ms-lead-navbar .navbar-collapse{-ms-flex-pack:start;justify-content:flex-start;height:50px;z-index:1140
+
+.ms-navbar .navbar-collapse,.ms-lead-navbar .navbar-collapse{-ms-flex-pack:end;justify-content:flex-end;height:50px;z-index:1140
 }
 .ms-navbar .navbar-collapse .navbar-nav,.ms-lead-navbar .navbar-collapse .navbar-nav{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch
 }
@@ -5703,14 +5694,7 @@ fami
 }
 .ms-lead-navbar{position:fixed!important;z-index:30;top:0;left:0;right:0;width:100%;background-color:rgba(0,0,0,.1)!important;box-shadow:none;color:#fff;height:50px;transition:all ease .3s
 }
-.ms-lead-navbar .navbar-brand{font-weight:300;word-spacing:-4px;font-size:20px;padding-top:9px;margin:0 20px;color:#f5f5f5;display:none;height:50px;white-space:nowrap
-}
-.ms-lead-navbar .navbar-brand img{display:inline-block;margin-right:10px
-}
-.ms-lead-navbar .navbar-brand .ms-title strong{display:inline-block;font-weight:400
-}
-.ms-lead-navbar .navbar-brand .ms-logo{margin-right:10px
-}
+
 .ms-lead-navbar.navbar-scroll{background-color:#03a9f4!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)
 }
 .ms-lead-navbar a{color:#fff
@@ -5730,7 +5714,7 @@ fami
 .ms-lead-navbar .container .navbar-nav .nav-item .nav-link:hover:before,.ms-lead-navbar .container .navbar-nav .nav-item .nav-link:focus:before{height:3px
 }
 .ms-lead-navbar .container .btn-navbar-menu{height:50px;width:50px;right:0;line-height:50px;text-align:center;font-size:21px;font-size:2.1rem
-}@media(min-width:768px) and (max-width:991px){.ms-lead-navbar .container .navbar-header .navbar-brand .ms-title{display:none
+}@media(min-width:768px) and (max-width:991px){.ms-lead-navbar .container .navbar-header .ms-title{display:none
 }
 .ms-lead-navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link{padding:0 12px
 }

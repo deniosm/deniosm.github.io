@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Page-2 Gallery | OpenBosniana OS | Free, Private, Secure | Free Linux Operating System </title>
+    <title> Gallery 2 | OpenBosniana OS | Free, Private, Secure | Free Linux Operating System </title>
     <meta name="description" content="OpenBosniana OS is a free, secure, multipurpose operating system...">
     <meta name="keywords" content="openBosniana OS, Bosniana OS, Debian Distro, Security,linux pentest, linux, lightweight, kde, distro, operating system, free operating system, linux download, windows linux, linux install, software linux, linux kernel, linux light, linux operating system, linux laptop, linux ubuntu, linux apps, linux basics, free software, free software foundation, open source, open source projects, linux mint, gaming linux, distro linux, linux desktop, linux os, easy to use, linuxlite, linux operating system download, download linux operating system, linux free, free os" />
     <meta name="author" content="Denis Maslo">
+
     <meta property="og:site_name" content="OpenBosniana OS">
     <meta property="og:title" content="
 
@@ -21,8 +22,8 @@
     <link rel="alternate" type="application/rss+xml" title="OpenBosniana OS" href="../rss.xml">
     <link rel="manifest" href="../assets/favicon/manifest.json">
     <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico" />
-    <meta name="application-name" content="OpenBosniana OS" />
-    <meta name="msapplication-TileColor" content="#00bcd4" />
+    <meta name="application-name" content="OpenBosniana OS"/>
+    <meta name="msapplication-TileColor" content="#00bcd4"/>
     <meta name="msapplication-TileImage" content="../assets/favicon/144x144.png">
     <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
     <link rel="stylesheet" href="../assets/css/fonts.css">
@@ -33,32 +34,45 @@
     <link href="../assets/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="gallery.css" />
     <style>
-      .overlay {
-        display: none;
-        position: fixed;
-        z-index: 10;
-        top: 3rem;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 1);
-        justify-content: center;
-        align-items: center;
-      }
+        .overlay {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            top: 3rem;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 1);
+            justify-content: center;
+            align-items: center;
+        }
 
-      .overlay-content {
-        max-width: 90%;
-        max-height: 90%;
-      }
-    </style>
-  </head>
+        .overlay-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+            </style>
+</head>
+
+
   <body>
+<div class="container-fluid">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-      <div class="container">
-        <div class="nav-vendor-wrap">
-          <a class="navbar-brand nav-vendor" href="../index.html"></a>
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-arrow-down-fill" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+            <p>Latest release</p>
+            <a href="https://bosniana.org/changelogs/index.html">Changelog</a>
+            <a href="https://bosniana.org/downloads/index.html">Download</a>
+            <p></p>
+            <a href="https://bosniana.org/wiki/installation-instructions/index.html">Installation instructions</a>
+            <a href="https://bosniana.org/wiki/doc/index.html">Documentation</a>
         </div>
-      </div>
+    </button>
+     <div class="container-fluid">
+          <a class="navbar-brand nav-vendor" href="/"></a>
+    </div>
       <button class="btn-sakriveni">
         <a href="../bs/index.html" class="text-white">
           <i class="ri-global-line"></i> BS </a>
@@ -66,8 +80,11 @@
       <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img id="menu-icon" src="../assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
       </button>
+
+
+    <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
-        <ul class="navbar-nav mr-3">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a href="../index.html">
               <i class="ri-home-4-fill"></i> Home </a>
@@ -76,7 +93,7 @@
             <a href="../project/index.html">
               <i class="ri-file-info-line"></i> Project </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a href="../packages/index.html">
               <i class="ri-apps-line"></i> Packages </a>
           </li>
@@ -92,97 +109,143 @@
             <a href="index.html">
               <i class="ri-image-fill"></i> Gallery </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a href="../downloads/index.html">
               <i class="ri-download-2-fill"></i> Downloads </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a href="../bs/index.html">
               <i class="ri-global-line"></i> BS </a>
           </li>
         </ul>
-      </div>
+      </div></div>
     </nav>
-    <div class="bodymargin"></div>
-    <div class="container">
-      <div class="container-fluid p-3 center-block">
-        <div class="linija-dole"></div>
-        <h2 class="text-center text-info-c">SCREENSHOT GALLERY</h2>
-      </div>
-      <br>
-      <div id="overlay" class="overlay">
-        <img id="overlay-img" class="overlay-content" />
-      </div>
-      <!-- Content -->
-      <section id="content">
-        <div class="box alt">
-          <div class="row 50% uniform">
-            <div class="4u  6u$(xsmall)">
-              <a class="image fit" href="kickoff.png">
-                <img src="kickoff.png" alt="Uranus & Voyager 2" />
-              </a>
-            </div>
-            <div class="4u$ 6u(xsmall)">
-              <a class="image fit" href="kicker.png">
-                <img src="kicker.png" alt="" />
-              </a>
-            </div>
-            <div class="4u  6u(xsmall)">
-              <a class="image fit" href="daapp.png">
-                <img src="daapp.png" alt="" />
-              </a>
-            </div>
-            <div class="4u  6u$(xsmall)">
-              <a class="image fit" href="dash.png">
-                <img src="dash.png" alt="" />
-              </a>
-            </div>
-            <div class="4u$ 6u(xsmall)">
-              <a class="image fit" href="electro.png">
-                <img src="electro.png" alt="" />
-              </a>
-            </div>
-            <div class="4u  6u(xsmall)">
-              <a class="image fit" href="3d.png">
-                <img src="3d.png" alt="" />
-              </a>
-            </div>
-            <div class="4u  6u$(xsmall)">
-              <a class="image fit" href="science.png">
-                <img src="science.png" alt="" />
-              </a>
-            </div>
-          </div>
+</div>
+
+
+<div class="bodymargin"></div>
+<div class="container">
+  <div class="container-fluid p-3 center-block">
+    <div class="linija-dole"></div>
+    <h2 class="text-center text-info-c">SCREENSHOT GALLERY</h2>
+  </div>
+  <br>
+  <div id="overlay" class="overlay">
+    <img id="overlay-img" class="overlay-content" />
+  </div>
+  <!-- Content -->
+  <section id="content">
+    <div class="box alt">
+      <div class="row 50% uniform">
+        <div class="4u  6u$(xsmall)">
+          <a class="image fit" href="kickoff.png">
+            <img src="kickoff.png" alt="Uranus & Voyager 2" />
+          </a>
         </div>
-      </section>
-    </div>
-    </div>
-    <br>
-    <div class="container-fluid trans-bckgr p-3">
-      <div class="ms-footer-col">
-        <div class="ms-footbar-block">
-          <ul class="list-unstyled three_cols">
-            <li class="p-3">
-              <p class="text-center p-3">Page: 2 </p>
-            </li>
-            <li class="p-3">
-              <a href="index.html">
-                <p class="btn btn-raised text-center">Prev</p>
-              </a>
-            </li>
-            <li class="p-3">
-              <a href="##">
-                <p class="btn btn-raised text-center">Next</p>
-              </a>
-            </li>
-          </ul>
+        <div class="4u$ 6u(xsmall)">
+          <a class="image fit" href="kicker.png">
+            <img src="kicker.png" alt="" />
+          </a>
+        </div>
+        <div class="4u  6u(xsmall)">
+          <a class="image fit" href="daapp.png">
+            <img src="daapp.png" alt="" />
+          </a>
+        </div>
+        <div class="4u  6u$(xsmall)">
+          <a class="image fit" href="dash.png">
+            <img src="dash.png" alt="" />
+          </a>
+        </div>
+        <div class="4u$ 6u(xsmall)">
+          <a class="image fit" href="electro.png">
+            <img src="electro.png" alt="" />
+          </a>
+        </div>
+        <div class="4u  6u(xsmall)">
+          <a class="image fit" href="3d.png">
+            <img src="3d.png" alt="" />
+          </a>
+        </div>
+        <div class="4u  6u$(xsmall)">
+          <a class="image fit" href="science.png">
+            <img src="science.png" alt="" />
+          </a>
         </div>
       </div>
     </div>
-    <br>
-    <br>
-    <div class="collapse navbar-collapse" id="ms-navbar">
-      <ul class="navbar-nav mr-3">
+  </section>
+</div>
+</div>
+<br>
+<div class="container-fluid trans-bckgr p-3">
+  <div class="ms-footer-col">
+    <div class="ms-footbar-block">
+      <ul class="list-unstyled three_cols">
+        <li class="p-3">
+          <p class="text-center p-3">Page: 2 </p>
+        </li>
+        <li class="p-3">
+          <a href="index.html">
+            <p class="btn btn-raised text-center">Prev</p>
+          </a>
+        </li>
+        <li class="p-3">
+          <a href="##">
+            <p class="btn btn-raised text-center">Next</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="ms-navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../index.html">
+              <i class="ri-home-4-fill"></i> Home </a>
+          </li>
+          <li class="nav-item">
+            <a href="../project/index.html">
+              <i class="ri-file-info-line"></i> Project </a>
+          </li>
+          <li class="nav-item">
+            <a href="../packages/index.html">
+              <i class="ri-apps-line"></i> Packages </a>
+          </li>
+          <li class="nav-item">
+            <a href="../wiki/index.html">
+              <i class="ri-book-2-line"></i> Wiki </a>
+          </li>
+          <li class="nav-item">
+            <a href="../blog/index.html">
+              <i class="ri-news-line"></i> Blog </a>
+          </li>
+          <li class="nav-item active">
+            <a href="index.html">
+              <i class="ri-image-fill"></i> Gallery </a>
+          </li>
+          <li class="nav-item">
+            <a href="../downloads/index.html">
+              <i class="ri-download-2-fill"></i> Downloads </a>
+          </li>
+          <li class="nav-item">
+            <a href="../bs/index.html">
+              <i class="ri-global-line"></i> BS </a>
+          </li>
+        </ul>
+      </div></div>
+    </nav>
+</div>
+
+
+    <div class="ms-slidebar " id="ms-slidebar">
+      <ul class="ms-slidebar-menu" id="slidebar-menu">
         <li class="nav-item">
           <a href="../index.html">
             <i class="ri-home-4-fill"></i> Home </a>
@@ -191,7 +254,7 @@
           <a href="../project/index.html">
             <i class="ri-file-info-line"></i> Project </a>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item">
           <a href="../packages/index.html">
             <i class="ri-apps-line"></i> Packages </a>
         </li>
@@ -203,21 +266,21 @@
           <a href="../blog/index.html">
             <i class="ri-news-line"></i> Blog </a>
         </li>
-        <li class="nav-item active">
-          <a href="index.html">
+        <li class="nav-item">
+          <a class="active" href="#">
             <i class="ri-image-fill"></i> Gallery </a>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item">
           <a href="../downloads/index.html">
             <i class="ri-download-2-fill"></i> Downloads </a>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item">
           <a href="../bs/index.html">
-            <i class="ri-global-line"></i> BS </a>
+            <i class="ri-global-line"></i> Bosanski </a>
         </li>
+        <div class="linija-dole"></div>
       </ul>
     </div>
-    </nav>
     <div class="logo-font">
       <section id="sponsor">
         <div class="sponsor pt-1 bg-sponsor">
@@ -371,5 +434,15 @@
         overlay.style.display = "none";
       }
     </script>
-  </body>
+    <script>
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const dropdownIcon = document.getElementById('dropdownIcon');
+
+        dropdownBtn.addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
+
+
