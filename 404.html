@@ -33,9 +33,7 @@
     <link rel="stylesheet" href="https://bosniana.org/assets/css/openbosniana.css">
     <link href="https://bosniana.org/assets/fonts/remixicon.css" rel="stylesheet">
 </head>
-
-
-  <body>
+<body>
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
     <button class="nav-drop-menu" id="dropdownBtn">
@@ -59,7 +57,6 @@
       <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img id="menu-icon" src="https://bosniana.org/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
       </button>
-
 <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
@@ -99,10 +96,6 @@
       </div></div>
     </nav>
 </div>
-
-
-
-
 <div class="bg-light">
 <div class="container-fluid">
 <div class="mt-2 pt-2">
@@ -183,9 +176,6 @@
     </button>
   </div>
 </footer>
-
-
-
 <script>
   window.onscroll = function() {
       const backToTopButton = document.getElementById("backToTop");
@@ -200,9 +190,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 </script>
-
-<script src="assets/js/plugins.min.js"></script>
-<!-- <script src="assets/js/openbosniana.js"></script> -->
+<script src="https://bosniana.org/assets/js/plugins.min.js"></script>
 <script>
 function slidebar() {
     var t = $(".ms-slidebar"),
@@ -211,17 +199,15 @@ function slidebar() {
         i = false;
 
     n.click(function() {
-        // Toggle custom sidebar
+
         i = !i;
         t.toggleClass("open", i);
 
-        // Optionally toggle Bootstrap's navbar collapse
         var target = $(this).attr('data-bs-target');
         if (target) {
             $(target).collapse('toggle');
         }
 
-        // Update menu icon and handle background change
         updateMenuIcon(i);
     });
 
@@ -233,7 +219,6 @@ function slidebar() {
         }
     });
 
-    // To handle closing when clicking outside the sidebar
     $(document).click(function(event) {
         if (!$(event.target).closest('.ms-slidebar, .ms-toggle-left').length && i) {
             t.removeClass("open");
@@ -247,12 +232,12 @@ function slidebar() {
         const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
-            menuIcon.src = 'assets/img/close.svg';
+            menuIcon.src = 'https://bosniana.org/assets/img/close.svg';
             button.style.backgroundColor = 'transparent';
             button.style.transform = 'rotate(90deg)';
             button.style.transition = 'all ease .40s';
         } else {
-            menuIcon.src = 'assets/img/menu.svg';
+            menuIcon.src = 'https://bosniana.org/assets/img/menu.svg';
             button.style.backgroundColor = 'transparent';
             button.style.transform = 'rotate(0deg)';
             button.style.transition = 'all ease .40s';
@@ -274,5 +259,3 @@ $(document).ready(function() {
     </script>
 </body>
 </html>
-
-
