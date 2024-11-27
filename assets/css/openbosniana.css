@@ -133,9 +133,9 @@ h6 {
   transform: rotate(180deg);
 }
 .nav-dropdown-content {
-  display: block;
+  display: hide;
   opacity: 0;
-  transform: translateY(-15px);
+  transform: translateX(-100%);
   position: fixed;
   z-index: 2000;
   border-radius: 0;
@@ -175,6 +175,7 @@ h6 {
 
 .nav-drop-menu.active .nav-dropdown-content {
   opacity: 1;
+  display:block;
   transform: translateY(0);
 
 }
