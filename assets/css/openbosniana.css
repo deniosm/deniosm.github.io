@@ -975,29 +975,29 @@ footer {
     color:#111111;}
 
 .gold-main-logo {
-    width:  160px;
-    height: 30px;
-    object-fit: contain;
+    width:  100px;
+    height: 20px;
+    object-fit: scale-down;
     margin-bottom: 20px;
     margin-top: 20px
 }
 
 .silver-main-logo {
-    width:  160px;
-    height: 30px;
+    width:  100px;
+    height: 20px;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: scale-down;
 }
 
 .bronze-main-logo {
-    width:  160px;
-    height: 30px;
-    object-fit: contain;
+    width:  100px;
+    height: 20px;
+    object-fit: scale-down;
 }
 .openbosniana-main-logo {
     width:  300px;
     height: 50px;
-    object-fit: contain;
+    object-fit: scale-down;
     padding:5px
 }
 .linija-footer-gore {
