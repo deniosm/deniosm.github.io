@@ -973,3 +973,30 @@ footer {
     font-family: 'Nunito';
     font-size: 17px;
     color:#111111;}
+
+.gold-main-logo {
+    width:  160px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.silver-main-logo {
+    width:  160px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.bronze-main-logo {
+    width:  160px;
+    height: 30px;
+    object-fit: contain;
+}
+.openbosniana-main-logo {
+    width:  300px;
+    height: 50px;
+    object-fit: contain;
+    padding:5px
+}
