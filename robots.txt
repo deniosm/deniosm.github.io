@@ -1,0 +1,7 @@
+Sitemap: https://bosniana.org/sitemap.xml
+
+User-Agent: *
+
+# Avoid step-by-step download pages being indexed.
+# For context, visitors should choose their download from the beginning.
+

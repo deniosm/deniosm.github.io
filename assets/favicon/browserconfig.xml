@@ -2,9 +2,10 @@
 <browserconfig>
    <msapplication>
      <tile>
-        <square70x70logo src="/assets/favicon/144x144.png"/>
-        <square150x150logo src="/assets/favicon/favicon.png"/>
-        <TileColor>#00bcd4</TileColor>
+        <square70x70logo src="/assets/favicon/square70x70.png"/>
+        <square150x150logo src="/assets/favicon/square150x150.png"/>
+        <square310x310logo src="/assets/favicon/square310x310.png"/>
+        <TileColor>#03a9f4</TileColor>
      </tile>
      <notification>
         <polling-uri  src="https://bosniana.org/rss.xml"/>
