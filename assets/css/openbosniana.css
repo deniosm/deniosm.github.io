@@ -983,8 +983,8 @@ footer {
     color:var(--navbar-bg);}
 
 .gold-main-logo {
-    width:  100px;
-    height: 20px;
+    width:  140px;
+    height: 30px;
     object-fit: contain;
     margin-bottom: scale-down;
     margin-bottom: 20px;
@@ -992,15 +992,15 @@ footer {
 }
 
 .silver-main-logo {
-    width:  100px;
-    height: 20px;
+    width:  140px;
+    height: 30px;
     object-fit: contain;
     margin-bottom: scale-down;
 }
 
 .bronze-main-logo {
-    width:  100px;
-    height: 20px;
+    width:  140px;
+    height: 30px;
     object-fit: contain;
     object-fit: scale-down;
 }
