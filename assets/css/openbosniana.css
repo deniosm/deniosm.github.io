@@ -688,12 +688,12 @@ footer {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-left:-30px;
+  gap: 10px;
+  margin-left:-40px;
 }
 .footer-links li a {
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   transition: color 0.3s;
   transition: background-color 0.3s;
 }
