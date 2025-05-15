@@ -1,307 +1,725 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/downloads/</loc>
+        <loc>http://bosniana.org/bs/403.html</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/404.html</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/500.html</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/50x.html</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/blog/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/blog/</loc>
+        <lastmod>2024-12-06</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/downloads/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/downloads/</loc>
         <lastmod>2024-12-05</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/downloads/"/>
-
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/gallery/</loc>
+        <loc>http://bosniana.org/blog/edu-112024/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/blog/edu-112024/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/gallery/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/gallery/</loc>
         <lastmod>2024-12-05</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/gallery/"/>
-
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/"/>
-
+        <loc>http://bosniana.org/blog/home-052025/</loc>
+        <lastmod>2025-05-15</lastmod>
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/downloads/openbosniana-edu-kde/</loc>
+        <loc>http://bosniana.org/blog/home-092024/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/blog/home-052025/</loc>
+        <lastmod>2025-05-15</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/</loc>
+        <lastmod>2024-12-08</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/</loc>
+        <lastmod>2025-05-14</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/downloads/openbosniana-edu-kde/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/downloads/openbosniana-edu-kde/</loc>
         <lastmod>2024-12-05</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/downloads/openbosniana-edu-kde/"/>
-
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/downloads/openbosniana-home-kde/</loc>
+        <loc>http://bosniana.org/bs/downloads/openbosniana-home-kde/</loc>
+        <lastmod>2025-05-15</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/downloads/openbosniana-home-kde/</loc>
+        <lastmod>2025-05-15</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/packages/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/packages/</loc>
         <lastmod>2024-12-05</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/downloads/openbosniana-home-kde/"/>
-
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/packages/</loc>
+        <loc>http://bosniana.org/bs/project/about/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/about/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/core/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/core/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/documentation/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/documentation/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/education/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/education/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/faq/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/faq/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/security/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/security/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/project/requirements/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/project/requirements/</loc>
+        <lastmod>2024-12-01</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/bs/wiki/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
+    </url>
+  
+
+    
+    
+    
+
+    
+    
+    
+
+    <url>
+        <loc>http://bosniana.org/wiki/</loc>
         <lastmod>2024-12-05</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/packages/"/>
-
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/project/about/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/about/"/>
-
+        <loc>http://bosniana.org/blog/xfce-092024/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
     </url>
+  
 
+    
+    
+    
 
-
-
-
-
-
-
-
+    
+    
+    
 
     <url>
-        <loc>https://bosniana.org/project/core/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/core/"/>
-
+        <loc>http://bosniana.org/bs/blog/xfce-092024/</loc>
+        <lastmod>2024-12-07</lastmod>
+        
+            
     </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/project/documentation/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/documentation/"/>
-
-    </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/project/education/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/education/"/>
-
-    </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/project/faq/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/faq/"/>
-
-    </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/project/security/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/security/"/>
-
-    </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/project/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/"/>
-
-    </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/project/requirements/</loc>
-        <lastmod>2024-12-01</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/project/requirements/"/>
-
-    </url>
-
-
-
-
-
-
-
-
-
-
-    <url>
-        <loc>https://bosniana.org/wiki/</loc>
-        <lastmod>2024-12-05</lastmod>
-
-
-            <xhtml:link rel="alternate" hreflang="bs" href="https://bosniana.org/bs/wiki/"/>
-
-    </url>
-
+  
 
 </urlset>
