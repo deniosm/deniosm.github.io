@@ -5795,19 +5795,22 @@ fami
   bottom: 30px;
   right: 30px;
   display: none;
-  background-color: #333;
-  color: white;
+  background-color: #3b505a;
+  color: rgb(3,169,244);
   border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  border-radius: 30%;
+  width: 40px;
+  height: 40px;
   font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  box-shadow: 0 0px 2px rgb(3,169,244);
   transition: opacity 0.3s ease;
   z-index: 1000;
 }
 
 #backToTopDugme:hover {
-  background-color: #555;
+  box-shadow: 0 0px 2px rgb(59,80,90);
+  color:rgb(59,80,90);
+  background-color: #03a9f4;
+  transition: all 0.3s ease;
 }
