@@ -382,7 +382,69 @@ crossorigin="anonymous"></script>
       </section>
     </div>
     <br>
+<div class="container-fluid">
+      <section class="bg-light">           
 
+<div class="container shadow">
+<div class="row justify-content-between align-items-center p-2">
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-users-love-us-black" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-rising-star-black" data-metadata="achievement=oss-rising-star" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-community-choice-black" data-metadata="achievement=oss-community-choice" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-sf-favorite-black" data-metadata="achievement=oss-sf-favorite" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script></div>
+<!-- End  Tag -->
+<br></div>
+<h4>
+ <span class="text-white bg-danger p-1">Preuzimanja s SourceForge mirrora </span>
+  <span id="sf-downloads" class="bg-dark p-1 text-white">  </span>
+</h4>
+
+<script>
+  const today = new Date().toISOString().split('T')[0];
+
+  const url1 = `https://sourceforge.net/projects/openbosniana-os/files/stats/json?start_date=2025-05-12&end_date=${today}`;
+  const url2 = `https://sourceforge.net/projects/denios-linux/files/stats/json?start_date=2022-09-04&end_date=${today}`;
+
+  Promise.all([fetch(url1), fetch(url2)])
+    .then(responses => Promise.all(responses.map(res => res.json())))
+    .then(([data1, data2]) => {
+      const total1 = data1.total || 0;
+      const total2 = data2.total || 0;
+      const combinedTotal = total1 + total2;
+
+      const formattedTotal = combinedTotal.toLocaleString();
+      document.getElementById('sf-downloads').textContent = formattedTotal;
+    })
+    .catch(error => {
+      console.error('Error fetching totals:', error);
+      document.getElementById('sf-downloads').textContent = 'Error';
+    });
+</script>
+ <h4 class="nunito-dark pb-2">Za statistiku preuzimanja koristimo službeni SourceForge <a href="https://sourceforge.net/p/forge/documentation/Download%20Stats%20API/">Download Stats API</a></h4>
+      </section>
+</div>
 <div class="container-fluid">
       <section class="bg-light">
         <div class="container shadow">
