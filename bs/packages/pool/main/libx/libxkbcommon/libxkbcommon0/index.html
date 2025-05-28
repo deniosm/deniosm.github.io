@@ -454,7 +454,25 @@ https://github.com/xkbcommon/libxkbcommon.git</p>
     </div>
   </div>
 </footer><button id="backToTopDugme" title="">↑</button>
+<script src="/bs/packages/packages.js"></script>
+<script>
+function searchPackages() {
+    const input = document.getElementById("searchBox").value.toLowerCase();
+    const resultsBox = document.getElementById("searchResults");
+    resultsBox.innerHTML = ""; // Clear previous results
 
+    if (input.length === 0) return;
+
+    const matches = packages.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBox.appendChild(li);
+    });
+}
+</script>
 <script>
   window.onscroll = function() {
       const backToTopButton = document.getElementById("backToTop");
@@ -486,7 +504,7 @@ https://github.com/xkbcommon/libxkbcommon.git</p>
         overlay.style.display = "none";
       }
     </script>
-    <script src="/assets/js/plugins.min.js"></script><script src="/assets/js/backtotop.js"></script>
+    <script src="/assets/js/plugins.min.js"></script><script src="/assets/js/backtotop.js"></script><script src="/assets/js/backtotop.js"><
 <script>
 function slidebar() {
     var t = $(".ms-slidebar"),
