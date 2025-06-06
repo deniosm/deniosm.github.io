@@ -24,12 +24,12 @@
     <link rel="alternate" type="application/rss+xml" title="OpenBosniana OS" href="rss.xml">
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta property="og:title" content="">
-    <meta property="og:url" content="http://bosniana.org/downloads/">
+    <meta property="og:url" content="http://192.168.0.9:4000/downloads/">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
 
-    <link rel="canonical" href="http://bosniana.org/downloads/">
+    <link rel="canonical" href="http://192.168.0.9:4000/downloads/">
     <link rel="alternate" type="application/rss+xml" title="OpenBosniana OS" href="/rss.xml">
 
     <meta property="og:url" content="https://bosniana.org/">
@@ -100,10 +100,9 @@ crossorigin="anonymous"></script>
     <button class="nav-drop-menu" id="dropdownBtn">
         <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
         <div class="nav-dropdown-content navbar-color">
-            <p>Latest</p>
+            <a href="https://bosniana.org/downloads/">Downloads</a>
             <a href="https://bosniana.org/blog/home-052025/">Release Notes | HOME</a>
             <a href="https://bosniana.org/blog/edu-112024/">Release Notes | EDU</a>
-            <a href="https://bosniana.org/downloads/">Downloads</a>
             <p></p>
             <a href="https://bosniana.org/wiki/installation-guide/" target="blank">Installation Guide</a>
             <a href="https://bosniana.org/wiki/">Documentation</a>
@@ -195,26 +194,62 @@ crossorigin="anonymous"></script>
     <main class="page-content" aria-label="Content">
 
         <div class="bodymargin"></div>
-<div class="container-fluid">
-                <div class="card-body mt-2 pt-2"><br>
-                    <h3 class="card-title-b text-info-c"><span class="nunito-dark">Downloads</span></h3>
-    <h4>OpenBosniana OS available in different editions.</h4>
-    <h4 >Choose your preferred edition and download the ISO file. Please verify the <a href="##"> checksum</a> before installation. </h4>
-    <br>
+<div class="container-fluid"><br>
+
+                <div class="section-title" data-aos="fade-up">
+                  <h2>Downloads</h2>
+                  <p></p>
                 </div>
+
+                <p class="nunito-dark">OpenBosniana OS available in different editions.</p>
+                <p class="nunito-dark">Choose your preferred edition and download the ISO file. Please verify the <a href="https://sourceforge.net/projects/openbosniana-os/files/iso/home/openbosniana.sha256sum/download"> checksum</a> before installation.</p>
+      <div class="container-fluid shadow">
+        <br>
+        <section class="bg-light">
+          <p class="pl-1">
+            <span class="text-white bg-danger p-1 shadow">Total downloads from SourceForge mirror </span>
+            <b>
+              <span id="sf-downloads" class="bg-dark p-1 text-white"></span>
+            </b>
+          </p>
+          <script>
+            const today = new Date().toISOString().split('T')[0];
+            const url1 = `https://sourceforge.net/projects/openbosniana-os/files/stats/json?start_date=2025-05-12&end_date=${today}`;
+            const url2 = `https://sourceforge.net/projects/denios-linux/files/stats/json?start_date=2022-09-04&end_date=${today}`;
+            Promise.all([fetch(url1), fetch(url2)]).then(responses => Promise.all(responses.map(res => res.json()))).then(([data1, data2]) => {
+              const total1 = data1.total || 0;
+              const total2 = data2.total || 0;
+              const combinedTotal = total1 + total2;
+              const formattedTotal = combinedTotal.toLocaleString();
+              document.getElementById('sf-downloads').textContent = formattedTotal;
+            }).catch(error => {
+              console.error('Error fetching totals:', error);
+              document.getElementById('sf-downloads').textContent = 'Error';
+            });
+          </script>
+          <p class="nunito-dark pl-1 pb-2 mt-2">For download statistics we use SourceForge official <a href="https://sourceforge.net/p/forge/documentation/Download%20Stats%20API/">Download Stats API</a>
+          </p>
+</section>
+</div><br>
+
+
+
 
      
 
     <section>
-    <div class="container-fluid shadow">
+    <div class="container-fluid shadow-features3"><br>
         <div class="row justify-content-between align-items-center">
             <div class="col-md-4">
                 <a href="##"><img src="/assets/gallery/bg-home.png" class="img-fluid"/></a><br><br>
             </div>
             <div class="title col-md-8 pl-lg-5">
-                <span class="pre-title">OpenBosniana OS</span>
-                <h2 class="h1">HOME Edition</h2>
-                <p>Operating system with Plasma desktop and application suite designed for workplace at both office and home.</p>
+                <div class="section-title" data-aos="fade-up">
+                  <h2>OpenBosniana OS</h2>
+                  <p>HOME Edition</p>
+                </div>
+
+                <p class="nunito-dark">Operating system with Plasma desktop and application suite designed for workplace at both office and home.</p>
                 <div>
                     <a href="/downloads/openbosniana-home-kde/" class="btn bg-info text-white">DOWNLOAD</a>
                     <a href="##" class="btn btn-raised">RELEASE NOTES</a>
@@ -226,13 +261,16 @@ crossorigin="anonymous"></script>
 </section>
 
 <section>
-    <div class="container-fluid shadow mt-2">
+    <div class="container-fluid shadow"><br>
         <div class="row justify-content-between align-items-center">
 
             <div class="title col-md-8 pl-lg-5">
-                <span class="pre-title">OpenBosniana OS</span>
-                <h2 class="h1">EDUCATION Edition</h2>
-                    <p>Operating system for all kinds of educational institutions from preschool to high school which provides integration of both students' and teacher's workplaces.</p>
+                <div class="section-title" data-aos="fade-up">
+                  <h2>OpenBosniana OS</h2>
+                  <p>EDUCATION Edition</p>
+                </div>
+            
+                <p class="nunito-dark">Operating system for all kinds of educational institutions from preschool to high school which provides integration of both students' and teacher's workplaces.</p>           
                 <div>
                     <a href="/downloads/openbosniana-edu-kde/" class="btn bg-warning text-white">DOWNLOAD</a>
                     <a href="##" class="btn btn-raised">RELEASE NOTES</a>
@@ -249,15 +287,19 @@ crossorigin="anonymous"></script>
 
 
 <section>
-    <div class="container-fluid shadow mt-2">
+    <div class="container-fluid shadow-features3"><br>
         <div class="row justify-content-between align-items-center">
             <div class="col-md-4">
                 <a href="##"><img src="/assets/img/project/error.png" class="img-fluid"/></a><br><br>
             </div>
             <div class="title col-md-8 pl-lg-5">
-                <span class="pre-title">OpenBosniana OS</span>
-                <h2 class="h1">SECURITY Edition</h2>
-                    <p>Operating system with XFCE Desktop for penetration testers and security researchers.</p>
+                <div class="section-title" data-aos="fade-up">
+                  <h2>OpenBosniana OS</h2>
+                  <p>SECURITY Edition</p>
+                </div>
+                
+                <p class="nunito-dark">Operating system with XFCE Desktop for penetration testers and security researchers.</p>        
+                <p class="nunito-dark bg-info pl-1">Downloads are not available.</p>  
                 <div>
                     <a href="##" class="btn bg-danger text-white">DOWNLOAD</a>
                     <a href="##" class="btn btn-raised">RELEASE NOTES</a>
@@ -269,23 +311,24 @@ crossorigin="anonymous"></script>
 </section>
 </div><br>
 
+
 </div>
 
 
     </main>
 
-    <div class="linija-footer-gore"></div>
+    <div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://www.gitlab.com/bosnianaos/" target="_blank">
+        <a href="https://www.gitlab.com/deniosm/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/gl.svg" title=" ">
         </a>
       </div>
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://sourceforge.net/projects/repo-os/" target="_blank">
+        <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/sf.svg" title=" ">
         </a>
       </div>
@@ -313,6 +356,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
+
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -323,72 +367,114 @@ crossorigin="anonymous"></script>
     </div>
   </div>
 </section>
-<footer>
-  <div class="logo-font">
-    <section id="sponsor">
-      <div class="sponsor">
-        <div class="linija-dole mb-1"></div>
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center">
-													<a href="##">OpenBosniana OS</a> and 
-													<a href="##">bosniana.org</a> developed by: 
-													<a href="##">Denis Maslo</a>
-        </p>
+</div>
 
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center"><i class="ri-mail-send-line"></i> Contact:
-          <span class="text-light ml-1">
-          <a href="mailto:dennios@duck.com">
+
+  <footer id="footer" class="footer">
+
+    <div class="container-fluid" style="background-color:rgba(0,0,0,0.2)">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <br>
+          <div class="footer-contact pt-3" style="text-align:start;">
+            <p>Development: <span class="text-danger"> Denis Maslo</span></p>
+            <p>Email:           <a href="mailto:dennios@duck.com">
              dennios@duck.com
-          </a>
-          </span>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:openbosniana_dev@bosniana.org">
-            <span class="text-light ml-1">Developers</span>
-          </a>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:info@bosniana.org">
-            <span class="text-light ml-1">Info</span>
-          </a>
-        </p>
-        <div class="linija-footer mt-1 mb-1"></div>
-      </div>
-    </section>
-  </div>
-  <div class="footer-content">
-    <ul class="footer-links">
-      <li>
-        <a href="https://bosniana.org/">Home</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/project">Project</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/packages">Packages</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/wiki">Wiki</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/blog">Blog</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/gallery">Gallery</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/downloads">Downloads</a>
-      </li>
-    </ul>
-    <div class="linija-footer mb-1"></div>
-    <div id="copyright">
-      <p class="text-center">Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</p>
-      <p class="text-center"> | &copy; 2022-2025 | openbosniana os | bosniana.org | </p>
-    </div>
-  </div>
-</footer><button id="backToTopDugme" title="">↑</button>
+          </a></p>
+            <p>Dev:           <a href="mailto:openbosniana_dev@bosniana.org">
+             openbosniana_dev [@] bosniana.org
+          </a></p>
+            <p>Info:           <a href="mailto:info@bosniana.org">
+             info [@] bosniana.org
+          </a></p><br>
+          <p><a href="/privacy-cookies-policy/">
+             Privacy & Cookies Policy
+          </a></p>
+          </div>
 
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/project/">Project</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/wiki/">Wiki</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="/downloads/">Downloads</a></li>
+            <li><a href="/bs/">Bosnian</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/project/">Home</a></li>
+            <li><a href="/project/education/">Education</a></li>
+            <li><a href="/project/requirements/">Requirements</a></li>
+            <li><a href="/project/documentation/">Documentation</a></li>
+            <li><a href="/project/about/">About</a></li>
+            <li><a href="/project/faq/">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="https://github.com/deniosm/">GitHub</a></li>
+            <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
+            <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
+            <li><a href="https://kernel.org/">Kernel</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="#">#Debian</a></li>
+            <li><a href="#">#OpenBosniana</a></li>
+            <li><a href="#">#GNU/Linux</a></li>
+            <li><a href="#">#FSF</a></li>
+            <li><a href="#">#SalsaDebian</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center" style="border-top:1px solid #222; padding:10px 0">
+
+      <p class="text-center">Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</p>
+      <p class="text-center"> &copy; 2022-2025 | openbosniana os | bosniana.org </p>
+
+    </div>
+
+  </footer>
+
+
+<button id="backToTopDugme" title="">↑</button>
+<script src="/packages/packages.js"></script>
+<script>
+function searchPackages() {
+    const input = document.getElementById("searchBox").value.toLowerCase();
+    const resultsBox = document.getElementById("searchResults");
+    resultsBox.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = packages.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBox.appendChild(li);
+    });
+}
+</script>
 <script>
   window.onscroll = function() {
       const backToTopButton = document.getElementById("backToTop");
@@ -494,7 +580,69 @@ $(document).ready(function() {
         }
     });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('features-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('.features-btn');
+      if (btn) {
+        btn.classList.toggle('rotated');
+      }
 
+      // Optional: Toggle any related content if needed
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('number-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
+
+ <script>
+    // Toggle dropdowns on click
+    document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        // Close other open dropdowns
+        document.querySelectorAll('.sdropdown').forEach(drop => {
+          if (drop !== parent) drop.classList.remove('open');
+        });
+        // Toggle current
+        parent.classList.toggle('open');
+      });
+    });
+
+    function stoggleNavbar() {
+      const nav = document.querySelector('.snavbar');
+      const btn = document.getElementById('smenuToggleBtn');
+      const isHidden = nav.style.display === 'none';
+
+      if (isHidden) {
+        nav.style.display = 'flex';
+        btn.textContent = 'Hide';
+      } else {
+        nav.style.display = 'none';
+        btn.textContent = 'Show';
+      }
+    }
+
+  </script>
 
 
   </body>

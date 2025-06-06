@@ -24,12 +24,12 @@
     <link rel="alternate" type="application/rss+xml" title="OpenBosniana OS" href="rss.xml">
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta property="og:title" content="">
-    <meta property="og:url" content="http://bosniana.org/">
+    <meta property="og:url" content="http://192.168.0.9:4000/">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
 
-    <link rel="canonical" href="http://bosniana.org/">
+    <link rel="canonical" href="http://192.168.0.9:4000/">
     <link rel="alternate" type="application/rss+xml" title="OpenBosniana OS" href="/rss.xml">
 
     <meta property="og:url" content="https://bosniana.org/">
@@ -100,10 +100,9 @@ crossorigin="anonymous"></script>
     <button class="nav-drop-menu" id="dropdownBtn">
         <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
         <div class="nav-dropdown-content navbar-color">
-            <p>Latest</p>
+            <a href="https://bosniana.org/downloads/">Downloads</a>
             <a href="https://bosniana.org/blog/home-052025/">Release Notes | HOME</a>
             <a href="https://bosniana.org/blog/edu-112024/">Release Notes | EDU</a>
-            <a href="https://bosniana.org/downloads/">Downloads</a>
             <p></p>
             <a href="https://bosniana.org/wiki/installation-guide/" target="blank">Installation Guide</a>
             <a href="https://bosniana.org/wiki/">Documentation</a>
@@ -194,532 +193,638 @@ crossorigin="anonymous"></script>
 
     <main class="page-content" aria-label="Content">
 
-        <div class="mshero-margin-top">
-    <div class="ms-hero ms-hero-material">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-7">
-                    <div class="naslovminus">
-                        <div class="ms-hero-img p-3 zoomInUp">
-                            <div class="naslovnaomot">
-                                <img src="/assets/img/home/blank.png" alt class="img-fluid">
-                                <div id="carousel-hero-img" class="carousel carousel-fade slide" data-ride="carousel" data-interval="6000">
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="ms-hero-img-slider carousel-item active">
-                                            <img src="/assets/img/home/desktop.png" alt class="img-fluid">
-                                        </div>
-                                        <div class="ms-hero-img-slider carousel-item">
-                                            <img src="/assets/img/home/11.png" alt class="img-fluid">
-                                        </div>
-                                        <div class="ms-hero-img-slider carousel-item">
-                                            <img src="/assets/img/home/office.png" alt class="img-fluid">
-                                        </div>
-                                        <div class="ms-hero-img-slider carousel-item">
-                                            <img src="/assets/img/home/support.png" alt class="img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="mshero-margin-top">
+          <div class="ms-hero ms-hero-material">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                  <div class="container">
+                    <div class="ms-hero-img p-3 zoomInUp">
+                      <div class="naslovnaomot">
+                        <img src="/assets/img/home/blank.png" alt class="img-fluid">
+                        <div id="carousel-hero-img" class="carousel carousel-fade slide" data-ride="carousel" data-interval="6000">
+                          <div class="carousel-inner" role="listbox">
+                            <div class="ms-hero-img-slider carousel-item active">
+                              <img src="/assets/img/home/desktop.png" alt class="img-fluid">
                             </div>
+                            <div class="ms-hero-img-slider carousel-item">
+                              <img src="/assets/img/home/office.png" alt class="img-fluid">
+                            </div>
+                            <div class="ms-hero-img-slider carousel-item">
+                              <img src="/assets/img/home/support.png" alt class="img-fluid">
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
                 <div class="col-xl-6 col-lg-5">
-                    <div class="ms-hero-material-text-container mt-3 animated fadeInLeft animation-delay-3">
-                        <header class="ms-hero-material-title shadow">
-                            <h1 class="animated fadeInLeft animation-delay-9" style="font-family: GoodTimes;font-size:25px;font-size:2.5rem;letter-spacing:3px;">
-                                open<strong style="font-family: GoodTimes;color:#2ac3ff;">Bosniana</strong>OS
-                            </h1>
-                            <div class="naslovnamargin animated fadeInRight animation-delay-9">
-                                <h2 class="color-light pt-3 pl-2 pb-3 animated fadeInRight animation-delay-11">
-                                    <span ><strong class="text-info-c animated fadeInRight animation-delay-13">Free, </strong></span><span class="animated fadeInRight animation-delay-15">Lightweight, Secure, </span><span class="text-info-c animated fadeInRight animation-delay-17">GNU/Linux </span>Operating System</h2>
+                  <div class="ms-hero-material-text-container mt-3 animated fadeInLeft animation-delay-3">
+                    <header class="ms-hero-material-title shadow">
+                      <h1 class="animated fadeInLeft animation-delay-9" style="font-family: GoodTimes;font-size:25px;font-size:2.5rem;letter-spacing:3px;">
+                        open
+                        <strong style="font-family: GoodTimes;color:#2ac3ff;">Bosniana</strong>OS
+                      </h1>
+                      <div class="naslovnamargin animated fadeInRight animation-delay-9">
+                        <h2 class="color-light pt-3 pl-2 pb-3 animated fadeInRight animation-delay-11">
+                          <span>
+                            <strong class="text-info-c animated fadeInRight animation-delay-13">Free, </strong>
+                          </span>
+                          <span class="animated fadeInRight animation-delay-15">Lightweight, Secure, </span>
+                          <span class="text-info-c animated fadeInRight animation-delay-17">GNU/Linux </span>Operating System
+                        </h2>
+                      </div>
+                    </header>
+                  </div>
+                  <div class="naslovna-list-bckgr">
+                    <div id="homepage-title" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                          <div class="carousel-caption">
+                            <div class="ms-hero-material-text-container">
+                              <ul class="ms-hero-material-list">
+                                <li>
+                                  <div class="ms-list-icon animated zoomInUp animation-delay-1">
+                                    <span class="ms-icon ms-icon-circle ms-icon-cccc color-danger">
+                                      <i class=""></i>
+                                    </span>
+                                  </div>
+                                  <div class="ms-list-text animated fadeInRight animation-delay-3"> An open-source operating system built on the Linux kernel and the GNU Project </div>
+                                </li>
+                                <li>
+                                  <div class="ms-list-icon animated zoomInUp animation-delay-5">
+                                    <span class="ms-icon ms-icon-circle ms-icon-cccc text-info-c">
+                                      <i class=""></i>
+                                    </span>
+                                  </div>
+                                  <div class="ms-list-text animated fadeInRight animation-delay-7"> Designed for ease of use, with a lightweight and user-friendly desktop environment that works seamlessly even on older hardware</div>
+                                </li>
+                                <li>
+                                  <div class="ms-list-icon animated zoomInUp animation-delay-9">
+                                    <span class="ms-icon ms-icon-circle ms-icon-cccc color-danger shadow-3dp">
+                                      <i class=""></i>
+                                    </span>
+                                  </div>
+                                  <div class="ms-list-text animated fadeInRight animation-delay-11"> Access thousands of completely free applications, ready to download and install via the application manager </div>
+                                </li>
+                              </ul>
                             </div>
-                        </header>
-                    </div>
-
-                    <div class="naslovna-list-bckgr">
-                        <div id="homepage-title" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <div class="carousel-caption">
-                                        <div class="ms-hero-material-text-container">
-                                            <ul class="ms-hero-material-list">
-                                                <li>
-                                                    <div class="ms-list-icon animated zoomInUp animation-delay-1">
-                                                        <span class="ms-icon ms-icon-circle ms-icon-cccc color-danger">
-                                                            <i class=""></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="ms-list-text animated fadeInRight animation-delay-3">
-                                                    An open-source operating system built on the Linux kernel and the GNU Project
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ms-list-icon animated zoomInUp animation-delay-5">
-                                                        <span class="ms-icon ms-icon-circle ms-icon-cccc text-info-c">
-                                                            <i class=""></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="ms-list-text animated fadeInRight animation-delay-7">
-                                                        Designed for ease of use, with a lightweight and user-friendly desktop environment that works seamlessly even on older hardware
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ms-list-icon animated zoomInUp animation-delay-9">
-                                                        <span class="ms-icon ms-icon-circle ms-icon-cccc color-danger shadow-3dp">
-                                                            <i class=""></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="ms-list-text animated fadeInRight animation-delay-11">
-                                                        Access thousands of completely free applications, ready to download and install via the application manager
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-
-            <div class="button-row-my mb-4 pb-2">
+              </div>
+              <div class="button-row-my mb-4 pb-2">
                 <a href="/downloads/" class="btn bg-info text-dark">Downloads</a>
                 <a href="/project/" class="btn bg-danger text-white">Read more</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div class="container-fluid">
-      <section class="bg-light"><br>
-        <div class="container">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 ">
-              <h4 class="text-info">Features</h4>
-              <h2 class="nunito-dark">Simple and Easy</h2>
-              <p class="nunito-dark">Simply download one of the versions, create a bootable USB flash drive, and you're ready to go. It is designed to work 'out of the box' and comes fully equipped with the software and applications that most people need.</p>
-            </div>
-            <div class="col-md-6 shadow">
-              <div class="p-1  mt-3">
-                <li class="list-unstyled">
-                  <img src="assets/img/home/office.svg" class="mr-3" alt="Office" width="32px">
-                  <a href="##">Office</a>
-                  <p class="p-1">With the complete LibreOffice office suite, you can use word processing programs, create presentations, drawings, spreadsheets, or even databases. LibreOffice is compatible with Microsoft Office, meaning you can open and use all your existing Microsoft Office files.</p>
-                </li>
-                <br>
-                <li class="list-unstyled">
-                  <img src="assets/img/home/mm.svg" class="mr-3" alt="Office" width="32px">
-                  <a href="##">Multimedia</a>
-                  <p class="p-1">Enjoy music, watch TV and movies, or listen to radio online. We include modern and popular players that handle a wide range of codecs, so you don't have to search for them.</p>
-                </li>
               </div>
             </div>
           </div>
-          <br>
         </div>
-      </section>
-    </div>
-    <br>
-    <div class="container-fluid">
-      <section class="bg-light">
-        <div class="container">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 shadow">
-              <div class="p-1  mt-3">
-                <li class="list-unstyled">
-                  <img src="assets/img/home/dev.svg" class="mr-3" alt="Developer-Friendly" width="32px">
-                  <a href="##">Developer-Friendly</a>
-                  <p class="p-1">OpenBosniana OS is tailored for developers, integrating popular programming languages, compilers, interpreters, libraries, and development frameworks. Whether pre-installed or just a command away in our software repository, it streamlines and accelerates your development process.</p>
-                </li>
-                <br>
-                <li class="list-unstyled">
-                  <img src="assets/img/home/work.svg" class="mr-3" alt="Design" width="32px">
-                  <a href="##">Design</a>
-                  <p class="p-1">Whether you're watching or editing your favorite files, OpenBosniana OS provides you with the tools you need to turn them into something special. Work in 3D with Blender, draw or edit images in GIMP, and use Inkscape for vector graphics.</p>
-                </li>
-              </div>
-            </div>
-            <div class="col-md-6 ">
-              <h4 class="text-info">Features</h4>
-              <h2 class="nunito-dark">Privacy</h2>
-              <p class="nunito-dark">OpenBosniana OS ensures your data is handled safely and reliably. The default web browser is a modified version of Firefox to make it harder for websites to collect user data. Tracking and telemetry features are disabled by default. With our built-in tools, in addition to preserving online privacy, you can also encrypt your home partition during installation—or other storage devices later on.</p>
-              <br>
-            </div>
-          </div>
-          <br>
-        </div>
-      </section>
-    </div>
-    <br>
-    <div class="container-fluid">
-      <section class="bg-light">
-        <div class="container">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 ">
-              <h4 class="text-info">Features</h4>
-              <h2 class="nunito-dark">Safety</h2>
-              <p class="nunito-dark">All Linux distributions are inherently safe. Every user has his own, protected part of the system in which work is done. OpenBosniana OS has numerous pre-configured tools and features to protect security and privacy. As long as you install software from secure repositories, you don't have to worry about unauthorized actions happening to your system.</p>
-              <br>
-            </div>
-            <div class="col-md-6 shadow">
-              <div class="p-1  mt-3">
-                <li class="list-unstyled">
-                  <img src="assets/img/home/upd.svg" class="mr-3" alt="Tools and Updates" width="32px">
-                  <a href="##">User-Friendly</a>
-                  <p class="p-1">With our built-in applications such as OB Welcome and OB Control Center, easily maintain, customize, and improve your system. Install the system once and update as needed.</p>
-                </li>
-                <br>
-                <li class="list-unstyled">
-                  <img src="assets/img/home/apps.svg" class="mr-3" alt="Applications" width="32px">
-                  <a href="##">Applications</a>
-                  <p class="p-1">Different versions of the operating system come with different default applications and tools. Take a closer look at the applications that come with the desired version:</p>
-                    <p class="text-info text-center">Core, Home, Edu, Security</p>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-      </section>
-    </div>
-<br>
-<div class="container-fluid">
-      <section class="bg-light">           
-
-<div class="container shadow">
-<div class="row justify-content-between align-items-center p-2">
-<!-- Begin  Tag -->
-<div class="sf-root" data-id="3875863" data-badge="oss-users-love-us-black" style="width:100px">
-    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
-</div>
-<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
-</script>
-<!-- End  Tag -->
-<!-- Begin  Tag -->
-<div class="sf-root" data-id="3875863" data-badge="oss-rising-star-black" data-metadata="achievement=oss-rising-star" style="width:100px">
-    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
-</div>
-<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
-</script>
-<!-- End  Tag -->
-<!-- Begin  Tag -->
-<div class="sf-root" data-id="3875863" data-badge="oss-community-choice-black" data-metadata="achievement=oss-community-choice" style="width:100px">
-    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
-</div>
-<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
-</script>
-<!-- End  Tag -->
-<!-- Begin  Tag -->
-<div class="sf-root" data-id="3875863" data-badge="oss-sf-favorite-black" data-metadata="achievement=oss-sf-favorite" style="width:100px">
-    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
-</div>
-<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
-</script></div>
-<!-- End  Tag -->
-<br></div><br>
-<div class="container">
-<p>
- <span class="text-white bg-danger p-1">Downloads from SourceForge mirror </span>
-  <b><span id="sf-downloads" class="bg-dark p-1 text-white">     </span></b>
-</p>
-
-<script>
-  const today = new Date().toISOString().split('T')[0];
-
-  const url1 = `https://sourceforge.net/projects/openbosniana-os/files/stats/json?start_date=2025-05-12&end_date=${today}`;
-  const url2 = `https://sourceforge.net/projects/denios-linux/files/stats/json?start_date=2022-09-04&end_date=${today}`;
-
-  Promise.all([fetch(url1), fetch(url2)])
-    .then(responses => Promise.all(responses.map(res => res.json())))
-    .then(([data1, data2]) => {
-      const total1 = data1.total || 0;
-      const total2 = data2.total || 0;
-      const combinedTotal = total1 + total2;
-
-      const formattedTotal = combinedTotal.toLocaleString();
-      document.getElementById('sf-downloads').textContent = formattedTotal;
-    })
-    .catch(error => {
-      console.error('Error fetching totals:', error);
-      document.getElementById('sf-downloads').textContent = 'Error';
-    });
-</script>
- <p class="nunito-dark pb-2">For download statistics we use SourceForge official <a href="https://sourceforge.net/p/forge/documentation/Download%20Stats%20API/">Download Stats API</a></p></div>
-      </section>
-</div>
-<div class="container-fluid">
-      <section class="bg-light">
-        <div class="container shadow">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 ">
-              <h4 class="text-info">Quick Start Guide</h4>
-              <h3 class="nunito-dark">Download</h3>
-
-              <p class="nunito-dark">Select and download the version and edition you want:</p>
-
-              <a href="/downloads/"><p class="nunito-dark">OpenBosniana OS
-                  <b>HOME</b></a></p>
-              <a href="/downloads/"><p class="nunito-dark">OpenBosniana OS
-                  <b>EDUCATION</b></a></p>
-              <a href="/downloads/"><p class="nunito-dark">OpenBosniana OS
-                  <b>SECURITY</b></a></p>
-              <a href="/gallery/" class="btn btn-raised">Gallery</a>
-              <a href="/project/" class="text-white btn btn-raised bg-info">More</a>
-              <a href="https://bosniana.org/wiki/installation-guide/choose/" target="_blank" class="btn btn-raised">Help</a>
-
-            </div>
-
-            <div class="col-md-6 ">
-              <h4 class="text-info">Quick Start Guide</h4>
-              <h3 class="nunito-dark">Boot OpenBosniana OS</h3>
-
-              <p class="nunito-dark">To burn an ISO image to a blank DVD or USB flash drive, <a href="https://bosniana.org/wiki/installation-guide/burn/" target="_blank"> use this guide.</a></p>
-
-              <h3 class="nunito-dark">Install OpenBosniana OS</h3>
-
-              <p class="nunito-dark"><a href="https://bosniana.org/wiki/installation-guide/install/" target="_blank"> Use this guide</a> to help with installation.</p>
-
-            </div>
-          </div>
-          <br>
-        </div>
-      </section>
-    </div><br>
 
 
-<br><div class="bg-blog">
-    <div class="container-fluid">
-                <div class="card-body mt-2 pt-2">
-                    <h2 class="card-title-b text-info-c"><span class="nunito-dark">Latest News</span></h2>
-                </div>
 
-    </div>
-
-    <div class="section-block-grey pb-2 pt-2">
+<main class="page-content" aria-label="Content">
+      <br>
+      <div class="container-fluid shadow">
+        <br>
         <div class="container-fluid">
-            <div class="row">
-            
-                <div class="col-md-4 col-sm-6 col-12">
-                    <div class="blog-grid-simple bg-blog1">
-                        <img src="/assets/img/project/bg-home-25.png" alt="OpenBosniana Home KDE 052025">
-                        <h4>OpenBosniana Home KDE 052025 release note</h4>
-                        <div class="blog-grid-simple-linija"></div>
-                        <p>New integrated default apps, a new default app launcher (Start Menu), GUI improvements, a new look tailored to Windows users, many bugs fixed, and more.</p>
-                        <div class="blog-grid-simple-content">
-                            <div class="row blog-grid-simple-date color-danger">
-                                <div class="col-2 pr-0">
-                                    <i class="ri-calendar-2-fill"></i>
-                                </div>
-                                <div class="col-5 pl-0">
-                                    <h5>2025/05/15</h5>
-                                </div>
-                                <div class="col-5 text-right">
-                                    <a href="/blog/home-052025/">Read on blog</a>
-                                </div>
-                            </div>
-                        </div>
+          <!-- Section Title -->
+          <div class="section-title" data-aos="fade-up">
+            <h2>Features</h2>
+            <p>What is OpenBosniana OS?</p>
+          </div>
+          <div>
+            <div class="row gy-4">
+              <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                <p> OpenBosniana OS is an operating system for desktop and laptop computers. It is built on top of Debian with a focus on privacy, security, and everyday tasks. It is designed to work 'out of the box' and comes fully equipped with the apps most people need. </p>
+                <div class="p-1  mt-3">
+                  <li class="list-unstyled p-1 shadow-features">
+                    <a href="##" class="features-toggle d-flex align-items-center justify-content-between" style="font-family: Nunito; font-size: 20px; font-weight: 500; padding-left: 8px; color: rgba(0,0,0,0.5);">
+                      <span class="d-flex align-items-center">
+                        <img src="/assets/img/home/office.svg" class="mr-2" alt="Office" width="32px"> Office </span>
+                      <img src="/assets/img/home/arrow-up.svg" class="features-btn" alt="btn" width="24px">
+                    </a>
+                    <div class="features-content">
+                      <p class="p-1">With the complete LibreOffice office suite, you can use word processing programs, create presentations, drawings, spreadsheets, or even databases. LibreOffice is compatible with Microsoft Office, meaning you can open and use all your existing Microsoft Office files.</p>
                     </div>
-                </div>
-            
-                <div class="col-md-4 col-sm-6 col-12">
-                    <div class="blog-grid-simple  bg-blog1">
-                        <img src="/assets/img/project/edu.png" alt="OpenBosniana Edu KDE 112024">
-                        <h4>OpenBosniana Edu KDE 112024 release note</h4>
-                        <div class="blog-grid-simple-linija"></div>
-                        <p>The latest version of the Edu KDE amd64 series. New ISOs. Many improvements</p>
-                        <div class="blog-grid-simple-content">
-                            <div class="row blog-grid-simple-date color-danger">
-                                <div class="col-2 pr-0">
-                                    <i class="ri-calendar-2-fill"></i>
-                                </div>
-                                <div class="col-5 pl-0">
-                                    <h5>2024/11/14</h5>
-                                </div>
-                                <div class="col-5 text-right">
-                                    <a href="/blog/edu-112024/" class="btn-info-c">Read on blog</a>
-                                </div>
-                            </div>
-                        </div>
+                  </li>
+                  <br>
+                  <li class="list-unstyled p-1 shadow shadow-features2">
+                    <a href="##" class="features-toggle d-flex align-items-center justify-content-between" style="font-family: Nunito; font-size: 20px; font-weight: 500; padding-left: 8px; color: rgba(0,0,0,0.5);">
+                      <span class="d-flex align-items-center">
+                        <img src="/assets/img/home/privacy.svg" class="mr-2" alt="Privacy" width="32px"> Privacy </span>
+                      <img src="/assets/img/home/arrow-up.svg" class="features-btn" alt="btn" width="24px">
+                    </a>
+                    <div class="features-content">
+                      <p class="p-1">OpenBosniana OS ensures your data is handled safely and reliably. The default web browser is a modified version of Firefox to make it harder for websites to collect user data. Tracking and telemetry features are disabled by default. With our built-in tools, in addition to preserving online privacy, you can also encrypt your home partition during installation—or other storage devices later on.</p>
                     </div>
+                  </li>
+                  <br>
+                  <li class="list-unstyled p-1 shadow-features ">
+                    <a href="##" class="features-toggle d-flex align-items-center justify-content-between" style="font-family: Nunito; font-size: 20px; font-weight: 500; padding-left: 8px; color: rgba(0,0,0,0.5);">
+                      <span class="d-flex align-items-center">
+                        <img src="/assets/img/home/security-high.svg" class="mr-2" alt="Office" width="32px"> Safety </span>
+                      <img src="/assets/img/home/arrow-up.svg" class="features-btn" alt="btn" width="24px">
+                    </a>
+                    <div class="features-content">
+                      <p class="p-1">OpenBosniana OS ensures your data is handled safely and reliably. The default web browser is a modified version of Firefox to make it harder for websites to collect user data. Tracking and telemetry features are disabled by default. With our built-in tools, in addition to preserving online privacy, you can also encrypt your home partition during installation—or other storage devices later on.</p>
+                    </div>
+                  </li>
                 </div>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-1 ">
+                  <li class="list-unstyled p-1 shadow shadow-features2">
+                    <a href="##" class="features-toggle d-flex align-items-center justify-content-between" style="font-family: Nunito; font-size: 20px; font-weight: 500; padding-left: 8px; color: rgba(0,0,0,0.5);">
+                      <span class="d-flex align-items-center">
+                        <img src="/assets/img/home/dev.svg" class="mr-2" alt="Office" width="32px"> Developer-Friendly </span>
+                      <img src="/assets/img/home/arrow-up.svg" class="features-btn" alt="btn" width="24px">
+                    </a>
+                    <div class="features-content">
+                      <p class="p-1">OpenBosniana OS is tailored for developers, integrating popular programming languages, compilers, interpreters, libraries, and development frameworks. Whether pre-installed or just a command away in our software repository, it streamlines and accelerates your development process.</p>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-unstyled p-1 shadow-features">
+                    <a href="##" class="features-toggle d-flex align-items-center justify-content-between" style="font-family: Nunito; font-size: 20px; font-weight: 500; padding-left: 8px; color: rgba(0,0,0,0.5);">
+                      <span class="d-flex align-items-center">
+                        <img src="/assets/img/home/mm.svg" class="mr-2" alt="Office" width="32px"> Multimedia </span>
+                      <img src="/assets/img/home/arrow-up.svg" class="features-btn" alt="btn" width="24px">
+                    </a>
+                    <div class="features-content">
+                      <p class="p-1">Enjoy music, watch TV and movies, or listen to radio online. We include modern and popular players that handle a wide range of codecs, so you don't have to search for them.</p>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-unstyled p-1 shadow shadow-features2">
+                    <a href="##" class="features-toggle d-flex align-items-center justify-content-between" style="font-family: Nunito; font-size: 20px; font-weight: 500; padding-left: 8px; color: rgba(0,0,0,0.5);">
+                      <span class="d-flex align-items-center">
+                        <img src="/assets/img/home/work.svg" class="mr-2" alt="Office" width="32px"> Design </span>
+                      <img src="/assets/img/home/arrow-up.svg" class="features-btn" alt="btn" width="24px">
+                    </a>
+                    <div class="features-content">
+                      <p class="p-1">Whether you're watching or editing your favorite files, OpenBosniana OS provides you with the tools you need to turn them into something special. Work in 3D with Blender, draw or edit images in GIMP, and use Inkscape for vector graphics.</p>
+                    </div>
+                  </li>
+                  <br>
+                  <br>
+                  <p class="text-center">
+                    <a href="/features/" class="btn-raised btn-light shadow-features p-3 m-1">ALL FEATURES</a>
+                    <a href="/project/" class="btn-raised btn-info shadow-features p-3 m-1">ABOUT</a>
+                    <a href="/gallery/" class="btn-raised btn-light shadow-features p-3 m-1">GALLERY</a>
+                  </p>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br>
+      </div>
+</main>
+      <div class="container-fluid shadow dd-bg">
+        <br>
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">Latest release</h2>
+          <p style="color:#fff">OpenBosniana OS HOME KDE 05-2025</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">The latest version of the friendly operating system is here. Install it on your computer today!</p>
+          </div>
+          <br>
+          <div class="cta-btn-container text-center">
+            <a class="bg-light shadow p-3 m-1 align-middle" href="/downloads/">DOWNLOAD</a>
+          </div>
+        </div>
+        <br>
+        <br>
 
-                <div class="col-md-4 col-sm-6 col-12">
-                    <div class="blog-grid-simple  bg-blog1">
-                        <img src="/assets/img/project/default.jpg" alt="OpenBosniana Home KDE 092024">
-                        <h4>OpenBosniana Home KDE 092024 release note</h4>
-                        <div class="blog-grid-simple-linija"></div>
-                        <p>The latest version of the Home KDE amd64 series.</p>
-                        <div class="blog-grid-simple-content">
-                            <div class="row blog-grid-simple-date color-danger">
-                                <div class="col-2 pr-0">
-                                    <i class="ri-calendar-2-fill"></i>
-                                </div>
-                                <div class="col-5 pl-0">
-                                    <h5>2024/10/21</h5>
-                                </div>
-                                <div class="col-5 text-right">
-                                    <a href="/blog/home-092024/">Read on blog</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="container"><br>
+            <div class="row justify-content-between align-items-center">
+
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-users-love-us-white" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-rising-star-white" data-metadata="achievement=oss-rising-star" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3552979" data-badge="oss-community-choice-white" data-metadata="achievement=oss-community-choice" style="width:100px">
+    <a href="https://sourceforge.net/projects/denios-linux/" target="_blank">Denios</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3552979';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+<!-- Begin  Tag -->
+<div class="sf-root" data-id="3875863" data-badge="oss-sf-favorite-white" data-metadata="achievement=oss-sf-favorite" style="width:100px">
+    <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">OpenBosniana-OS</a>
+</div>
+<script>(function () {var sc=document.createElement('script');sc.async=true;sc.src='https://b.sf-syn.com/badge_js?sf_id=3875863';var p=document.getElementsByTagName('script')[0];p.parentNode.insertBefore(sc, p);})();
+</script>
+<!-- End  Tag -->
+              </div><br>
 
             </div>
-        </div>
-        <!-- All News Link -->
-        <div class="container-fluid center-block">
-            <h2 class="text-center">
+          </div>
+      <div class="container-fluid shadow">
+        <br>
+        <div class="bg-light">
+          <p class="text-center">
+            <span class="bg-dark p-1 text-white shadow-features3">Total downloads from SourceForge mirror </span>
+
+          </p>
+            <p class="text-center mt-1" style="font-size:22px!important">
+              <span id="sf-downloads" class="bg-dark p-1 text-danger shadow-features3"></span>
+            </p>
+          <script>
+            const today = new Date().toISOString().split('T')[0];
+            const url1 = `https://sourceforge.net/projects/openbosniana-os/files/stats/json?start_date=2025-05-12&end_date=${today}`;
+            const url2 = `https://sourceforge.net/projects/denios-linux/files/stats/json?start_date=2022-09-04&end_date=${today}`;
+            Promise.all([fetch(url1), fetch(url2)]).then(responses => Promise.all(responses.map(res => res.json()))).then(([data1, data2]) => {
+              const total1 = data1.total || 0;
+              const total2 = data2.total || 0;
+              const combinedTotal = total1 + total2;
+              const formattedTotal = combinedTotal.toLocaleString();
+              document.getElementById('sf-downloads').textContent = formattedTotal;
+            }).catch(error => {
+              console.error('Error fetching totals:', error);
+              document.getElementById('sf-downloads').textContent = 'Error';
+            });
+          </script>
+          <p class="nunito-dark text-center  pt-2 pb-2">For download statistics we use SourceForge official <a href="https://sourceforge.net/p/forge/documentation/Download%20Stats%20API/">Download Stats API</a>
+          </p>
+    </div> 
+</div>   
+
+      <div class="container-fluid">
+        <br>
+        <div class="container-fluid">
+            <div class="section-title" data-aos="fade-up">
+              <h2>From the blog</h2>
+              <p>Latest news</p>
+            </div>
+
+<div class="text-start">
+  <h4 class="text-start">Categories</h4>
+<div class="ob-meta-top">
+    <li>
+      <a href="#">Software <span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">Accessories <span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">Tutorials <span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">Education <span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">Drivers <span></span>
+      </a>
+    </li>
+    <li>
+      <a href="#">Release notes <span></span>
+      </a>
+    </li>
+
+</div>
+</div> 
+ <br>
+      </div>
+
+     <ob-section id="ob-blog-posts" class="ob-blog-posts obsection">
+
+      <div class="container-fluid">
+        <div class="row">
+
+        <div class="col-lg-4"><div class="m-2">
+            <div class="ob-article">
+
+              <div class="ob-post-img">
+                <div class="img-fluid">
+                    <img src="/assets/img/blog/bg-home.png" alt="" >
+                </div>
+              </div>
+
+              <p class="ob-post-category">Release notes</p>
+
+              <h2 class="ob-title">
+                <a href="/blog/home-052025/">OpenBosniana Home KDE 052025</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="/assets/img/blog-author.jpg" alt="" class="ob-post-author-img">
+                <div class="ob-post-meta">
+                  <p class="ob-post-author">Denis Maslo</p>
+
+                  <p class="ob-post-date">
+                    <time datetime="2025-05-15">May 15, 2025</time>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div> </div>
+
+        <div class="col-lg-4"><div class="m-2">
+            <div class="ob-article">
+
+              <div class="ob-post-img">
+                <div class="img-fluid">
+                    <img src="/assets/img/blog/default.jpg" alt="" >
+                </div>
+              </div>
+
+              <p class="ob-post-category">Release notes</p>
+
+              <h2 class="ob-title">
+                <a href="/blog/home-092024/">OpenBosniana Home KDE 092024</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="/assets/img/blog-author.jpg" alt="" class="ob-post-author-img">
+                <div class="ob-post-meta">
+                  <p class="ob-post-author">Denis Maslo</p>
+
+                  <p class="ob-post-date">
+                    <time datetime="2024-12-22">Dec 22, 2024</time>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div> </div>
+
+        <div class="col-lg-4"><div class="m-2">
+            <div class="ob-article">
+
+              <div class="ob-post-img">
+                <div class="img-fluid">
+                    <img src="/assets/img/blog/default.jpg" alt="" >
+                </div>
+              </div>
+
+              <p class="ob-post-category">Release notes</p>
+
+              <h2 class="ob-title">
+                <a href="/blog/edu-112024/">OpenBosniana Edu KDE 112024</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src="/assets/img/blog-author.jpg" alt="" class="ob-post-author-img">
+                <div class="ob-post-meta">
+                  <p class="ob-post-author">Denis Maslo</p>
+
+                  <p class="ob-post-date">
+                    <time datetime="2024-11-14">Nov 11, 2024</time>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div> </div>
+
+            <!-- All News Link -->
+            <div class="container-fluid center-block">
+              <h2 class="text-center">
                 <a href="/blog/" class="btn bg-info text-white">ALL NEWS</a>
-            </h2>
+              </h2>
+          </div>
+          
+            </div>
+          </div><br>
+    </ob-section>
+
+
+
+</div>
+
+
+
+
+
+
+      <div class="container-fluid shadow-features3">
+        <br>
+        <section class="bg-light">
+          <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-md-6 ">
+                <div class="section-title text-start" data-aos="fade-up">
+                  <h2>Try it now</h2>
+                  <p>Quick Start Guide</p>
+                </div>
+                <p class="nunito-dark">1. Select and download the version and edition you want:</p>
+                <ul class="text-start pl-2">
+                <li>
+                <a href="/downloads/" class="text-info">
+                  <span>OpenBosniana OS <b>HOME</b></span>
+                </a>
+ </li>               <li>
+                <a href="/downloads/" class="text-info">
+                  <span>OpenBosniana OS <b>EDUCATION</b></span>
+                </a>
+  </li>                <li>
+                <a href="/downloads/" class="text-info">
+                  <span>OpenBosniana OS <b>SECURITY</b></span>
+                </a>
+  </li></ul> <br>
+                <a href="/gallery/" class="btn btn-raised">Gallery</a>
+                <a href="/project/" class="text-white btn btn-raised bg-info">More</a>
+                <a href="https://bosniana.org/wiki/installation-guide/choose/" target="_blank" class="btn btn-raised">Help</a>
+              </div>
+              <div class="col-md-6"><br>
+                <p>2. Simply create bootable media (DVD, USB...)</p>
+                <p class="nunito-dark">To burn an ISO image to a blank DVD or USB flash drive, <a href="https://bosniana.org/wiki/installation-guide/burn/" target="_blank"> use this guide.</a>
+                </p>
+                <br>
+                <p>3. Test or install OpenBosniana OS</p>
+                <p class="nunito-dark">
+                  <a href="https://bosniana.org/wiki/installation-guide/install/" target="_blank"> Use this guide</a> to help with installation.
+                </p>
+              </div>
+            </div>
+            <br>
+          </div>
+        </section>
+      </div>
+      <br>
+
+      <div class="container-fluid">
+        <br>
+
+        <div class="container-fluid">
+          <div class="section-title text-start" data-aos="fade-up">
+            <h2>Packages</h2>
+            <p>Latest Updated Packages</p>
+          </div>
+          <p class="nunito-dark"> This list shows the most recently updated packages. </p>
+          <p class="nunito-dark"> This is a limited OpenBosniana OS repositories and contains the packages needed to build the system.</p>
+          <p class="nunito-dark"> With the Package Search and the Online Package Viewer, you can track, download, and resolve dependencies for all packages available in the main OpenBosniana OS repository. </p>
+          <br>
+          <a href="/packages/" class="btn-raised shadow-features p-3">VIEW MORE </a>
         </div>
-    </div>
-</div>
-
-
-<div class="container-fluid"><br>
-  <div class="pb-2 pt-2">
-    <div class="card-body mt-2 pt-2">
-      <h2 class="card-title-b text-info-c"><span class="nunito-dark">Recent Packages</span></h2>
-      <p class="nunito-dark p-2 mt-2">
-        Recent updates. View more<a href="packages/"> here</a>.
+        <br>
+        <div class="container">
+          <h3>Online Package Viewer</h3>
+          <div class="bg-2">
+            <input type="text" id="searchBox" placeholder="  Package Name..." onkeyup="searchPackages()" class="form-control mb-3 pl-2 text-white shadow">
+          </div>
+          <ul id="searchResults" class="list-group mb-3"></ul>
+        </div>
+      </div>
+      </div>
+      <div class="table-responsive tabela-okvir-1 nunito-dark">
+        <table class="table table-sm">
+          <thead class="text-white bg-2">
+            <tr>
+              <th scope="col">Arch</th>
+              <th scope="col">Name</th>
+              <th scope="col">Version</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/l/linux/hyperv-daemons/">hyperv-daemons</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 17:33:53</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/packages/pool/main/l/linux/linux-libc-dev/">linux-libc-dev</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 17:29:38</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/l/linux/linux-image-6.12.22+bpo-amd64-unsigned/">linux-image-6.12.22+bpo-amd64-unsigned</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 06:10:07</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/o/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned/">openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 06:08:16</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/packages/pool/main/o/openbosniana-kernel-bootfiles-unsigned/openbosniana-kernel-bootfiles-unsigned/">openbosniana-kernel-bootfiles-unsigned</a>
+              </td>
+              <td>2025.05.14</td>
+              <td>2025-05-13 05:39:25</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/packages/pool/main/o/openbosniana-kernel-bootfiles-signed/openbosniana-kernel-bootfiles-signed/">openbosniana-kernel-bootfiles-signed</a>
+              </td>
+              <td>2025.05.14</td>
+              <td>2025-05-13 05:35:16</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/o/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64/">openbosniana-kernel-bootfiles-6.12.22+bpo-amd64</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:38</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/l/linux/linux-kbuild-6.12.22+bpo/">linux-kbuild-6.12.22+bpo</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:37</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/l/linux-signed-amd64/linux-image-6.12.22+bpo-amd64/">linux-image-6.12.22+bpo-amd64</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:37</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/packages/pool/main/l/linux/linux-headers-6.12.22+bpo-common/">linux-headers-6.12.22+bpo-common</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:33</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/l/linux/linux-headers-6.12.22+bpo-amd64/">linux-headers-6.12.22+bpo-amd64</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:32</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/packages/pool/main/o/openbosniana-kernel-bootfiles-6.12.12+bpo-amd64/openbosniana-kernel-bootfiles-6.12.12+bpo-amd64/">openbosniana-kernel-bootfiles-6.12.12+bpo-amd64</a>
+              </td>
+              <td>6.12.12-1~bpo12+1</td>
+              <td>2025-05-13 02:40:46</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <p class="text-center mb-2 mt-2">
+        <a href="/packages/" class="btn-raised  shadow p-3">VIEW MORE</a>
       </p>
-                    <p class="nunito-dark">
-                    Find packages using our online package viewer.
-                    </p>
-<div class="container shadow">
-<h3>Online Package Viewer</h3>
-<div class="bg-2 shadow">
-<input type="text" id="searchBox" placeholder="  Package Name..." onkeyup="searchPackages()" class="form-control mb-3 pl-2 text-white shadow">
-</div>
-<ul id="searchResults" class="list-group mb-3"></ul>
-</div>
-</div>
-    </div>
-    <div class="table-responsive tabela-okvir-1 nunito-dark">
-      <table class="table table-sm">
-        <thead class="text-white bg-2">
-          <tr>
-            <th scope="col">Arch</th>
-            <th scope="col">Name</th>
-            <th scope="col">Version</th>
-            <th scope="col">Date</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td>all</td>
-            <td><a href="/packages/pool/main/w/wireless-regdb/wireless-regdb/">wireless-regdb</a></td>
-            <td>2025.02.20-1~deb12u1</td>
-            <td>2025-05-25 00:22:54</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/s/shadow/uidmap/">uidmap</a></td>
-            <td>4.13+dfsg1-1+deb12u1</td>
-            <td>2025-05-25 00:22:52</td>
-          </tr>
-        
-          <tr>
-            <td>all</td>
-            <td><a href="/packages/pool/main/p/python-h11/python3-h11/">python3-h11</a></td>
-            <td>0.14.0-1.1~deb12u1</td>
-            <td>2025-05-25 00:22:52</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/s/shadow/passwd/">passwd</a></td>
-            <td>4.13+dfsg1-1+deb12u1</td>
-            <td>2025-05-25 00:22:52</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/o/openssl/openssl/">openssl</a></td>
-            <td>3.0.16-1~deb12u1</td>
-            <td>2025-05-25 00:22:52</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/o/openssh/openssh-client/">openssh-client</a></td>
-            <td>9.2p1-2+deb12u6</td>
-            <td>2025-05-25 00:22:51</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/o/openjdk-17/openjdk-17-jre/">openjdk-17-jre</a></td>
-            <td>17.0.15+6-1~deb12u1</td>
-            <td>2025-05-25 00:22:51</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/o/openjdk-17/openjdk-17-jre-headless/">openjdk-17-jre-headless</a></td>
-            <td>17.0.15+6-1~deb12u1</td>
-            <td>2025-05-25 00:22:51</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/o/openjdk-17/openjdk-17-jdk/">openjdk-17-jdk</a></td>
-            <td>17.0.15+6-1~deb12u1</td>
-            <td>2025-05-25 00:22:51</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/o/openjdk-17/openjdk-17-jdk-headless/">openjdk-17-jdk-headless</a></td>
-            <td>17.0.15+6-1~deb12u1</td>
-            <td>2025-05-25 00:22:50</td>
-          </tr>
-        
-          <tr>
-            <td>all</td>
-            <td><a href="/packages/pool/main/n/node-serialize-javascript/node-serialize-javascript/">node-serialize-javascript</a></td>
-            <td>6.0.0-2+deb12u1</td>
-            <td>2025-05-25 00:22:49</td>
-          </tr>
-        
-          <tr>
-            <td>amd64</td>
-            <td><a href="/packages/pool/main/s/shadow/login/">login</a></td>
-            <td>4.13+dfsg1-1+deb12u1</td>
-            <td>2025-05-25 00:22:49</td>
-          </tr>
-        
-        </tbody>
-      </table>
-    </div><br>
-    <p class="text-center mb-2 mt-2">
-      <a href="packages/" class="btn-raised shadow p-3">VIEW MORE</a>
-    </p>
-  </div>
-</div><br>
-
+      <br>
+      </div>
+      </div>
 
 
 
     </main>
 
-    <div class="linija-footer-gore"></div>
+    <div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://www.gitlab.com/bosnianaos/" target="_blank">
+        <a href="https://www.gitlab.com/deniosm/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/gl.svg" title=" ">
         </a>
       </div>
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://sourceforge.net/projects/repo-os/" target="_blank">
+        <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/sf.svg" title=" ">
         </a>
       </div>
@@ -747,6 +852,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
+
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -757,71 +863,95 @@ crossorigin="anonymous"></script>
     </div>
   </div>
 </section>
-<footer>
-  <div class="logo-font">
-    <section id="sponsor">
-      <div class="sponsor">
-        <div class="linija-dole mb-1"></div>
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center">
-													<a href="##">OpenBosniana OS</a> and 
-													<a href="##">bosniana.org</a> developed by: 
-													<a href="##">Denis Maslo</a>
-        </p>
+</div>
 
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center"><i class="ri-mail-send-line"></i> Contact:
-          <span class="text-light ml-1">
-          <a href="mailto:dennios@duck.com">
+
+  <footer id="footer" class="footer">
+
+    <div class="container-fluid" style="background-color:rgba(0,0,0,0.2)">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <br>
+          <div class="footer-contact pt-3" style="text-align:start;">
+            <p>Development: <span class="text-danger"> Denis Maslo</span></p>
+            <p>Email:           <a href="mailto:dennios@duck.com">
              dennios@duck.com
-          </a>
-          </span>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:openbosniana_dev@bosniana.org">
-            <span class="text-light ml-1">Developers</span>
-          </a>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:info@bosniana.org">
-            <span class="text-light ml-1">Info</span>
-          </a>
-        </p>
-        <div class="linija-footer mt-1 mb-1"></div>
+          </a></p>
+            <p>Dev:           <a href="mailto:openbosniana_dev@bosniana.org">
+             openbosniana_dev [@] bosniana.org
+          </a></p>
+            <p>Info:           <a href="mailto:info@bosniana.org">
+             info [@] bosniana.org
+          </a></p><br>
+          <p><a href="/privacy-cookies-policy/">
+             Privacy & Cookies Policy
+          </a></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/project/">Project</a></li>
+            <li><a href="/packages/">Packages</a></li>
+            <li><a href="/wiki/">Wiki</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="/downloads/">Downloads</a></li>
+            <li><a href="/bs/">Bosnian</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/project/">Home</a></li>
+            <li><a href="/project/education/">Education</a></li>
+            <li><a href="/project/requirements/">Requirements</a></li>
+            <li><a href="/project/documentation/">Documentation</a></li>
+            <li><a href="/project/about/">About</a></li>
+            <li><a href="/project/faq/">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="https://github.com/deniosm/">GitHub</a></li>
+            <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
+            <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
+            <li><a href="https://kernel.org/">Kernel</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="#">#Debian</a></li>
+            <li><a href="#">#OpenBosniana</a></li>
+            <li><a href="#">#GNU/Linux</a></li>
+            <li><a href="#">#FSF</a></li>
+            <li><a href="#">#SalsaDebian</a></li>
+          </ul>
+        </div>
+
       </div>
-    </section>
-  </div>
-  <div class="footer-content">
-    <ul class="footer-links">
-      <li>
-        <a href="https://bosniana.org/">Home</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/project">Project</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/packages">Packages</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/wiki">Wiki</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/blog">Blog</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/gallery">Gallery</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/downloads">Downloads</a>
-      </li>
-    </ul>
-    <div class="linija-footer mb-1"></div>
-    <div id="copyright">
-      <p class="text-center">Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</p>
-      <p class="text-center"> | &copy; 2022-2025 | openbosniana os | bosniana.org | </p>
     </div>
-  </div>
-</footer><button id="backToTopDugme" title="">↑</button>
+
+    <div class="container copyright text-center" style="border-top:1px solid #222; padding:10px 0">
+
+      <p class="text-center">Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries.</p>
+      <p class="text-center"> &copy; 2022-2025 | openbosniana os | bosniana.org </p>
+
+    </div>
+
+  </footer>
+
+
+<button id="backToTopDugme" title="">↑</button>
 <script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
@@ -946,7 +1076,69 @@ $(document).ready(function() {
         }
     });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('features-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('.features-btn');
+      if (btn) {
+        btn.classList.toggle('rotated');
+      }
 
+      // Optional: Toggle any related content if needed
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('number-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
+
+ <script>
+    // Toggle dropdowns on click
+    document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        // Close other open dropdowns
+        document.querySelectorAll('.sdropdown').forEach(drop => {
+          if (drop !== parent) drop.classList.remove('open');
+        });
+        // Toggle current
+        parent.classList.toggle('open');
+      });
+    });
+
+    function stoggleNavbar() {
+      const nav = document.querySelector('.snavbar');
+      const btn = document.getElementById('smenuToggleBtn');
+      const isHidden = nav.style.display === 'none';
+
+      if (isHidden) {
+        nav.style.display = 'flex';
+        btn.textContent = 'Hide';
+      } else {
+        nav.style.display = 'none';
+        btn.textContent = 'Show';
+      }
+    }
+
+  </script>
 
 
   </body>
