@@ -92,72 +92,188 @@ crossorigin="anonymous"></script>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container-full">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-    <button class="nav-drop-menu" id="dropdownBtn">
-        <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
-        <div class="nav-dropdown-content navbar-color">
-            <p>Latest</p>
-            <a href="https://bosniana.org/blog/home-052025/">Release Notes | HOME</a>
-            <a href="https://bosniana.org/blog/edu-112024/">Release Notes | EDU</a>
-            <a href="https://bosniana.org/downloads/">Downloads</a>
-            <p></p>
-            <a href="https://bosniana.org/wiki/installation-guide/" target="blank">Installation Guide</a>
-            <a href="https://bosniana.org/wiki/">Documentation</a>
-        </div>
+    <button class="nav-drop-menu-search" id="dropdownBtnSearch">
+
+        <i class="ri-search-line" id="dropdownIconSearch"></i><span>Search</span>
+        <div class="nav-dropdown-content-search">
+
+            <div class="text-dark">
+                <input type="text" id="searchBoxGeneral" placeholder=" Search..." onkeyup="searchPackagesGeneral()" class="form-control pl-2 text-dark">
+
+                <ul id="searchResultsGeneral" class="pl-0 shadow-features3 text-light"></ul>
+
+           </div>
+ </div>
     </button>
+
      <div class="container-fluid">
           <a class="navbar-brand nav-vendor" href="/"></a>
     </div>
-      <button class="btn-sakriveni">
-        <a href="/bs/" class="text-white">
-          <i class="ri-global-line"></i> BS </a>
-      </button>
-      <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
-      </button>
+
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-translate-2" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+
+
+            <a class=" " href="/bs/">Bosnian<i class=""></i></a>
+
+            <a class=" active" href="/">English<i class=""></i></a>
+
+
+        </div>
+    </button>
+
+
+
+    <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="All OpenBosniana">
+      <span class="menu-text">All OpenBosniana</span><img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" />
+    </button>
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
 
-          <li class="nav-item ">
-            <a href="/">
-              <i class="ri-home-4-fill"></i> Home </a>
-          </li>
 
           <li class="nav-item ">
-            <a href="/project/">
-              <i class="ri-file-info-line"></i> Project </a>
+            <a href="/">
+               Home <i class=""></i></a>
           </li>
+
+
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/project/" class="">
+         Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/security/" class="">
+         Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+         Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+         Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+         Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+         About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+         FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
 
           <li class="nav-item active">
             <a href="/packages/">
-              <i class="ri-apps-line"></i> Packages </a>
+              Packages <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/wiki/">
-              <i class="ri-book-2-line"></i> Wiki </a>
+              Wiki <i class=""></i></a>
           </li>
 
-          <li class="nav-item ">
-            <a href="/blog/">
-              <i class="ri-news-line"></i> Blog </a>
-          </li>
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+         All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+         Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+         Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+         Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+         Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+         Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
 
           <li class="nav-item ">
             <a href="/gallery/">
-              <i class="ri-image-fill"></i> Gallery </a>
+              Gallery <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/downloads/">
-              <i class="ri-download-2-fill"></i> Downloads </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="/bs/">
-              <i class="ri-global-line"></i> BS </a>
+              Downloads <i class=""></i></a>
           </li>
 
         </ul>
@@ -166,27 +282,156 @@ crossorigin="anonymous"></script>
 </div>
 <div class="ms-slidebar " id="ms-slidebar">
     <ul class="ms-slidebar-menu" id="slidebar-menu">
-<br>
 
-        <li class="nav-item"> <a class=" " href="/"><i class="ri-home-4-fill"></i>Home</a></li>
+        <li class="nav-item"> <a class=" " href="/">Home <i class=""></i></a></li>
 
-        <li class="nav-item"> <a class=" " href="/project/"><i class="ri-file-info-line"></i>Project</a></li>
 
-        <li class="nav-item"> <a class=" active" href="/packages/"><i class="ri-apps-line"></i>Packages</a></li>
 
-        <li class="nav-item"> <a class=" " href="/wiki/"><i class="ri-book-2-line"></i>Wiki</a></li>
 
-        <li class="nav-item"> <a class=" " href="/blog/"><i class="ri-news-line"></i>Blog</a></li>
 
-        <li class="nav-item"> <a class=" " href="/gallery/"><i class="ri-image-fill"></i>Gallery</a></li>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
 
-        <li class="nav-item"> <a class=" " href="/downloads/"><i class="ri-download-2-fill"></i>Downloads</a></li>
+      <li>
+        <a href="/project/" class="">
+          Home
+        </a>
+      </li>
 
-        <li class="nav-item"> <a class=" " href="/bs/"><i class="ri-global-line"></i>BS</a></li>
+      <li>
+        <a href="/project/education/" class="">
+          Education
+        </a>
+      </li>
 
-<br>
+      <li>
+        <a href="/project/security/" class="">
+          Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+          Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+          Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+          Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+          FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+
+        <li class="nav-item"> <a class="active " href="/packages/">Packages<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/wiki/">Wiki<i class=""></i></a></li>
+
+
+
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+          All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+          Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+          Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+          Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+          Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+          Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+          Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+        <li class="nav-item"> <a class=" " href="/gallery/">Gallery<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/downloads/">Downloads<i class=""></i></a></li>
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle">Language <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+      <li>
+        <a href="/bs/">Bosnian
+        </a>
+      </li>
+      <li>
+        <a href="/">English
+        </a>
+      </li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+                <p class="text-center mt-1">
+                    <a href="##" class="text-light">View Sitemap</a>
+                </p>
+       </li>
     </ul>
 </div>
+
 
 
     <main class="page-content" aria-label="Content">
@@ -207,7 +452,7 @@ crossorigin="anonymous"></script>
         <div class="container">
           <h3>Online Package Viewer</h3>
           <div class="bg-2 shadow-features3">
-            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-white shadow">
+            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-dark shadow">
           </div>
           <ul id="searchResults" class="list-group mb-3"></ul>
         </div>
@@ -240,350 +485,350 @@ crossorigin="anonymous"></script>
               <td><a href="pool/main/n/network-manager/gir1.2-nm-1.0/">gir1.2-nm-1.0</a></td>
               <td>1.42.4-1+deb12u1</td>
               <td>GObject introspection data for the libnm library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libn/libnotify/gir1.2-notify-0.7/">gir1.2-notify-0.7</a></td>
               <td>0.8.1-1</td>
               <td>sends desktop notifications to a notification daemon (Introspection files)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/packagekit/gir1.2-packagekitglib-1.0/">gir1.2-packagekitglib-1.0</a></td>
               <td>1.2.6-5</td>
               <td>GObject introspection data for the PackageKit GLib library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pango1.0/gir1.2-pango-1.0/">gir1.2-pango-1.0</a></td>
               <td>1.50.12+ds-1</td>
               <td>Layout and rendering of internationalized text - gir bindings</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/policykit-1/gir1.2-polkit-1.0/">gir1.2-polkit-1.0</a></td>
               <td>122-3</td>
               <td>GObject introspection data for polkit</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/poppler/gir1.2-poppler-0.18/">gir1.2-poppler-0.18</a></td>
               <td>22.12.0-2+deb12u1</td>
               <td>GObject introspection data for poppler-glib</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libr/librsvg/gir1.2-rsvg-2.0/">gir1.2-rsvg-2.0</a></td>
               <td>2.54.7+dfsg-1~deb12u1</td>
               <td>gir files for renderer library for SVG files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libs/libsecret/gir1.2-secret-1/">gir1.2-secret-1</a></td>
               <td>0.20.5-3</td>
               <td>Secret store (GObject-Introspection)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/w/webkit2gtk/gir1.2-webkit2-4.0/">gir1.2-webkit2-4.0</a></td>
               <td>2.48.1-2~deb12u1</td>
               <td>Web content engine library for GTK - GObject introspection data</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/git/git/">git</a></td>
               <td>1:2.39.5-0+deb12u2</td>
               <td>fast, scalable, distributed revision control system</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/git/git-man/">git-man</a></td>
               <td>1:2.39.5-0+deb12u2</td>
               <td>fast, scalable, distributed revision control system (manual pages)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/glib-networking/glib-networking/">glib-networking</a></td>
               <td>2.74.0-4</td>
               <td>network-related giomodules for GLib</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/glib-networking/glib-networking-common/">glib-networking-common</a></td>
               <td>2.74.0-4</td>
               <td>network-related giomodules for GLib - data files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/glib-networking/glib-networking-services/">glib-networking-services</a></td>
               <td>2.74.0-4</td>
               <td>network-related giomodules for GLib - D-Bus services</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/gnome-packagekit/gnome-packagekit-common/">gnome-packagekit-common</a></td>
               <td>43.0-1</td>
               <td>Common data files for GNOME PackageKit</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/gnupg2/gnupg/">gnupg</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - a free PGP replacement</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/gnupg2/gnupg-l10n/">gnupg-l10n</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - localization files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gnupg-utils/">gnupg-utils</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - utility programs</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/gnupg2/gnupg2/">gnupg2</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - a free PGP replacement (dummy transitional package)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gocryptfs/gocryptfs/">gocryptfs</a></td>
               <td>2.3-1+b4</td>
               <td>Encrypted overlay filesystem written in Go</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/golang-1.19/golang-1.19-go/">golang-1.19-go</a></td>
               <td>1.19.8-2</td>
               <td>Go programming language compiler, linker, compiled stdlib</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/golang-1.19/golang-1.19-src/">golang-1.19-src</a></td>
               <td>1.19.8-2</td>
               <td>Go programming language - source files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/golang-1.23/golang-1.23-go/">golang-1.23-go</a></td>
               <td>1.23.5-1~bpo12+1</td>
               <td>Go programming language compiler, linker, compiled stdlib</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/golang-1.23/golang-1.23-src/">golang-1.23-src</a></td>
               <td>1.23.5-1~bpo12+1</td>
               <td>Go programming language - source files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/golang-github-containers-common/golang-github-containers-common/">golang-github-containers-common</a></td>
               <td>0.50.1+ds1-4</td>
               <td>Common files for github.com/containers repositories</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/golang-github-containers-image/golang-github-containers-image/">golang-github-containers-image</a></td>
               <td>5.26.1-2~bpo12+1</td>
               <td>Configuration files and manpages for github.com/containers repositories</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/golang-defaults/golang-go/">golang-go</a></td>
               <td>2:1.23~2~bpo12+1</td>
               <td>Go programming language compiler, linker, compiled stdlib</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/g/golang-defaults/golang-src/">golang-src</a></td>
               <td>2:1.23~2~bpo12+1</td>
               <td>Go programming language - source files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gpa/gpa/">gpa</a></td>
               <td>0.10.0-5</td>
               <td>GNU Privacy Assistant (GPA)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gpart/gpart/">gpart</a></td>
               <td>1:0.3-10</td>
               <td>Guess PC disk partition table, find lost partitions</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpg/">gpg</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU Privacy Guard -- minimalist public key operations</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpg-agent/">gpg-agent</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - cryptographic agent</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpg-wks-client/">gpg-wks-client</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - Web Key Service client</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpg-wks-server/">gpg-wks-server</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - Web Key Service server</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpgconf/">gpgconf</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - core configuration utilities</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpgsm/">gpgsm</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - S/MIME version</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/gnupg2/gpgv/">gpgv</a></td>
               <td>2.2.40-1.1</td>
               <td>GNU privacy guard - signature verification tool</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grep/grep/">grep</a></td>
               <td>3.8-5</td>
               <td>GNU grep, egrep and fgrep</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/groff/groff-base/">groff-base</a></td>
               <td>1.22.4-10</td>
               <td>GNU troff text-formatting system (base system components)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-common/">grub-common</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader (common files)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-coreboot/">grub-coreboot</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (Coreboot version)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-coreboot-bin/">grub-coreboot-bin</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (Coreboot modules)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-coreboot-dbg/">grub-coreboot-dbg</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (Coreboot debug files)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi/">grub-efi</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (dummy package)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi-amd64/">grub-efi-amd64</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (EFI-AMD64 version)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi-amd64-bin/">grub-efi-amd64-bin</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (EFI-AMD64 modules)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi-amd64-dbg/">grub-efi-amd64-dbg</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (EFI-AMD64 debug files)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi-amd64-signed-template/">grub-efi-amd64-signed-template</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (EFI-AMD64 signing template)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi-ia32/">grub-efi-ia32</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (EFI-IA32 version)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/g/grub2/grub-efi-ia32-bin/">grub-efi-ia32-bin</a></td>
               <td>2.12-1~bpo12+1</td>
               <td>GRand Unified Bootloader, version 2 (EFI-IA32 modules)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
 
         </tbody>
@@ -653,12 +898,24 @@ crossorigin="anonymous"></script>
 
 </div><br>
 
-    </main>
 
+    </main>
 <div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
+    <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">OpenBosniana OS repositories</h2>
+          <p style="color:#fff"></p>
+    </div>
+    
+<div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">All source codes are available in our repositories:</p>
+          </div>
+          <br>
+</div>
+    
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
         <a href="https://www.gitlab.com/deniosm/" target="_blank">
@@ -694,7 +951,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
-
+<br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -749,8 +1006,8 @@ crossorigin="anonymous"></script>
         <div class="col-lg-2 col-md-3 footer-links">
           <br>
           <ul>
-            <li><a href="/project/">Home</a></li>
-            <li><a href="/project/education/">Education</a></li>
+            <li><a href="/project/">KDE-Home</a></li>
+            <li><a href="/project/education/">KDE-Education</a></li>
             <li><a href="/project/requirements/">Requirements</a></li>
             <li><a href="/project/documentation/">Documentation</a></li>
             <li><a href="/project/about/">About</a></li>
@@ -763,7 +1020,7 @@ crossorigin="anonymous"></script>
           <ul>
             <li><a href="https://github.com/deniosm/">GitHub</a></li>
             <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
-            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForgeNet</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
             <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
             <li><a href="https://kernel.org/">Kernel</a></li>
           </ul>
@@ -793,7 +1050,10 @@ crossorigin="anonymous"></script>
   </footer>
 
 
-<button id="backToTopDugme" title="">↑</button>
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Back to top</button>
+<!--
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Nazad na vrh</button>
+-->
 <script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
@@ -807,9 +1067,28 @@ function searchPackages() {
 
     matches.slice(0, 20).forEach(pkg => {
         const li = document.createElement("li");
-        li.className = "list-group-item";
+        li.className = "list-group-item-a";
         li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
         resultsBox.appendChild(li);
+    });
+}
+</script>
+<script src="/search/searchgeneral.js"></script>
+<script>
+function searchPackagesGeneral() {
+    const input = document.getElementById("searchBoxGeneral").value.toLowerCase();
+    const resultsBoxGeneral = document.getElementById("searchResultsGeneral");
+    resultsBoxGeneral.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = searchgeneral.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBoxGeneral.appendChild(li);
     });
 }
 </script>
@@ -883,18 +1162,13 @@ function slidebar() {
 
     function updateMenuIcon(isOpen) {
         const menuIcon = document.getElementById('menu-icon');
-        const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
             menuIcon.src = '/assets/img/close.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(90deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(90deg)';
         } else {
             menuIcon.src = '/assets/img/menu.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(0deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
     }
 }
@@ -903,6 +1177,36 @@ $(document).ready(function() {
     slidebar();
 });
 </script>
+<script>
+    const dropdownBtnSearch = document.getElementById('dropdownBtnSearch');
+    const dropdownContentSearch = document.querySelector('.nav-dropdown-content-search');
+    const searchBox = document.getElementById('searchBoxGeneral');
+    const searchResults = document.getElementById('searchResultsGeneral');
+
+    dropdownBtnSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
+            searchBox.focus();
+        }
+    });
+
+    dropdownContentSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdownBtnSearch.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            dropdownBtnSearch.classList.remove('active');
+        }
+    });
+</script>
+
 <script>
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownIcon = document.getElementById('dropdownIcon');
@@ -951,33 +1255,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
- <script>
-    // Toggle dropdowns on click
-    document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        // Close other open dropdowns
-        document.querySelectorAll('.sdropdown').forEach(drop => {
-          if (drop !== parent) drop.classList.remove('open');
-        });
-        // Toggle current
-        parent.classList.toggle('open');
+<script>
+
+  document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.sdropdown').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
       });
+      parent.classList.toggle('open');
     });
+  });
 
-    function stoggleNavbar() {
-      const nav = document.querySelector('.snavbar');
-      const btn = document.getElementById('smenuToggleBtn');
-      const isHidden = nav.style.display === 'none';
-
-      if (isHidden) {
-        nav.style.display = 'flex';
-        btn.textContent = 'Hide';
-      } else {
-        nav.style.display = 'none';
-        btn.textContent = 'Show';
-      }
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sdropdown')) {
+      document.querySelectorAll('.sdropdown.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
     }
+  });
 
-  </script>
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+<script>
+
+  document.querySelectorAll('.ms-slidebar121-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.ms-slidebar121').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.ms-slidebar121')) {
+      document.querySelectorAll('.ms-slidebar121.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+

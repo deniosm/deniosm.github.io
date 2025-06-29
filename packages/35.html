@@ -92,72 +92,188 @@ crossorigin="anonymous"></script>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container-full">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-    <button class="nav-drop-menu" id="dropdownBtn">
-        <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
-        <div class="nav-dropdown-content navbar-color">
-            <p>Latest</p>
-            <a href="https://bosniana.org/blog/home-052025/">Release Notes | HOME</a>
-            <a href="https://bosniana.org/blog/edu-112024/">Release Notes | EDU</a>
-            <a href="https://bosniana.org/downloads/">Downloads</a>
-            <p></p>
-            <a href="https://bosniana.org/wiki/installation-guide/" target="blank">Installation Guide</a>
-            <a href="https://bosniana.org/wiki/">Documentation</a>
-        </div>
+    <button class="nav-drop-menu-search" id="dropdownBtnSearch">
+
+        <i class="ri-search-line" id="dropdownIconSearch"></i><span>Search</span>
+        <div class="nav-dropdown-content-search">
+
+            <div class="text-dark">
+                <input type="text" id="searchBoxGeneral" placeholder=" Search..." onkeyup="searchPackagesGeneral()" class="form-control pl-2 text-dark">
+
+                <ul id="searchResultsGeneral" class="pl-0 shadow-features3 text-light"></ul>
+
+           </div>
+ </div>
     </button>
+
      <div class="container-fluid">
           <a class="navbar-brand nav-vendor" href="/"></a>
     </div>
-      <button class="btn-sakriveni">
-        <a href="/bs/" class="text-white">
-          <i class="ri-global-line"></i> BS </a>
-      </button>
-      <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
-      </button>
+
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-translate-2" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+
+
+            <a class=" " href="/bs/">Bosnian<i class=""></i></a>
+
+            <a class=" active" href="/">English<i class=""></i></a>
+
+
+        </div>
+    </button>
+
+
+
+    <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="All OpenBosniana">
+      <span class="menu-text">All OpenBosniana</span><img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" />
+    </button>
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
 
-          <li class="nav-item ">
-            <a href="/">
-              <i class="ri-home-4-fill"></i> Home </a>
-          </li>
 
           <li class="nav-item ">
-            <a href="/project/">
-              <i class="ri-file-info-line"></i> Project </a>
+            <a href="/">
+               Home <i class=""></i></a>
           </li>
+
+
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/project/" class="">
+         Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/security/" class="">
+         Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+         Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+         Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+         Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+         About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+         FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
 
           <li class="nav-item active">
             <a href="/packages/">
-              <i class="ri-apps-line"></i> Packages </a>
+              Packages <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/wiki/">
-              <i class="ri-book-2-line"></i> Wiki </a>
+              Wiki <i class=""></i></a>
           </li>
 
-          <li class="nav-item ">
-            <a href="/blog/">
-              <i class="ri-news-line"></i> Blog </a>
-          </li>
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+         All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+         Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+         Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+         Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+         Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+         Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
 
           <li class="nav-item ">
             <a href="/gallery/">
-              <i class="ri-image-fill"></i> Gallery </a>
+              Gallery <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/downloads/">
-              <i class="ri-download-2-fill"></i> Downloads </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="/bs/">
-              <i class="ri-global-line"></i> BS </a>
+              Downloads <i class=""></i></a>
           </li>
 
         </ul>
@@ -166,27 +282,156 @@ crossorigin="anonymous"></script>
 </div>
 <div class="ms-slidebar " id="ms-slidebar">
     <ul class="ms-slidebar-menu" id="slidebar-menu">
-<br>
 
-        <li class="nav-item"> <a class=" " href="/"><i class="ri-home-4-fill"></i>Home</a></li>
+        <li class="nav-item"> <a class=" " href="/">Home <i class=""></i></a></li>
 
-        <li class="nav-item"> <a class=" " href="/project/"><i class="ri-file-info-line"></i>Project</a></li>
 
-        <li class="nav-item"> <a class=" active" href="/packages/"><i class="ri-apps-line"></i>Packages</a></li>
 
-        <li class="nav-item"> <a class=" " href="/wiki/"><i class="ri-book-2-line"></i>Wiki</a></li>
 
-        <li class="nav-item"> <a class=" " href="/blog/"><i class="ri-news-line"></i>Blog</a></li>
 
-        <li class="nav-item"> <a class=" " href="/gallery/"><i class="ri-image-fill"></i>Gallery</a></li>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
 
-        <li class="nav-item"> <a class=" " href="/downloads/"><i class="ri-download-2-fill"></i>Downloads</a></li>
+      <li>
+        <a href="/project/" class="">
+          Home
+        </a>
+      </li>
 
-        <li class="nav-item"> <a class=" " href="/bs/"><i class="ri-global-line"></i>BS</a></li>
+      <li>
+        <a href="/project/education/" class="">
+          Education
+        </a>
+      </li>
 
-<br>
+      <li>
+        <a href="/project/security/" class="">
+          Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+          Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+          Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+          Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+          FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+
+        <li class="nav-item"> <a class="active " href="/packages/">Packages<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/wiki/">Wiki<i class=""></i></a></li>
+
+
+
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+          All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+          Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+          Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+          Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+          Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+          Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+          Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+        <li class="nav-item"> <a class=" " href="/gallery/">Gallery<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/downloads/">Downloads<i class=""></i></a></li>
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle">Language <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+      <li>
+        <a href="/bs/">Bosnian
+        </a>
+      </li>
+      <li>
+        <a href="/">English
+        </a>
+      </li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+                <p class="text-center mt-1">
+                    <a href="##" class="text-light">View Sitemap</a>
+                </p>
+       </li>
     </ul>
 </div>
+
 
 
     <main class="page-content" aria-label="Content">
@@ -207,7 +452,7 @@ crossorigin="anonymous"></script>
         <div class="container">
           <h3>Online Package Viewer</h3>
           <div class="bg-2 shadow-features3">
-            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-white shadow">
+            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-dark shadow">
           </div>
           <ul id="searchResults" class="list-group mb-3"></ul>
         </div>
@@ -240,350 +485,350 @@ crossorigin="anonymous"></script>
               <td><a href="pool/main/n/node-commander/node-commander/">node-commander</a></td>
               <td>9.4.1-1</td>
               <td>Complete solution for Node.js command-line interfaces</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-commondir/node-commondir/">node-commondir</a></td>
               <td>1.0.1+~1.0.0-1</td>
               <td>compute the closest common parent for file paths</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-concat-stream/node-concat-stream/">node-concat-stream</a></td>
               <td>2.0.0+~2.0.0-2</td>
               <td>writable stream that concatenates strings</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-console-control-strings/node-console-control-strings/">node-console-control-strings</a></td>
               <td>1.1.0-3</td>
               <td>cross-platform tested terminal/console command strings</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-convert-source-map/node-convert-source-map/">node-convert-source-map</a></td>
               <td>1.9.0+~1.5.2-1</td>
               <td>Converts a source-map from/to between formats</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-copy-concurrently/node-copy-concurrently/">node-copy-concurrently</a></td>
               <td>1.0.5-9</td>
               <td>Copy files, directories and symlinks concurrently</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-core-js/node-core-js/">node-core-js</a></td>
               <td>3.26.1-3</td>
               <td>Modular standard library for JavaScript</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-core-js/node-core-js-compat/">node-core-js-compat</a></td>
               <td>3.26.1-3</td>
               <td>data about the necessity of core-js</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-core-js/node-core-js-pure/">node-core-js-pure</a></td>
               <td>3.26.1-3</td>
               <td>Modular standard library for JavaScript without global namespace pollution</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-core-util-is/node-core-util-is/">node-core-util-is</a></td>
               <td>1.0.3-1</td>
               <td>util.is* functions introduced in Node v0.12 for older versions</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-coveralls/node-coveralls/">node-coveralls</a></td>
               <td>3.1.1-2</td>
               <td>input json-cov output and posts to coveralls.io</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-css-loader/node-css-loader/">node-css-loader</a></td>
               <td>6.7.2+~cs14.0.11-1</td>
               <td>css loader module for webpack</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-css-selector-tokenizer/node-css-selector-tokenizer/">node-css-selector-tokenizer</a></td>
               <td>0.8.0+~cs4.8.3-1</td>
               <td>Parses and stringifies CSS selectors</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-data-uri-to-buffer/node-data-uri-to-buffer/">node-data-uri-to-buffer</a></td>
               <td>4.0.0-3</td>
               <td>Generate a Buffer instance from a Data URI string</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-debbundle-es-to-primitive/node-debbundle-es-to-primitive/">node-debbundle-es-to-primitive</a></td>
               <td>1.2.1+~cs9.7.25-2</td>
               <td>Pure javascript implementation of ToPrimitive algorithm</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-debug/node-debug/">node-debug</a></td>
               <td>4.3.4+~cs4.1.7-1</td>
               <td>small debugging utility for Node.js</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-decamelize/node-decamelize/">node-decamelize</a></td>
               <td>4.0.0-2</td>
               <td>convert a camelized string into a lowercased one with a custom separator</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-decompress-response/node-decompress-response/">node-decompress-response</a></td>
               <td>6.0.0-2</td>
               <td>Decompress a HTTP response if needed</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-deep-equal/node-deep-equal/">node-deep-equal</a></td>
               <td>2.1.0+~cs31.12.80-1</td>
               <td>node's assert.deepEqual algorithm</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-deep-is/node-deep-is/">node-deep-is</a></td>
               <td>0.1.4-1</td>
               <td>node's assert.deepEqual algorithm except for NaN being equal to NaN</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-defaults/node-defaults/">node-defaults</a></td>
               <td>1.0.4+~1.0.3-1</td>
               <td>merge single level defaults over a config object</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-define-properties/node-define-properties/">node-define-properties</a></td>
               <td>1.1.4+~1.1.3-1</td>
               <td>Define multiple non-enumerable properties at once</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-define-property/node-define-property/">node-define-property</a></td>
               <td>2.0.2+really+2.0.2-3</td>
               <td>Define property on an object</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-defined/node-defined/">node-defined</a></td>
               <td>1.0.1+~1.0.0-1</td>
               <td>return the first argument that is `!== undefined`</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-del/node-del/">node-del</a></td>
               <td>7.0.0-5</td>
               <td>Delete files and folders</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-delegates/node-delegates/">node-delegates</a></td>
               <td>1.0.0-3</td>
               <td>delegate methods and accessors to another property</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-depd/node-depd/">node-depd</a></td>
               <td>2.0.0-2</td>
               <td>mark a function or property as deprecated - Node.js module</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-diff/node-diff/">node-diff</a></td>
               <td>5.0.0~dfsg+~5.0.1-4</td>
               <td>javascript text differencing implementation</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-doctrine/node-doctrine/">node-doctrine</a></td>
               <td>3.0.0-4</td>
               <td>JSDoc parser</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-electron-to-chromium/node-electron-to-chromium/">node-electron-to-chromium</a></td>
               <td>1.4.284-1</td>
               <td>Provides a list of electron-to-chromium version mappings</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-encoding/node-encoding/">node-encoding</a></td>
               <td>0.1.13-2</td>
               <td>Convert encodings, uses iconv by default and fallbacks to iconv-lite if needed</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-end-of-stream/node-end-of-stream/">node-end-of-stream</a></td>
               <td>1.4.4+~1.4.1-1</td>
               <td>Invoke a callback when a stream has completed or failed</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-enhanced-resolve/node-enhanced-resolve/">node-enhanced-resolve</a></td>
               <td>5.10.0-1</td>
               <td>Offers a async require.resolve function</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-err-code/node-err-code/">node-err-code</a></td>
               <td>2.0.3+dfsg-3</td>
               <td>Create an error with a code</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-errno/node-errno/">node-errno</a></td>
               <td>1.0.0-3</td>
               <td>libuv errno details exposed - Node.js module</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-error-ex/node-error-ex/">node-error-ex</a></td>
               <td>1.3.2-4</td>
               <td>easy error subclassing and stack customization</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-es-abstract/node-es-abstract/">node-es-abstract</a></td>
               <td>1.20.4+~cs26.27.47-1</td>
               <td>ECMAScript spec abstract operations</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-es-module-lexer/node-es-module-lexer/">node-es-module-lexer</a></td>
               <td>1.1.0+dfsg-2+deb12u1</td>
               <td>Fast lexer to extract named exports from EcmaScript modules</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-es6-error/node-es6-error/">node-es6-error</a></td>
               <td>4.1.1-5</td>
               <td>Easily-extendable error for use with ES6 classes</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-escape-string-regexp/node-escape-string-regexp/">node-escape-string-regexp</a></td>
               <td>4.0.0-2</td>
               <td>Escape RegExp special characters in Node.js</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-escodegen/node-escodegen/">node-escodegen</a></td>
               <td>2.0.0+dfsg+~0.0.7-2</td>
               <td>ECMAScript code generator</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-eslint-scope/node-eslint-scope/">node-eslint-scope</a></td>
               <td>7.1.1+~3.7.4-1</td>
               <td>ECMAScript scope analyzer for ESLint</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-eslint-utils/node-eslint-utils/">node-eslint-utils</a></td>
               <td>3.0.0-3</td>
               <td>utilities for ESLint plugins</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-eslint-visitor-keys/node-eslint-visitor-keys/">node-eslint-visitor-keys</a></td>
               <td>3.3.0+~1.0.0-1</td>
               <td>Constants and utilities about visitor keys to traverse AST</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-espree/node-espree/">node-espree</a></td>
               <td>9.4.1~dfsg-1</td>
               <td>Esprima-compatible JavaScript parser built on Acorn</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-esprima/node-esprima/">node-esprima</a></td>
               <td>4.0.1+ds+~4.0.3-2</td>
               <td>ECMAScript parsing infrastructure for multipurpose analysis</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-esquery/node-esquery/">node-esquery</a></td>
               <td>1.4.2~ds-1</td>
               <td>query library for ECMAScript AST using CSS-like queries</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-esrecurse/node-esrecurse/">node-esrecurse</a></td>
               <td>4.3.0-2</td>
               <td>ECMAScript AST recursive visitor</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-estraverse/node-estraverse/">node-estraverse</a></td>
               <td>5.3.0+ds+~5.1.1-1</td>
               <td>ECMAScript JS AST traversal functions</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-esutils/node-esutils/">node-esutils</a></td>
               <td>2.0.3+~2.0.0-1</td>
               <td>utility box for ECMAScript language tools</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
 
         </tbody>
@@ -653,12 +898,24 @@ crossorigin="anonymous"></script>
 
 </div><br>
 
-    </main>
 
+    </main>
 <div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
+    <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">OpenBosniana OS repositories</h2>
+          <p style="color:#fff"></p>
+    </div>
+    
+<div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">All source codes are available in our repositories:</p>
+          </div>
+          <br>
+</div>
+    
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
         <a href="https://www.gitlab.com/deniosm/" target="_blank">
@@ -694,7 +951,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
-
+<br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -749,8 +1006,8 @@ crossorigin="anonymous"></script>
         <div class="col-lg-2 col-md-3 footer-links">
           <br>
           <ul>
-            <li><a href="/project/">Home</a></li>
-            <li><a href="/project/education/">Education</a></li>
+            <li><a href="/project/">KDE-Home</a></li>
+            <li><a href="/project/education/">KDE-Education</a></li>
             <li><a href="/project/requirements/">Requirements</a></li>
             <li><a href="/project/documentation/">Documentation</a></li>
             <li><a href="/project/about/">About</a></li>
@@ -763,7 +1020,7 @@ crossorigin="anonymous"></script>
           <ul>
             <li><a href="https://github.com/deniosm/">GitHub</a></li>
             <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
-            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForgeNet</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
             <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
             <li><a href="https://kernel.org/">Kernel</a></li>
           </ul>
@@ -793,7 +1050,10 @@ crossorigin="anonymous"></script>
   </footer>
 
 
-<button id="backToTopDugme" title="">↑</button>
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Back to top</button>
+<!--
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Nazad na vrh</button>
+-->
 <script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
@@ -807,9 +1067,28 @@ function searchPackages() {
 
     matches.slice(0, 20).forEach(pkg => {
         const li = document.createElement("li");
-        li.className = "list-group-item";
+        li.className = "list-group-item-a";
         li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
         resultsBox.appendChild(li);
+    });
+}
+</script>
+<script src="/search/searchgeneral.js"></script>
+<script>
+function searchPackagesGeneral() {
+    const input = document.getElementById("searchBoxGeneral").value.toLowerCase();
+    const resultsBoxGeneral = document.getElementById("searchResultsGeneral");
+    resultsBoxGeneral.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = searchgeneral.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBoxGeneral.appendChild(li);
     });
 }
 </script>
@@ -883,18 +1162,13 @@ function slidebar() {
 
     function updateMenuIcon(isOpen) {
         const menuIcon = document.getElementById('menu-icon');
-        const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
             menuIcon.src = '/assets/img/close.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(90deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(90deg)';
         } else {
             menuIcon.src = '/assets/img/menu.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(0deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
     }
 }
@@ -903,6 +1177,36 @@ $(document).ready(function() {
     slidebar();
 });
 </script>
+<script>
+    const dropdownBtnSearch = document.getElementById('dropdownBtnSearch');
+    const dropdownContentSearch = document.querySelector('.nav-dropdown-content-search');
+    const searchBox = document.getElementById('searchBoxGeneral');
+    const searchResults = document.getElementById('searchResultsGeneral');
+
+    dropdownBtnSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
+            searchBox.focus();
+        }
+    });
+
+    dropdownContentSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdownBtnSearch.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            dropdownBtnSearch.classList.remove('active');
+        }
+    });
+</script>
+
 <script>
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownIcon = document.getElementById('dropdownIcon');
@@ -951,33 +1255,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
- <script>
-    // Toggle dropdowns on click
-    document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        // Close other open dropdowns
-        document.querySelectorAll('.sdropdown').forEach(drop => {
-          if (drop !== parent) drop.classList.remove('open');
-        });
-        // Toggle current
-        parent.classList.toggle('open');
+<script>
+
+  document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.sdropdown').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
       });
+      parent.classList.toggle('open');
     });
+  });
 
-    function stoggleNavbar() {
-      const nav = document.querySelector('.snavbar');
-      const btn = document.getElementById('smenuToggleBtn');
-      const isHidden = nav.style.display === 'none';
-
-      if (isHidden) {
-        nav.style.display = 'flex';
-        btn.textContent = 'Hide';
-      } else {
-        nav.style.display = 'none';
-        btn.textContent = 'Show';
-      }
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sdropdown')) {
+      document.querySelectorAll('.sdropdown.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
     }
+  });
 
-  </script>
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+<script>
+
+  document.querySelectorAll('.ms-slidebar121-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.ms-slidebar121').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.ms-slidebar121')) {
+      document.querySelectorAll('.ms-slidebar121.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+

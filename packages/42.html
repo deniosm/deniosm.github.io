@@ -92,72 +92,188 @@ crossorigin="anonymous"></script>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container-full">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-    <button class="nav-drop-menu" id="dropdownBtn">
-        <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
-        <div class="nav-dropdown-content navbar-color">
-            <p>Latest</p>
-            <a href="https://bosniana.org/blog/home-052025/">Release Notes | HOME</a>
-            <a href="https://bosniana.org/blog/edu-112024/">Release Notes | EDU</a>
-            <a href="https://bosniana.org/downloads/">Downloads</a>
-            <p></p>
-            <a href="https://bosniana.org/wiki/installation-guide/" target="blank">Installation Guide</a>
-            <a href="https://bosniana.org/wiki/">Documentation</a>
-        </div>
+    <button class="nav-drop-menu-search" id="dropdownBtnSearch">
+
+        <i class="ri-search-line" id="dropdownIconSearch"></i><span>Search</span>
+        <div class="nav-dropdown-content-search">
+
+            <div class="text-dark">
+                <input type="text" id="searchBoxGeneral" placeholder=" Search..." onkeyup="searchPackagesGeneral()" class="form-control pl-2 text-dark">
+
+                <ul id="searchResultsGeneral" class="pl-0 shadow-features3 text-light"></ul>
+
+           </div>
+ </div>
     </button>
+
      <div class="container-fluid">
           <a class="navbar-brand nav-vendor" href="/"></a>
     </div>
-      <button class="btn-sakriveni">
-        <a href="/bs/" class="text-white">
-          <i class="ri-global-line"></i> BS </a>
-      </button>
-      <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
-      </button>
+
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-translate-2" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+
+
+            <a class=" " href="/bs/">Bosnian<i class=""></i></a>
+
+            <a class=" active" href="/">English<i class=""></i></a>
+
+
+        </div>
+    </button>
+
+
+
+    <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="All OpenBosniana">
+      <span class="menu-text">All OpenBosniana</span><img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" />
+    </button>
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
 
-          <li class="nav-item ">
-            <a href="/">
-              <i class="ri-home-4-fill"></i> Home </a>
-          </li>
 
           <li class="nav-item ">
-            <a href="/project/">
-              <i class="ri-file-info-line"></i> Project </a>
+            <a href="/">
+               Home <i class=""></i></a>
           </li>
+
+
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/project/" class="">
+         Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/security/" class="">
+         Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+         Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+         Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+         Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+         About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+         FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
 
           <li class="nav-item active">
             <a href="/packages/">
-              <i class="ri-apps-line"></i> Packages </a>
+              Packages <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/wiki/">
-              <i class="ri-book-2-line"></i> Wiki </a>
+              Wiki <i class=""></i></a>
           </li>
 
-          <li class="nav-item ">
-            <a href="/blog/">
-              <i class="ri-news-line"></i> Blog </a>
-          </li>
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+         All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+         Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+         Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+         Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+         Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+         Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
 
           <li class="nav-item ">
             <a href="/gallery/">
-              <i class="ri-image-fill"></i> Gallery </a>
+              Gallery <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/downloads/">
-              <i class="ri-download-2-fill"></i> Downloads </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="/bs/">
-              <i class="ri-global-line"></i> BS </a>
+              Downloads <i class=""></i></a>
           </li>
 
         </ul>
@@ -166,27 +282,156 @@ crossorigin="anonymous"></script>
 </div>
 <div class="ms-slidebar " id="ms-slidebar">
     <ul class="ms-slidebar-menu" id="slidebar-menu">
-<br>
 
-        <li class="nav-item"> <a class=" " href="/"><i class="ri-home-4-fill"></i>Home</a></li>
+        <li class="nav-item"> <a class=" " href="/">Home <i class=""></i></a></li>
 
-        <li class="nav-item"> <a class=" " href="/project/"><i class="ri-file-info-line"></i>Project</a></li>
 
-        <li class="nav-item"> <a class=" active" href="/packages/"><i class="ri-apps-line"></i>Packages</a></li>
 
-        <li class="nav-item"> <a class=" " href="/wiki/"><i class="ri-book-2-line"></i>Wiki</a></li>
 
-        <li class="nav-item"> <a class=" " href="/blog/"><i class="ri-news-line"></i>Blog</a></li>
 
-        <li class="nav-item"> <a class=" " href="/gallery/"><i class="ri-image-fill"></i>Gallery</a></li>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
 
-        <li class="nav-item"> <a class=" " href="/downloads/"><i class="ri-download-2-fill"></i>Downloads</a></li>
+      <li>
+        <a href="/project/" class="">
+          Home
+        </a>
+      </li>
 
-        <li class="nav-item"> <a class=" " href="/bs/"><i class="ri-global-line"></i>BS</a></li>
+      <li>
+        <a href="/project/education/" class="">
+          Education
+        </a>
+      </li>
 
-<br>
+      <li>
+        <a href="/project/security/" class="">
+          Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+          Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+          Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+          Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+          FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+
+        <li class="nav-item"> <a class="active " href="/packages/">Packages<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/wiki/">Wiki<i class=""></i></a></li>
+
+
+
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+          All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+          Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+          Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+          Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+          Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+          Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+          Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+        <li class="nav-item"> <a class=" " href="/gallery/">Gallery<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/downloads/">Downloads<i class=""></i></a></li>
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle">Language <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+      <li>
+        <a href="/bs/">Bosnian
+        </a>
+      </li>
+      <li>
+        <a href="/">English
+        </a>
+      </li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+                <p class="text-center mt-1">
+                    <a href="##" class="text-light">View Sitemap</a>
+                </p>
+       </li>
     </ul>
 </div>
+
 
 
     <main class="page-content" aria-label="Content">
@@ -207,7 +452,7 @@ crossorigin="anonymous"></script>
         <div class="container">
           <h3>Online Package Viewer</h3>
           <div class="bg-2 shadow-features3">
-            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-white shadow">
+            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-dark shadow">
           </div>
           <ul id="searchResults" class="list-group mb-3"></ul>
         </div>
@@ -240,350 +485,350 @@ crossorigin="anonymous"></script>
               <td><a href="pool/main/o/openbosniana-kernel-bootfiles-unsigned/openbosniana-kernel-bootfiles-unsigned/">openbosniana-kernel-bootfiles-unsigned</a></td>
               <td>2025.05.14</td>
               <td>Linux 6.12 for 64-bit PCs</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openbosniana-menu/openbosniana-menu/">openbosniana-menu</a></td>
               <td>2024.11.13</td>
               <td>OpenBosniana GNU/Linux custom menu</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/o/openbosniana-core/openbosniana-meta-base/">openbosniana-meta-base</a></td>
               <td>2024.09.06</td>
               <td>OpenBosniana OS base apps</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/o/openbosniana-core/openbosniana-meta-hardware/">openbosniana-meta-hardware</a></td>
               <td>2024.09.06</td>
               <td>OpenBosniana OS meta</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openbosniana-virtual-keyboard/openbosniana-virtual-keyboard/">openbosniana-virtual-keyboard</a></td>
               <td>2024.01.30</td>
               <td>OpenBosniana OS Virtual keyboard</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openbosniana-welcome/openbosniana-welcome/">openbosniana-welcome</a></td>
               <td>2024.11.13</td>
               <td>OpenBosniana Welcome Application</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openbosniana-welcome/openbosniana-welcome-dbgsym/">openbosniana-welcome-dbgsym</a></td>
               <td>2024.11.13</td>
               <td>debug symbols for openbosniana-welcome</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openjdk-17/openjdk-17-jdk/">openjdk-17-jdk</a></td>
               <td>17.0.15+6-1~deb12u1</td>
               <td>OpenJDK Development Kit (JDK)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openjdk-17/openjdk-17-jdk-headless/">openjdk-17-jdk-headless</a></td>
               <td>17.0.15+6-1~deb12u1</td>
               <td>OpenJDK Development Kit (JDK) (headless)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openjdk-17/openjdk-17-jre/">openjdk-17-jre</a></td>
               <td>17.0.15+6-1~deb12u1</td>
               <td>OpenJDK Java runtime, using Hotspot JIT</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openjdk-17/openjdk-17-jre-headless/">openjdk-17-jre-headless</a></td>
               <td>17.0.15+6-1~deb12u1</td>
               <td>OpenJDK Java runtime, using Hotspot JIT (headless)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openssh/openssh-client/">openssh-client</a></td>
               <td>1:9.2p1-2+deb12u6</td>
               <td>secure shell (SSH) client, for secure access to remote machines</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/openssl/openssl/">openssl</a></td>
               <td>3.0.16-1~deb12u1</td>
               <td>Secure Sockets Layer toolkit - cryptographic utility</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/o/os-prober/os-prober/">os-prober</a></td>
               <td>1.81</td>
               <td>utility to detect other OSes on a set of drives</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/o/oxygen-sounds/oxygen-sounds/">oxygen-sounds</a></td>
               <td>4:5.27.5-2</td>
               <td>Sounds for the Oxygen desktop theme</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/p11-kit/p11-kit/">p11-kit</a></td>
               <td>0.24.1-2</td>
               <td>p11-glue utilities</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/p11-kit/p11-kit-modules/">p11-kit-modules</a></td>
               <td>0.24.1-2</td>
               <td>p11-glue proxy and trust modules</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/p7zip/p7zip/">p7zip</a></td>
               <td>16.02+dfsg-8</td>
               <td>7zr file archiver with high compression ratio</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/p7zip/p7zip-full/">p7zip-full</a></td>
               <td>16.02+dfsg-8</td>
               <td>7z and 7za file archivers with high compression ratio</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/packagekit/packagekit/">packagekit</a></td>
               <td>1.2.6-5</td>
               <td>Provides a package management service</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/packagekit/packagekit-tools/">packagekit-tools</a></td>
               <td>1.2.6-5</td>
               <td>Provides PackageKit command-line tools</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/par2cmdline/par2/">par2</a></td>
               <td>0.8.1-3</td>
               <td>PAR 2.0 compatible file verification and repair tool</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/parted/parted/">parted</a></td>
               <td>3.5-3</td>
               <td>disk partition manipulator</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/partitionmanager/partitionmanager/">partitionmanager</a></td>
               <td>22.12.3-1</td>
               <td>file, disk and partition management for KDE</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/s/shadow/passwd/">passwd</a></td>
               <td>1:4.13+dfsg1-1+deb12u1</td>
               <td>change and administer password and group data</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/patch/patch/">patch</a></td>
               <td>2.7.6-7</td>
               <td>Apply a diff file to an original</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/patchutils/patchutils/">patchutils</a></td>
               <td>0.4.2-1</td>
               <td>Utilities to work with patches</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/p/pci.ids/pci.ids/">pci.ids</a></td>
               <td>0.0~2023.04.11-1</td>
               <td>PCI ID Repository</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pciutils/pciutils/">pciutils</a></td>
               <td>1:3.9.0-4</td>
               <td>PCI utilities</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/perl/perl/">perl</a></td>
               <td>5.36.0-7+deb12u2</td>
               <td>Larry Wall's Practical Extraction and Report Language</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/perl/perl-base/">perl-base</a></td>
               <td>5.36.0-7+deb12u2</td>
               <td>minimal Perl system</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/p/perl/perl-modules-5.36/">perl-modules-5.36</a></td>
               <td>5.36.0-7+deb12u2</td>
               <td>Core Perl modules</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/perl-openssl-defaults/perl-openssl-defaults/">perl-openssl-defaults</a></td>
               <td>7+b1</td>
               <td>version compatibility baseline for Perl OpenSSL packages</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/perl-tk/perl-tk/">perl-tk</a></td>
               <td>1:804.036-1+b2</td>
               <td>Perl module providing the Tk graphics library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/phonon/phonon4qt5/">phonon4qt5</a></td>
               <td>4:4.11.1-4</td>
               <td>multimedia framework from KDE using Qt 5 - metapackage</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/phonon-backend-vlc/phonon4qt5-backend-vlc/">phonon4qt5-backend-vlc</a></td>
               <td>0.11.3-1</td>
               <td>Phonon4Qt5 VLC backend</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pinentry/pinentry-curses/">pinentry-curses</a></td>
               <td>1.2.1-1</td>
               <td>curses-based PIN or pass-phrase entry dialog for GnuPG</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pinentry/pinentry-gnome3/">pinentry-gnome3</a></td>
               <td>1.2.1-1</td>
               <td>GNOME 3 PIN or pass-phrase entry dialog for GnuPG</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/policykit-1/pkexec/">pkexec</a></td>
               <td>122-3</td>
               <td>run commands as another user with polkit authorization</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pkgconf/pkg-config/">pkg-config</a></td>
               <td>1.8.1-1</td>
               <td>manage compile and link flags for libraries (transitional package)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pkgconf/pkgconf/">pkgconf</a></td>
               <td>1.8.1-1</td>
               <td>manage compile and link flags for libraries</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/pkgconf/pkgconf-bin/">pkgconf-bin</a></td>
               <td>1.8.1-1</td>
               <td>manage compile and link flags for libraries (binaries)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/plasma-browser-integration/plasma-browser-integration/">plasma-browser-integration</a></td>
               <td>5.27.5-2</td>
               <td>Chromium, Google Chrome, Firefox integration for Plasma</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/plasma-desktop/plasma-desktop/">plasma-desktop</a></td>
               <td>4:5.27.5-2</td>
               <td>Tools and widgets for the desktop</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/p/plasma-desktop/plasma-desktop-data/">plasma-desktop-data</a></td>
               <td>4:5.27.5-2</td>
               <td>Tools and widgets for the desktop data files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/plasma-discover/plasma-discover/">plasma-discover</a></td>
               <td>5.27.5-2</td>
               <td>Discover software management suite</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/plasma-discover/plasma-discover-backend-fwupd/">plasma-discover-backend-fwupd</a></td>
               <td>5.27.5-2</td>
               <td>Discover software management suite - fwupd backend</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/p/plasma-discover/plasma-discover-common/">plasma-discover-common</a></td>
               <td>5.27.5-2</td>
               <td>Discover software manager suite (common data files)</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/plasma-disks/plasma-disks/">plasma-disks</a></td>
               <td>5.27.5-2</td>
               <td>Monitor S.M.A.R.T. capable devices for imminent failure in Plasma</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/p/plasma-framework/plasma-framework/">plasma-framework</a></td>
               <td>5.103.0-1+deb12u1</td>
               <td>Plasma Runtime components</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
 
         </tbody>
@@ -653,12 +898,24 @@ crossorigin="anonymous"></script>
 
 </div><br>
 
-    </main>
 
+    </main>
 <div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
+    <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">OpenBosniana OS repositories</h2>
+          <p style="color:#fff"></p>
+    </div>
+    
+<div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">All source codes are available in our repositories:</p>
+          </div>
+          <br>
+</div>
+    
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
         <a href="https://www.gitlab.com/deniosm/" target="_blank">
@@ -694,7 +951,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
-
+<br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -749,8 +1006,8 @@ crossorigin="anonymous"></script>
         <div class="col-lg-2 col-md-3 footer-links">
           <br>
           <ul>
-            <li><a href="/project/">Home</a></li>
-            <li><a href="/project/education/">Education</a></li>
+            <li><a href="/project/">KDE-Home</a></li>
+            <li><a href="/project/education/">KDE-Education</a></li>
             <li><a href="/project/requirements/">Requirements</a></li>
             <li><a href="/project/documentation/">Documentation</a></li>
             <li><a href="/project/about/">About</a></li>
@@ -763,7 +1020,7 @@ crossorigin="anonymous"></script>
           <ul>
             <li><a href="https://github.com/deniosm/">GitHub</a></li>
             <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
-            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForgeNet</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
             <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
             <li><a href="https://kernel.org/">Kernel</a></li>
           </ul>
@@ -793,7 +1050,10 @@ crossorigin="anonymous"></script>
   </footer>
 
 
-<button id="backToTopDugme" title="">↑</button>
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Back to top</button>
+<!--
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Nazad na vrh</button>
+-->
 <script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
@@ -807,9 +1067,28 @@ function searchPackages() {
 
     matches.slice(0, 20).forEach(pkg => {
         const li = document.createElement("li");
-        li.className = "list-group-item";
+        li.className = "list-group-item-a";
         li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
         resultsBox.appendChild(li);
+    });
+}
+</script>
+<script src="/search/searchgeneral.js"></script>
+<script>
+function searchPackagesGeneral() {
+    const input = document.getElementById("searchBoxGeneral").value.toLowerCase();
+    const resultsBoxGeneral = document.getElementById("searchResultsGeneral");
+    resultsBoxGeneral.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = searchgeneral.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBoxGeneral.appendChild(li);
     });
 }
 </script>
@@ -883,18 +1162,13 @@ function slidebar() {
 
     function updateMenuIcon(isOpen) {
         const menuIcon = document.getElementById('menu-icon');
-        const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
             menuIcon.src = '/assets/img/close.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(90deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(90deg)';
         } else {
             menuIcon.src = '/assets/img/menu.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(0deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
     }
 }
@@ -903,6 +1177,36 @@ $(document).ready(function() {
     slidebar();
 });
 </script>
+<script>
+    const dropdownBtnSearch = document.getElementById('dropdownBtnSearch');
+    const dropdownContentSearch = document.querySelector('.nav-dropdown-content-search');
+    const searchBox = document.getElementById('searchBoxGeneral');
+    const searchResults = document.getElementById('searchResultsGeneral');
+
+    dropdownBtnSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
+            searchBox.focus();
+        }
+    });
+
+    dropdownContentSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdownBtnSearch.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            dropdownBtnSearch.classList.remove('active');
+        }
+    });
+</script>
+
 <script>
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownIcon = document.getElementById('dropdownIcon');
@@ -951,33 +1255,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
- <script>
-    // Toggle dropdowns on click
-    document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        // Close other open dropdowns
-        document.querySelectorAll('.sdropdown').forEach(drop => {
-          if (drop !== parent) drop.classList.remove('open');
-        });
-        // Toggle current
-        parent.classList.toggle('open');
+<script>
+
+  document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.sdropdown').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
       });
+      parent.classList.toggle('open');
     });
+  });
 
-    function stoggleNavbar() {
-      const nav = document.querySelector('.snavbar');
-      const btn = document.getElementById('smenuToggleBtn');
-      const isHidden = nav.style.display === 'none';
-
-      if (isHidden) {
-        nav.style.display = 'flex';
-        btn.textContent = 'Hide';
-      } else {
-        nav.style.display = 'none';
-        btn.textContent = 'Show';
-      }
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sdropdown')) {
+      document.querySelectorAll('.sdropdown.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
     }
+  });
 
-  </script>
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+<script>
+
+  document.querySelectorAll('.ms-slidebar121-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.ms-slidebar121').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.ms-slidebar121')) {
+      document.querySelectorAll('.ms-slidebar121.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+

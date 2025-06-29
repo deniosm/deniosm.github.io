@@ -92,72 +92,188 @@ crossorigin="anonymous"></script>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container-full">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-    <button class="nav-drop-menu" id="dropdownBtn">
-        <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
-        <div class="nav-dropdown-content navbar-color">
-            <p>Latest</p>
-            <a href="https://bosniana.org/blog/home-052025/">Release Notes | HOME</a>
-            <a href="https://bosniana.org/blog/edu-112024/">Release Notes | EDU</a>
-            <a href="https://bosniana.org/downloads/">Downloads</a>
-            <p></p>
-            <a href="https://bosniana.org/wiki/installation-guide/" target="blank">Installation Guide</a>
-            <a href="https://bosniana.org/wiki/">Documentation</a>
-        </div>
+    <button class="nav-drop-menu-search" id="dropdownBtnSearch">
+
+        <i class="ri-search-line" id="dropdownIconSearch"></i><span>Search</span>
+        <div class="nav-dropdown-content-search">
+
+            <div class="text-dark">
+                <input type="text" id="searchBoxGeneral" placeholder=" Search..." onkeyup="searchPackagesGeneral()" class="form-control pl-2 text-dark">
+
+                <ul id="searchResultsGeneral" class="pl-0 shadow-features3 text-light"></ul>
+
+           </div>
+ </div>
     </button>
+
      <div class="container-fluid">
           <a class="navbar-brand nav-vendor" href="/"></a>
     </div>
-      <button class="btn-sakriveni">
-        <a href="/bs/" class="text-white">
-          <i class="ri-global-line"></i> BS </a>
-      </button>
-      <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
-      </button>
+
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-translate-2" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+
+
+            <a class=" " href="/bs/">Bosnian<i class=""></i></a>
+
+            <a class=" active" href="/">English<i class=""></i></a>
+
+
+        </div>
+    </button>
+
+
+
+    <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="All OpenBosniana">
+      <span class="menu-text">All OpenBosniana</span><img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" />
+    </button>
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
 
-          <li class="nav-item ">
-            <a href="/">
-              <i class="ri-home-4-fill"></i> Home </a>
-          </li>
 
           <li class="nav-item ">
-            <a href="/project/">
-              <i class="ri-file-info-line"></i> Project </a>
+            <a href="/">
+               Home <i class=""></i></a>
           </li>
+
+
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/project/" class="">
+         Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/security/" class="">
+         Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+         Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+         Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+         Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+         About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+         FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
 
           <li class="nav-item active">
             <a href="/packages/">
-              <i class="ri-apps-line"></i> Packages </a>
+              Packages <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/wiki/">
-              <i class="ri-book-2-line"></i> Wiki </a>
+              Wiki <i class=""></i></a>
           </li>
 
-          <li class="nav-item ">
-            <a href="/blog/">
-              <i class="ri-news-line"></i> Blog </a>
-          </li>
+
+
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+         All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+         Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+         Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+         Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+         Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+         Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+         Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
 
           <li class="nav-item ">
             <a href="/gallery/">
-              <i class="ri-image-fill"></i> Gallery </a>
+              Gallery <i class=""></i></a>
           </li>
 
           <li class="nav-item ">
             <a href="/downloads/">
-              <i class="ri-download-2-fill"></i> Downloads </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="/bs/">
-              <i class="ri-global-line"></i> BS </a>
+              Downloads <i class=""></i></a>
           </li>
 
         </ul>
@@ -166,27 +282,156 @@ crossorigin="anonymous"></script>
 </div>
 <div class="ms-slidebar " id="ms-slidebar">
     <ul class="ms-slidebar-menu" id="slidebar-menu">
-<br>
 
-        <li class="nav-item"> <a class=" " href="/"><i class="ri-home-4-fill"></i>Home</a></li>
+        <li class="nav-item"> <a class=" " href="/">Home <i class=""></i></a></li>
 
-        <li class="nav-item"> <a class=" " href="/project/"><i class="ri-file-info-line"></i>Project</a></li>
 
-        <li class="nav-item"> <a class=" active" href="/packages/"><i class="ri-apps-line"></i>Packages</a></li>
 
-        <li class="nav-item"> <a class=" " href="/wiki/"><i class="ri-book-2-line"></i>Wiki</a></li>
 
-        <li class="nav-item"> <a class=" " href="/blog/"><i class="ri-news-line"></i>Blog</a></li>
 
-        <li class="nav-item"> <a class=" " href="/gallery/"><i class="ri-image-fill"></i>Gallery</a></li>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Project <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
 
-        <li class="nav-item"> <a class=" " href="/downloads/"><i class="ri-download-2-fill"></i>Downloads</a></li>
+      <li>
+        <a href="/project/" class="">
+          Home
+        </a>
+      </li>
 
-        <li class="nav-item"> <a class=" " href="/bs/"><i class="ri-global-line"></i>BS</a></li>
+      <li>
+        <a href="/project/education/" class="">
+          Education
+        </a>
+      </li>
 
-<br>
+      <li>
+        <a href="/project/security/" class="">
+          Security
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/core/" class="">
+          Core
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/requirements/" class="">
+          Requirements
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/documentation/" class="">
+          Documentation
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/about/" class="">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="/project/faq/" class="">
+          FAQ
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+
+        <li class="nav-item"> <a class="active " href="/packages/">Packages<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/wiki/">Wiki<i class=""></i></a></li>
+
+
+
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+
+      <li>
+        <a href="/blog/" class="">
+          All news
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/software/" class="">
+          Software
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/accessories/" class="">
+          Accessories
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/tutorials/" class="">
+          Tutorials
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/education/" class="">
+          Education
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/drivers/" class="">
+          Drivers
+        </a>
+      </li>
+
+      <li>
+        <a href="/blog/release-notes/" class="">
+          Release notes
+        </a>
+      </li>
+
+  </ul>
+</li>
+
+
+
+        <li class="nav-item"> <a class=" " href="/gallery/">Gallery<i class=""></i></a></li>
+
+        <li class="nav-item"> <a class=" " href="/downloads/">Downloads<i class=""></i></a></li>
+
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle">Language <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+      <li>
+        <a href="/bs/">Bosnian
+        </a>
+      </li>
+      <li>
+        <a href="/">English
+        </a>
+      </li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+                <p class="text-center mt-1">
+                    <a href="##" class="text-light">View Sitemap</a>
+                </p>
+       </li>
     </ul>
 </div>
+
 
 
     <main class="page-content" aria-label="Content">
@@ -207,7 +452,7 @@ crossorigin="anonymous"></script>
         <div class="container">
           <h3>Online Package Viewer</h3>
           <div class="bg-2 shadow-features3">
-            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-white shadow">
+            <input type="text" id="searchBox" placeholder="Package Name..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-dark shadow">
           </div>
           <ul id="searchResults" class="list-group mb-3"></ul>
         </div>
@@ -240,350 +485,350 @@ crossorigin="anonymous"></script>
               <td><a href="pool/main/b/baloo-widgets/libkf5baloowidgets5/">libkf5baloowidgets5</a></td>
               <td>4:22.12.3-1</td>
               <td>Wigets for use with Baloo</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/b/bluez-qt/libkf5bluezqt-data/">libkf5bluezqt-data</a></td>
               <td>5.103.0-1</td>
               <td>data files for bluez-qt</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/b/bluez-qt/libkf5bluezqt6/">libkf5bluezqt6</a></td>
               <td>5.103.0-1</td>
               <td>Qt wrapper for bluez</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kbookmarks/libkf5bookmarks-data/">libkf5bookmarks-data</a></td>
               <td>5.103.0-1</td>
               <td>Qt library with support for bookmarks and the XBEL format.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kbookmarks/libkf5bookmarks5/">libkf5bookmarks5</a></td>
               <td>5.103.0-1</td>
               <td>Qt library with support for bookmarks and the XBEL format.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcalcore/libkf5calendarcore5abi2/">libkf5calendarcore5abi2</a></td>
               <td>5:5.103.0-1</td>
               <td>calendar access framework</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdeclarative/libkf5calendarevents5/">libkf5calendarevents5</a></td>
               <td>5.103.0-1</td>
               <td>provides integration of QML and KDE frameworks -- calendarevents</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/libk/libkf5calendarsupport/libkf5calendarsupport-data/">libkf5calendarsupport-data</a></td>
               <td>4:22.12.3-1</td>
               <td>KDE PIM Calendar support - data files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libk/libkf5calendarsupport/libkf5calendarsupport5abi1/">libkf5calendarsupport5abi1</a></td>
               <td>4:22.12.3-1</td>
               <td>KDE PIM Calendar support - library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcalutils/libkf5calendarutils5/">libkf5calendarutils5</a></td>
               <td>4:22.12.3-1</td>
               <td>library with utility functions for the handling of calendar data</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kcodecs/libkf5codecs-data/">libkf5codecs-data</a></td>
               <td>5.103.0-1</td>
               <td>collection of methods to manipulate strings</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcodecs/libkf5codecs5/">libkf5codecs5</a></td>
               <td>5.103.0-1</td>
               <td>collection of methods to manipulate strings</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kcompletion/libkf5completion-data/">libkf5completion-data</a></td>
               <td>5.103.0-1</td>
               <td>Widgets with advanced auto-completion features.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcompletion/libkf5completion5/">libkf5completion5</a></td>
               <td>5.103.0-1</td>
               <td>Widgets with advanced auto-completion features.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kconfig/libkf5config-bin/">libkf5config-bin</a></td>
               <td>5.103.0-2</td>
               <td>configuration settings framework for Qt</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kconfig/libkf5config-data/">libkf5config-data</a></td>
               <td>5.103.0-2</td>
               <td>configuration settings framework for Qt</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kconfig/libkf5configcore5/">libkf5configcore5</a></td>
               <td>5.103.0-2</td>
               <td>configuration settings framework for Qt</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kconfig/libkf5configgui5/">libkf5configgui5</a></td>
               <td>5.103.0-2</td>
               <td>configuration settings framework for Qt</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kconfig/libkf5configqml5/">libkf5configqml5</a></td>
               <td>5.103.0-2</td>
               <td>configuration settings framework for Qt</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kconfigwidgets/libkf5configwidgets-data/">libkf5configwidgets-data</a></td>
               <td>5.103.0-1</td>
               <td>Extra widgets for easier configuration support.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kconfigwidgets/libkf5configwidgets5/">libkf5configwidgets5</a></td>
               <td>5.103.0-1</td>
               <td>Extra widgets for easier configuration support.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-contacts/libkf5contacteditor5/">libkf5contacteditor5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi contact editor library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kcontacts/libkf5contacts-data/">libkf5contacts-data</a></td>
               <td>5:5.103.0-1</td>
               <td>data files for kcontacts</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcontacts/libkf5contacts5/">libkf5contacts5</a></td>
               <td>5:5.103.0-1</td>
               <td>address book API for KDE frameworks</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kcoreaddons/libkf5coreaddons-data/">libkf5coreaddons-data</a></td>
               <td>5.103.0-1</td>
               <td>KDE Frameworks 5 addons to QtCore - data files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcoreaddons/libkf5coreaddons5/">libkf5coreaddons5</a></td>
               <td>5.103.0-1</td>
               <td>KDE Frameworks 5 addons to QtCore</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcrash/libkf5crash5/">libkf5crash5</a></td>
               <td>5.103.0-1</td>
               <td>Support for application crash analysis and bug report from apps</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kdav/libkf5dav-data/">libkf5dav-data</a></td>
               <td>1:5.103.0-1</td>
               <td>DAV protocol implementation with KJobs - arch independent files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdav/libkf5dav5/">libkf5dav5</a></td>
               <td>1:5.103.0-1</td>
               <td>DAV protocol implementation with KJobs</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdbusaddons/libkf5dbusaddons-bin/">libkf5dbusaddons-bin</a></td>
               <td>5.103.0-1</td>
               <td>class library for qtdbus</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kdbusaddons/libkf5dbusaddons-data/">libkf5dbusaddons-data</a></td>
               <td>5.103.0-1</td>
               <td>class library for qtdbus</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdbusaddons/libkf5dbusaddons5/">libkf5dbusaddons5</a></td>
               <td>5.103.0-1</td>
               <td>class library for qtdbus</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kdeclarative/libkf5declarative-data/">libkf5declarative-data</a></td>
               <td>5.103.0-1</td>
               <td>provides integration of QML and KDE frameworks</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdeclarative/libkf5declarative5/">libkf5declarative5</a></td>
               <td>5.103.0-1</td>
               <td>provides integration of QML and KDE frameworks</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kdnssd-kf5/libkf5dnssd-data/">libkf5dnssd-data</a></td>
               <td>5.103.0-1</td>
               <td>Abstraction to system DNSSD features.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdnssd-kf5/libkf5dnssd5/">libkf5dnssd5</a></td>
               <td>5.103.0-1</td>
               <td>Abstraction to system DNSSD features.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdoctools/libkf5doctools5/">libkf5doctools5</a></td>
               <td>5.103.0-1</td>
               <td>Tools to generate documentation in various formats from DocBook</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/libk/libkf5eventviews/libkf5eventviews-data/">libkf5eventviews-data</a></td>
               <td>4:22.12.3-1</td>
               <td>KDE PIM event handling - data files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libk/libkf5eventviews/libkf5eventviews5abi1/">libkf5eventviews5abi1</a></td>
               <td>4:22.12.3-1</td>
               <td>KDE PIM event handling - library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kfilemetadata-kf5/libkf5filemetadata-bin/">libkf5filemetadata-bin</a></td>
               <td>5.103.0-1</td>
               <td>library for extracting file metadata</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kfilemetadata-kf5/libkf5filemetadata-data/">libkf5filemetadata-data</a></td>
               <td>5.103.0-1</td>
               <td>library for extracting file metadata</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kfilemetadata-kf5/libkf5filemetadata3/">libkf5filemetadata3</a></td>
               <td>5.103.0-1</td>
               <td>library for extracting file metadata</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kglobalaccel/libkf5globalaccel-bin/">libkf5globalaccel-bin</a></td>
               <td>5.103.0-1</td>
               <td>Configurable global shortcut support.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kglobalaccel/libkf5globalaccel-data/">libkf5globalaccel-data</a></td>
               <td>5.103.0-1</td>
               <td>Configurable global shortcut support.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kglobalaccel/libkf5globalaccel5/">libkf5globalaccel5</a></td>
               <td>5.103.0-1</td>
               <td>Configurable global shortcut support.</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kglobalaccel/libkf5globalaccelprivate5/">libkf5globalaccelprivate5</a></td>
               <td>5.103.0-1</td>
               <td>Configurable global shortcut support - private runtime library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libk/libkf5grantleetheme/libkf5grantleetheme-plugins/">libkf5grantleetheme-plugins</a></td>
               <td>22.12.3-1</td>
               <td>KDE PIM grantlee theme support - plugins</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libk/libkf5grantleetheme/libkf5grantleetheme5/">libkf5grantleetheme5</a></td>
               <td>22.12.3-1</td>
               <td>KDE PIM grantlee theme support - library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/libk/libkf5gravatar/libkf5gravatar-data/">libkf5gravatar-data</a></td>
               <td>4:22.12.3-1</td>
               <td>KDE PIM gravatar library - data files</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libk/libkf5gravatar/libkf5gravatar5abi2/">libkf5gravatar5abi2</a></td>
               <td>4:22.12.3-1</td>
               <td>KDE PIM gravatar library</td>
-              <td>2025-06-05 23:18:58</td>
+              <td>2025-06-29 03:56:10</td>
             </tr>
 
         </tbody>
@@ -653,12 +898,24 @@ crossorigin="anonymous"></script>
 
 </div><br>
 
-    </main>
 
+    </main>
 <div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
+    <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">OpenBosniana OS repositories</h2>
+          <p style="color:#fff"></p>
+    </div>
+    
+<div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">All source codes are available in our repositories:</p>
+          </div>
+          <br>
+</div>
+    
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
         <a href="https://www.gitlab.com/deniosm/" target="_blank">
@@ -694,7 +951,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
-
+<br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -749,8 +1006,8 @@ crossorigin="anonymous"></script>
         <div class="col-lg-2 col-md-3 footer-links">
           <br>
           <ul>
-            <li><a href="/project/">Home</a></li>
-            <li><a href="/project/education/">Education</a></li>
+            <li><a href="/project/">KDE-Home</a></li>
+            <li><a href="/project/education/">KDE-Education</a></li>
             <li><a href="/project/requirements/">Requirements</a></li>
             <li><a href="/project/documentation/">Documentation</a></li>
             <li><a href="/project/about/">About</a></li>
@@ -763,7 +1020,7 @@ crossorigin="anonymous"></script>
           <ul>
             <li><a href="https://github.com/deniosm/">GitHub</a></li>
             <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
-            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForgeNet</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
             <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
             <li><a href="https://kernel.org/">Kernel</a></li>
           </ul>
@@ -793,7 +1050,10 @@ crossorigin="anonymous"></script>
   </footer>
 
 
-<button id="backToTopDugme" title="">↑</button>
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Back to top</button>
+<!--
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Nazad na vrh</button>
+-->
 <script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
@@ -807,9 +1067,28 @@ function searchPackages() {
 
     matches.slice(0, 20).forEach(pkg => {
         const li = document.createElement("li");
-        li.className = "list-group-item";
+        li.className = "list-group-item-a";
         li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
         resultsBox.appendChild(li);
+    });
+}
+</script>
+<script src="/search/searchgeneral.js"></script>
+<script>
+function searchPackagesGeneral() {
+    const input = document.getElementById("searchBoxGeneral").value.toLowerCase();
+    const resultsBoxGeneral = document.getElementById("searchResultsGeneral");
+    resultsBoxGeneral.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = searchgeneral.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBoxGeneral.appendChild(li);
     });
 }
 </script>
@@ -883,18 +1162,13 @@ function slidebar() {
 
     function updateMenuIcon(isOpen) {
         const menuIcon = document.getElementById('menu-icon');
-        const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
             menuIcon.src = '/assets/img/close.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(90deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(90deg)';
         } else {
             menuIcon.src = '/assets/img/menu.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(0deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
     }
 }
@@ -903,6 +1177,36 @@ $(document).ready(function() {
     slidebar();
 });
 </script>
+<script>
+    const dropdownBtnSearch = document.getElementById('dropdownBtnSearch');
+    const dropdownContentSearch = document.querySelector('.nav-dropdown-content-search');
+    const searchBox = document.getElementById('searchBoxGeneral');
+    const searchResults = document.getElementById('searchResultsGeneral');
+
+    dropdownBtnSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
+            searchBox.focus();
+        }
+    });
+
+    dropdownContentSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdownBtnSearch.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            dropdownBtnSearch.classList.remove('active');
+        }
+    });
+</script>
+
 <script>
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownIcon = document.getElementById('dropdownIcon');
@@ -951,33 +1255,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
- <script>
-    // Toggle dropdowns on click
-    document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        // Close other open dropdowns
-        document.querySelectorAll('.sdropdown').forEach(drop => {
-          if (drop !== parent) drop.classList.remove('open');
-        });
-        // Toggle current
-        parent.classList.toggle('open');
+<script>
+
+  document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.sdropdown').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
       });
+      parent.classList.toggle('open');
     });
+  });
 
-    function stoggleNavbar() {
-      const nav = document.querySelector('.snavbar');
-      const btn = document.getElementById('smenuToggleBtn');
-      const isHidden = nav.style.display === 'none';
-
-      if (isHidden) {
-        nav.style.display = 'flex';
-        btn.textContent = 'Hide';
-      } else {
-        nav.style.display = 'none';
-        btn.textContent = 'Show';
-      }
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sdropdown')) {
+      document.querySelectorAll('.sdropdown.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
     }
+  });
 
-  </script>
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+<script>
+
+  document.querySelectorAll('.ms-slidebar121-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.ms-slidebar121').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.ms-slidebar121')) {
+      document.querySelectorAll('.ms-slidebar121.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+

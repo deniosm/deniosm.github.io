@@ -92,126 +92,378 @@ crossorigin="anonymous"></script>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container-full">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-    <button class="nav-drop-menu" id="dropdownBtn">
-        <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
-        <div class="nav-dropdown-content navbar-color">
-            <p>Nedavne promjene</p>
-            <a href="https://bosniana.org/bs/blog/home-052025/">Bilješke o izdanju | HOME</a>
-            <a href="https://bosniana.org/bs/blog/edu-112024/">Bilješke o izdanju | EDU</a>
-            <a href="https://bosniana.org/bs/downloads/">Preuzimanja</a>
-            <p></p>
-            <a href="https://bosniana.org/bs/wiki/installation-guide/" target="blank">Vodič za instalaciju</a>
-            <a href="https://bosniana.org/bs/wiki/">Dokumentacija</a>
-        </div>
+    <button class="nav-drop-menu-search" id="dropdownBtnSearch">
+        
+        <i class="ri-search-line" id="dropdownIconSearch"></i><span>Pretraži</span>
+        <div class="nav-dropdown-content-search">
+
+            <div class="text-dark">
+                <input type="text" id="searchBoxGeneral" placeholder=" Pretraži..." onkeyup="searchPackagesGeneral()" class="form-control pl-2 text-dark">
+
+                <ul id="searchResultsGeneral" class="pl-0 shadow-features3 text-light"></ul>
+
+           </div>
+ </div>
     </button>
+
      <div class="container-fluid">
           <a class="navbar-brand nav-vendor" href="/bs/"></a>
     </div>
-      <button class="btn-sakriveni">
-        <a href="/" class="text-white">
-          <i class="ri-global-line"></i> EN </a>
-      </button>
-      <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
-      </button>
+ 
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-translate-2" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+
+        
+            <a class=" " href="/">Engleski<i class=""></i></a>
+        
+            <a class=" " href="/bs/">Bosanski<i class=""></i></a>
+            
+
+        </div>
+    </button> 
+  
+  
+  
+    <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="All OpenBosniana">
+      <span class="menu-text">Sve OpenBosniana</span><img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" />
+    </button>
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
-
+        
+        
           <li class="nav-item ">
             <a href="/bs/">
-              <i class="ri-home-4-fill"></i> Početna </a>
+               Početna <i class=""></i></a>
           </li>
+        
+        
 
-          <li class="nav-item ">
-            <a href="/bs/project/">
-              <i class="ri-file-info-line"></i> Projekat </a>
-          </li>
 
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Projekt <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         KDE-Home
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/education/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         KDE-Education
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/security/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         XFCE-Security
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/core/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Core
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/requirements/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Zahtjevi
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/documentation/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Dokumentacija
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/about/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         O projektu
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/faq/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Često postavljana pitanja
+        </a>
+      </li>
+    
+  </ul>
+</li>
+
+    
+
+        
           <li class="nav-item active">
             <a href="/bs/packages/">
-              <i class="ri-apps-line"></i> Paketi </a>
+              Paketi <i class=""></i></a>
           </li>
-
+        
           <li class="nav-item ">
             <a href="/bs/wiki/">
-              <i class="ri-book-2-line"></i> Wiki </a>
+              Wiki <i class=""></i></a>
           </li>
+        
 
-          <li class="nav-item ">
-            <a href="/bs/blog/">
-              <i class="ri-news-line"></i> Blog </a>
-          </li>
 
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Sve vijesti
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/software/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Softver
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/accessories/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Dodaci
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/tutorials/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Tutorijali
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/education/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Obrazovanje
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/drivers/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Drajveri
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/release-notes/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Bilješke o izdanju
+        </a>
+      </li>
+    
+  </ul>
+</li>
+
+    
+        
           <li class="nav-item ">
             <a href="/bs/gallery/">
-              <i class="ri-image-fill"></i> Galerija </a>
+              Galerija <i class=""></i></a>
           </li>
-
+        
           <li class="nav-item ">
             <a href="/bs/downloads/">
-              <i class="ri-download-2-fill"></i> Preuzimanja </a>
+              Preuzimanja <i class=""></i></a>
           </li>
-
-          <li class="nav-item ">
-            <a href="/">
-              <i class="ri-global-line"></i> EN </a>
-          </li>
-
+        
         </ul>
       </div></div>
     </nav>
 </div>
 <div class="ms-slidebar " id="ms-slidebar">
     <ul class="ms-slidebar-menu" id="slidebar-menu">
-<br>
+        
+        <li class="nav-item"> <a class=" " href="/bs/">Početna <i class=""></i></a></li>
+        
 
-        <li class="nav-item"> <a class=" " href="/bs/"><i class="ri-home-4-fill"></i>Početna</a></li>
 
-        <li class="nav-item"> <a class=" " href="/bs/project/"><i class="ri-file-info-line"></i>Projekat</a></li>
 
-        <li class="nav-item"> <a class=" active" href="/bs/packages/"><i class="ri-apps-line"></i>Paketi</a></li>
 
-        <li class="nav-item"> <a class=" " href="/bs/wiki/"><i class="ri-book-2-line"></i>Wiki</a></li>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Projekt <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+    
+      <li>
+        <a href="/bs/project/" class="">
+          KDE-Home
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/education/" class="">
+          KDE-Education
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/security/" class="">
+          XFCE-Security
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/core/" class="">
+          Core
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/requirements/" class="">
+          Zahtjevi
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/documentation/" class="">
+          Dokumentacija
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/about/" class="">
+          O projektu
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/faq/" class="">
+          Često postavljana pitanja
+        </a>
+      </li>
+    
+  </ul>
+</li>
 
-        <li class="nav-item"> <a class=" " href="/bs/blog/"><i class="ri-news-line"></i>Blog</a></li>
+    
 
-        <li class="nav-item"> <a class=" " href="/bs/gallery/"><i class="ri-image-fill"></i>Galerija</a></li>
+        
+        <li class="nav-item"> <a class=" active" href="/bs/packages/">Paketi<i class=""></i></a></li>
+        
+        <li class="nav-item"> <a class=" " href="/bs/wiki/">Wiki<i class=""></i></a></li>
+        
 
-        <li class="nav-item"> <a class=" " href="/bs/downloads/"><i class="ri-download-2-fill"></i>Preuzimanja</a></li>
 
-        <li class="nav-item"> <a class=" " href="/"><i class="ri-global-line"></i>EN</a></li>
 
-<br>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+    
+      <li>
+        <a href="/bs/blog/" class="">
+          Sve vijesti
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/software/" class="">
+          Softver
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/accessories/" class="">
+          Dodaci
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/tutorials/" class="">
+          Tutorijali
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/education/" class="">
+          Obrazovanje
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/drivers/" class="">
+          Drajveri
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/release-notes/" class="">
+          Bilješke o izdanju
+        </a>
+      </li>
+    
+  </ul>
+</li>
+
+    
+        
+        <li class="nav-item"> <a class=" " href="/bs/gallery/">Galerija<i class=""></i></a></li>
+        
+        <li class="nav-item"> <a class=" " href="/bs/downloads/">Preuzimanja<i class=""></i></a></li>
+        
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle">Jezik <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+      <li>
+        <a href="/">Engleski
+        </a>
+      </li>
+      <li>
+        <a href="/bs/">Bosanski
+        </a>
+      </li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+                <p class="text-center mt-1">
+                    <a href="##" class="text-light">Mapa sajta</a>
+                </p>
+       </li> 
     </ul>
 </div>
-
 
     <main class="page-content" aria-label="Content">
 
 <div class="bodymargin"></div>
 
+<br>
+        <div class="container-fluid">
+          <div class="section-title text-start" data-aos="fade-up">
+            <h2>Paketi</h2>
+            <p>Stranica:<span><b> 17</b> od </span><b>50</b></p>
+          </div>
+          <p class="nunito-dark"> Pomoću pretrage paketa i online preglednika paketa možete pratiti, preuzimati i rješavati zavisnosti za sve pakete dostupne u glavnom repozitoriju OpenBosniana OS-a.
+ </p>
 
-                <div class="card-body mt-2 pt-2"><br>
-                    <h3 class="card-title-b text-info-c"><span class="nunito-dark">Paketi | 17</span></h3>
-                    <p class="nunito-dark p-2 mt-2">
-                        <span><b>2495 </b></span>pronađeni odgovarajući paketi.
-                    </p>
-                    <p class="nunito-dark">
-                    Stranica:<span><b> 17</b> of </span><b>50</b>
-                    </p>
 
-<div class="container shadow">
-<h3>Mrežni preglednik paketa</h3>
-<div class="bg-2 shadow">
-<input type="text" id="searchBox" placeholder="  Naziv paketa..." onkeyup="searchPackages()" class="form-control mb-3 pl-2 text-white shadow">
-</div>
-<ul id="searchResults" class="list-group mb-3"></ul>
-</div>
-</div>
+        </div>
 
+        <div class="container">
+          <h3>Online preglednik paketa</h3>
+          <div class="bg-2 shadow-features3">
+            <input type="text" id="searchBox" placeholder="Naziv paketa..." onkeyup="searchPackages()" class="form-control mb-1 pl-2 text-dark shadow">
+          </div>
+          <ul id="searchResults" class="list-group mb-3"></ul>
+        </div>
+      </div>
+      </div>
+            <div class="container justify-content-between align-items-center pb-2">
+            <div class="row">
+                <p class="btn btn-light bg-light mr-2">Stranica:<span><b> 17</b></span></p>
+                <a href="16.html" class="btn btn-raised mr-2">Nazad</a>
+                <a href="18.html" class="btn btn-raised">Naprijed</a>
+             </div>
+          </div>
 
 <div class="container-fluid">
     <div class="table-responsive tabela-okvir-1 nunito-dark">
@@ -232,350 +484,350 @@ crossorigin="anonymous"></script>
               <td><a href="pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-18/">libjavascriptcoregtk-4.0-18</a></td>
               <td>2.48.1-2~deb12u1</td>
               <td>JavaScript engine library from WebKitGTK</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/w/webkit2gtk/libjavascriptcoregtk-4.1-0/">libjavascriptcoregtk-4.1-0</a></td>
               <td>2.48.1-2~deb12u1</td>
               <td>JavaScript engine library from WebKitGTK</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libj/libjaylink/libjaylink0/">libjaylink0</a></td>
               <td>0.3.1-1</td>
               <td>library for interacting with J-Link programmers</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jbigkit/libjbig0/">libjbig0</a></td>
               <td>2.1-6.1</td>
               <td>JBIGkit libraries</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jbig2dec/libjbig2dec0/">libjbig2dec0</a></td>
               <td>0.19-3</td>
               <td>JBIG2 decoder library - shared libraries</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libj/libjcat/libjcat1/">libjcat1</a></td>
               <td>0.1.9-1</td>
               <td>JSON catalog library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jemalloc/libjemalloc2/">libjemalloc2</a></td>
               <td>5.3.0-1</td>
               <td>general-purpose scalable concurrent malloc(3) implementation</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jimtcl/libjim0.81/">libjim0.81</a></td>
               <td>0.81+dfsg0-2</td>
               <td>small-footprint implementation of Tcl - shared library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libj/libjpeg-turbo/libjpeg62-turbo/">libjpeg62-turbo</a></td>
               <td>1:2.1.5-2</td>
               <td>libjpeg-turbo JPEG runtime library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jq/libjq1/">libjq1</a></td>
               <td>1.6-2.1</td>
               <td>lightweight and flexible command-line JSON processor - shared library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/n/node-jquery/libjs-jquery/">libjs-jquery</a></td>
               <td>3.6.1+dfsg+~3.5.14-1</td>
               <td>JavaScript library for dynamic web applications</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/u/underscore/libjs-underscore/">libjs-underscore</a></td>
               <td>1.13.4~dfsg+~1.11.4-3</td>
               <td>JavaScript's functional programming helper library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/json-c/libjson-c5/">libjson-c5</a></td>
               <td>0.16-2</td>
               <td>JSON manipulation library - shared library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/json-glib/libjson-glib-1.0-0/">libjson-glib-1.0-0</a></td>
               <td>1.6.6-1</td>
               <td>GLib JSON manipulation library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/j/json-glib/libjson-glib-1.0-common/">libjson-glib-1.0-common</a></td>
               <td>1.6.6-1</td>
               <td>GLib JSON manipulation library (common files)</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jigit/libjte2/">libjte2</a></td>
               <td>1.22-3</td>
               <td>Jigdo Template Export - runtime library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jpeg-xl/libjxl0.7/">libjxl0.7</a></td>
               <td>0.7.0-10</td>
               <td>JPEG XL Image Coding System - "JXL" (shared libraries)</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jxrlib/libjxr-tools/">libjxr-tools</a></td>
               <td>1.2~git20170615.f752187-5</td>
               <td>JPEG-XR lib - command line apps</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/j/jxrlib/libjxr0/">libjxr0</a></td>
               <td>1.2~git20170615.f752187-5</td>
               <td>JPEG-XR lib - libraries</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/krb5/libk5crypto3/">libk5crypto3</a></td>
               <td>1.20.1-2+deb12u3</td>
               <td>MIT Kerberos runtime libraries - Crypto Library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kaccounts-integration/libkaccounts2/">libkaccounts2</a></td>
               <td>4:22.12.3-1</td>
               <td>System to administer web accounts - shared library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/libk/libkate/libkate1/">libkate1</a></td>
               <td>0.4.1-11</td>
               <td>Codec for karaoke and text encapsulation</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kcolorpicker/libkcolorpicker0/">libkcolorpicker0</a></td>
               <td>0.2.0-1</td>
               <td>QToolButton-like widget with color selection popup menu (lib)</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdecoration/libkdecorations2-5v5/">libkdecorations2-5v5</a></td>
               <td>4:5.27.5-2</td>
               <td>library to create window decorations</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdecoration/libkdecorations2private10/">libkdecorations2private10</a></td>
               <td>4:5.27.5-2</td>
               <td>library to create window decorations - private library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kdsoap/libkdsoap1/">libkdsoap1</a></td>
               <td>1.9.1+dfsg-5</td>
               <td>Qt-based client-side and server-side SOAP component - client-side library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/keyutils/libkeyutils1/">libkeyutils1</a></td>
               <td>1.6.3-2</td>
               <td>Linux Key Management Utilities (library)</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kactivities-kf5/libkf5activities5/">libkf5activities5</a></td>
               <td>5.103.0-1</td>
               <td>Library to organize the user work in separate activities.</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kactivities-stats/libkf5activitiesstats1/">libkf5activitiesstats1</a></td>
               <td>5.103.0-1</td>
               <td>usage data collected by the activities system</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi/libkf5akonadiagentbase5/">libkf5akonadiagentbase5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi agent base library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/a/akonadi-calendar/libkf5akonadicalendar-data/">libkf5akonadicalendar-data</a></td>
               <td>4:22.12.3-1</td>
               <td>data files for akonadi-calendar</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-calendar/libkf5akonadicalendar5abi1/">libkf5akonadicalendar5abi1</a></td>
               <td>4:22.12.3-1</td>
               <td>library providing calendar helpers for Akonadi items</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-contacts/libkf5akonadicontact5/">libkf5akonadicontact5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi contacts access library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-notes/libkf5akonadinotes5/">libkf5akonadinotes5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi notes access library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearch-bin/">libkf5akonadisearch-bin</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search library - runtime binaries</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearch-data/">libkf5akonadisearch-data</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search library - data files</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearch-plugins/">libkf5akonadisearch-plugins</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search library - runtime plugins</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearchcore5/">libkf5akonadisearchcore5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search core library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearchdebug5/">libkf5akonadisearchdebug5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search debug library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearchpim5/">libkf5akonadisearchpim5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/akonadi-search/libkf5akonadisearchxapian5/">libkf5akonadisearchxapian5</a></td>
               <td>4:22.12.3-1</td>
               <td>Akonadi search xapian library</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/karchive/libkf5archive-data/">libkf5archive-data</a></td>
               <td>5.103.0-1</td>
               <td>data files for karchive</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/karchive/libkf5archive5/">libkf5archive5</a></td>
               <td>5.103.0-1</td>
               <td>Qt 5 addon providing access to numerous types of archives</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/a/attica-kf5/libkf5attica5/">libkf5attica5</a></td>
               <td>5.103.0-1</td>
               <td>Qt library that implements the Open Collaboration Services API</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>all</td>
               <td><a href="pool/main/k/kauth/libkf5auth-data/">libkf5auth-data</a></td>
               <td>5.103.0-1</td>
               <td>Abstraction to system policy and authentication features</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kauth/libkf5auth5/">libkf5auth5</a></td>
               <td>5.103.0-1</td>
               <td>Abstraction to system policy and authentication features</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/k/kauth/libkf5authcore5/">libkf5authcore5</a></td>
               <td>5.103.0-1</td>
               <td>Abstraction to system policy and authentication features</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/b/baloo-kf5/libkf5baloo5/">libkf5baloo5</a></td>
               <td>5.103.0-2</td>
               <td>framework for searching and managing metadata core lib.</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/b/baloo-kf5/libkf5balooengine5/">libkf5balooengine5</a></td>
               <td>5.103.0-2</td>
               <td>framework for searching and managing metadata plugins</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
             <tr>
               <td>amd64</td>
               <td><a href="pool/main/b/baloo-widgets/libkf5baloowidgets-bin/">libkf5baloowidgets-bin</a></td>
               <td>4:22.12.3-1</td>
               <td>Wigets for use with Baloo - binaries</td>
-              <td>2025-05-28 08:10:13</td>
+              <td>2025-06-29 03:26:32</td>
             </tr>
 
         </tbody>
@@ -583,25 +835,16 @@ crossorigin="anonymous"></script>
    </div>
 </div>
 
-<div class="container-fluid p-3">
-  <div class="ms-footer-col">
-    <div class="ms-footbar-block">
-      <ul class="list-unstyled three_cols">
-        <li class="p-3">
-          <p class="text-center p-3">Stranica:<span><b> 17</b> of </span><b>50</b></p>
-        </li>
-        <li class="p-3">
-          <a href="16.html"><p class="text-center btn btn-raised p-3">Nazad</p></a>
-        </li>
-        <li class="p-3">
-         <a href="18.html"> <p class="text-center btn btn-raised p-3">Naprijed</p></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="container-fluid p-3">
-    <a href="https://bosniana.org/packages/"><p class="text-center btn btn-info p-0">1</p></a>
+
+            <div class="container justify-content-between align-items-center"><br>
+            <div class="row">
+                <p class="btn btn-light bg-light mr-2">Stranica:<span><b> 17</b></span></p>
+                <a href="16.html" class="btn btn-raised mr-2">Nazad</a>
+                <a href="18.html" class="btn btn-raised">Naprijed</a>
+             </div>
+          </div><br>
+<div class="container-fluid shadow-features3 p-3">
+    <a href="https://bosniana.org/bs/packages/"><p class="text-center btn btn-info p-0">1</p></a>
     <a href="2.html"><p class="text-center btn btn-info p-0">2</p></a>
     <a href="3.html"><p class="text-center btn btn-info p-0">3</p></a>
     <a href="4.html"><p class="text-center btn btn-info p-0">4</p></a>
@@ -654,20 +897,33 @@ crossorigin="anonymous"></script>
 
 </div><br>
 
-    </main>
 
-    <div class="linija-footer-gore"></div>
+    </main>
+<div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
+    <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">
+OpenBosniana OS repozitoriji</h2>
+          <p style="color:#fff"></p>
+    </div>
+    
+<div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">Svi izvorni kodovi su dostupni u našim repozitorijima:</p>
+          </div>
+          <br>
+</div>
+    
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://www.gitlab.com/bosnianaos/" target="_blank">
+        <a href="https://www.gitlab.com/deniosm/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/gl.svg" title=" ">
         </a>
       </div>
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://sourceforge.net/projects/repo-os/" target="_blank">
+        <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/sf.svg" title=" ">
         </a>
       </div>
@@ -695,6 +951,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
+<br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -705,72 +962,99 @@ crossorigin="anonymous"></script>
     </div>
   </div>
 </section>
-<footer>
-  <div class="logo-font">
-    <section id="sponsor">
-      <div class="sponsor">
-        <div class="linija-dole mb-1"></div>
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center">
-													<a href="##">OpenBosniana OS</a> i
-													<a href="##">bosniana.org</a> razvio:
-													<a href="##">Denis Maslo</a>
-        </p>
+</div>
 
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center"><i class="ri-mail-send-line"></i> Kontakt:
-          <span class="text-light ml-1">
-          <a href="mailto:dennios@duck.com">
+
+  <footer id="footer" class="footer">
+
+    <div class="container-fluid" style="background-color:rgba(0,0,0,0.2)">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <br>
+          <div class="footer-contact pt-3" style="text-align:start;">
+            <p>Razvoj: <span class="text-danger"> Denis Maslo</span></p>
+            <p>E-pošta:           <a href="mailto:dennios@duck.com">
              dennios@duck.com
-          </a>
-          </span>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:openbosniana_dev@bosniana.org">
-            <span class="text-light ml-1">Razvojni programeri</span>
-          </a>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:info@bosniana.org">
-            <span class="text-light ml-1">Informacije</span>
-          </a>
-        </p>
-        <div class="linija-footer mt-1 mb-1"></div>
+          </a></p>
+            <p>Razvojni programer:           <a href="mailto:openbosniana_dev@bosniana.org">
+             openbosniana_dev [@] bosniana.org
+          </a></p>
+            <p>Informacije:           <a href="mailto:info@bosniana.org">
+             info [@] bosniana.org
+          </a></p><br>
+          <p><a href="/bs/privacy-cookies-policy/">
+             Politika privatnosti i kolačića 
+          </a></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/bs/">Početna</a></li>
+            <li><a href="/bs/project/">Projekt</a></li>
+            <li><a href="/bs/packages/">Paketi</a></li>
+            <li><a href="/bs/wiki/">Wiki</a></li>
+            <li><a href="/bs/blog/">Blog</a></li>
+            <li><a href="/bs/gallery/">Galerija</a></li>
+            <li><a href="/bs/downloads/">Preuzimanja</a></li>
+            <li><a href="https://bosniana.org/">Engleski</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/bs/project/">KDE-Home</a></li>
+            <li><a href="/bs/project/education/">KDE-Education</a></li>
+            <li><a href="/bs/project/requirements/">Zahtjevi</a></li>
+            <li><a href="/bs/project/documentation/">Dokumentacija</a></li>
+            <li><a href="/bs/project/about/">O nama</a></li>
+            <li><a href="/bs/project/faq/">Često postavljana pitanja</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="https://github.com/deniosm/">GitHub</a></li>
+            <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
+            <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
+            <li><a href="https://kernel.org/">Kernel</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="#">#Debian</a></li>
+            <li><a href="#">#OpenBosniana</a></li>
+            <li><a href="#">#GNU/Linux</a></li>
+            <li><a href="#">#FSF</a></li>
+            <li><a href="#">#SalsaDebian</a></li>
+          </ul>
+        </div>
+
       </div>
-    </section>
-  </div>
-  <div class="footer-content">
-    <ul class="footer-links">
-      <li>
-        <a href="https://bosniana.org/bs/">Početna</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/project">Projekat</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/packages">Paketi</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/wiki">Wiki</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/blog">Blog</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/gallery">Galerija</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/downloads">Preuzimanja</a>
-      </li>
-    </ul>
-    <div class="linija-footer mb-1"></div>
-    <div id="copyright">
-      <p class="text-center">Linux® je registrovani zaštitni znak Linusa Torvaldsa u SAD-u i drugim zemljama.</p>
-      <p class="text-center"> | &copy; 2022-2025 | openbosniana os | bosniana.org | </p>
     </div>
-  </div>
-</footer><button id="backToTopDugme" title="">↑</button>
-<script src="/bs/packages/packages.js"></script>
+
+    <div class="container copyright text-center" style="border-top:1px solid #222; padding:10px 0">
+
+      <p class="text-center">Linux® je registrovani zaštitni znak Linusa Torvaldsa u SAD-u i drugim zemljama.</p>
+      <p class="text-center"> &copy; 2022-2025 | openbosniana os | bosniana.org </p>
+
+    </div>
+
+  </footer>
+
+<!--
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Back to top</button>
+-->
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Nazad na vrh</button>
+
+<script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
     const input = document.getElementById("searchBox").value.toLowerCase();
@@ -780,12 +1064,31 @@ function searchPackages() {
     if (input.length === 0) return;
 
     const matches = packages.filter(pkg => pkg.name.toLowerCase().includes(input));
-    
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item-a";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBox.appendChild(li);
+    });
+}
+</script>
+<script src="/search/searchgeneral.js"></script>
+<script>
+function searchPackagesGeneral() {
+    const input = document.getElementById("searchBoxGeneral").value.toLowerCase();
+    const resultsBoxGeneral = document.getElementById("searchResultsGeneral");
+    resultsBoxGeneral.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = searchgeneral.filter(pkg => pkg.name.toLowerCase().includes(input));
+
     matches.slice(0, 20).forEach(pkg => {
         const li = document.createElement("li");
         li.className = "list-group-item";
         li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
-        resultsBox.appendChild(li);
+        resultsBoxGeneral.appendChild(li);
     });
 }
 </script>
@@ -820,7 +1123,7 @@ function searchPackages() {
         overlay.style.display = "none";
       }
     </script>
-    <script src="/assets/js/plugins.min.js"></script><script src="/assets/js/backtotop.js"></script><script src="/assets/js/backtotop.js"><
+    <script src="/assets/js/plugins.min.js"></script><script src="/assets/js/backtotop.js"></script>
 <script>
 function slidebar() {
     var t = $(".ms-slidebar"),
@@ -859,18 +1162,13 @@ function slidebar() {
 
     function updateMenuIcon(isOpen) {
         const menuIcon = document.getElementById('menu-icon');
-        const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
             menuIcon.src = '/assets/img/close.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(90deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(90deg)';
         } else {
             menuIcon.src = '/assets/img/menu.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(0deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
     }
 }
@@ -879,6 +1177,36 @@ $(document).ready(function() {
     slidebar();
 });
 </script>
+<script>
+    const dropdownBtnSearch = document.getElementById('dropdownBtnSearch');
+    const dropdownContentSearch = document.querySelector('.nav-dropdown-content-search');
+    const searchBox = document.getElementById('searchBoxGeneral');
+    const searchResults = document.getElementById('searchResultsGeneral');
+
+    dropdownBtnSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
+            searchBox.focus();
+        }
+    });
+
+    dropdownContentSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdownBtnSearch.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            dropdownBtnSearch.classList.remove('active');
+        }
+    });
+</script>
+
 <script>
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownIcon = document.getElementById('dropdownIcon');
@@ -894,8 +1222,109 @@ $(document).ready(function() {
         }
     });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('features-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('.features-btn');
+      if (btn) {
+        btn.classList.toggle('rotated');
+      }
 
+      // Optional: Toggle any related content if needed
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('number-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
 
-  </body>
+<script>
 
-</html>
+  document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.sdropdown').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sdropdown')) {
+      document.querySelectorAll('.sdropdown.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+<script>
+
+  document.querySelectorAll('.ms-slidebar121-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.ms-slidebar121').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.ms-slidebar121')) {
+      document.querySelectorAll('.ms-slidebar121.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+

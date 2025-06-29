@@ -92,113 +92,363 @@ crossorigin="anonymous"></script>
 <body>
 
 
-    <div class="container-fluid">
+    <div class="container-full">
     <nav class="navbar navbar-expand-lg fixed-top ms-navbar ms-navbar-primary">
-    <button class="nav-drop-menu" id="dropdownBtn">
-        <i class="ri-menu-unfold-3-fill" id="dropdownIcon"></i>
-        <div class="nav-dropdown-content navbar-color">
-            <p>Nedavne promjene</p>
-            <a href="https://bosniana.org/bs/blog/home-052025/">Bilješke o izdanju | HOME</a>
-            <a href="https://bosniana.org/bs/blog/edu-112024/">Bilješke o izdanju | EDU</a>
-            <a href="https://bosniana.org/bs/downloads/">Preuzimanja</a>
-            <p></p>
-            <a href="https://bosniana.org/bs/wiki/installation-guide/" target="blank">Vodič za instalaciju</a>
-            <a href="https://bosniana.org/bs/wiki/">Dokumentacija</a>
-        </div>
+    <button class="nav-drop-menu-search" id="dropdownBtnSearch">
+        
+        <i class="ri-search-line" id="dropdownIconSearch"></i><span>Pretraži</span>
+        <div class="nav-dropdown-content-search">
+
+            <div class="text-dark">
+                <input type="text" id="searchBoxGeneral" placeholder=" Pretraži..." onkeyup="searchPackagesGeneral()" class="form-control pl-2 text-dark">
+
+                <ul id="searchResultsGeneral" class="pl-0 shadow-features3 text-light"></ul>
+
+           </div>
+ </div>
     </button>
+
      <div class="container-fluid">
           <a class="navbar-brand nav-vendor" href="/bs/"></a>
     </div>
-      <button class="btn-sakriveni">
-        <a href="/" class="text-white">
-          <i class="ri-global-line"></i> EN </a>
-      </button>
-      <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" width="34px" height="34px" />
-      </button>
+ 
+    <button class="nav-drop-menu" id="dropdownBtn">
+        <i class="ri-translate-2" id="dropdownIcon"></i>
+        <div class="nav-dropdown-content navbar-color">
+
+        
+            <a class=" " href="/">Engleski<i class=""></i></a>
+        
+            <a class=" " href="/bs/">Bosanski<i class=""></i></a>
+            
+
+        </div>
+    </button> 
+  
+  
+  
+    <button class="ms-toggle-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="All OpenBosniana">
+      <span class="menu-text">Sve OpenBosniana</span><img id="menu-icon" src="/assets/img/menu.svg" alt="Menu Icon" />
+    </button>
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="ms-navbar">
         <ul class="navbar-nav">
-
+        
+        
           <li class="nav-item ">
             <a href="/bs/">
-              <i class="ri-home-4-fill"></i> Početna </a>
+               Početna <i class=""></i></a>
           </li>
+        
+        
 
-          <li class="nav-item ">
-            <a href="/bs/project/">
-              <i class="ri-file-info-line"></i> Projekat </a>
-          </li>
 
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Projekt <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         KDE-Home
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/education/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         KDE-Education
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/security/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         XFCE-Security
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/core/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Core
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/requirements/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Zahtjevi
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/documentation/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Dokumentacija
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/about/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         O projektu
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/project/faq/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Često postavljana pitanja
+        </a>
+      </li>
+    
+  </ul>
+</li>
+
+    
+
+        
           <li class="nav-item active">
             <a href="/bs/packages/">
-              <i class="ri-apps-line"></i> Paketi </a>
+              Paketi <i class=""></i></a>
           </li>
-
+        
           <li class="nav-item ">
             <a href="/bs/wiki/">
-              <i class="ri-book-2-line"></i> Wiki </a>
+              Wiki <i class=""></i></a>
           </li>
+        
 
-          <li class="nav-item ">
-            <a href="/bs/blog/">
-              <i class="ri-news-line"></i> Blog </a>
-          </li>
 
+
+<li class="nav-item sdropdown ">
+  <a href="##" class="sdropdown-toggle">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="sdropdown-menu list-unstyled">
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Sve vijesti
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/software/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Softver
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/accessories/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Dodaci
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/tutorials/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Tutorijali
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/education/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Obrazovanje
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/drivers/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Drajveri
+        </a>
+      </li>
+    
+      <li style="text-shadow:0px 0px 0px #fff!important">
+        <a href="/bs/blog/release-notes/" class="" style="text-shadow:0px 0px 0px #fff!important">
+         Bilješke o izdanju
+        </a>
+      </li>
+    
+  </ul>
+</li>
+
+    
+        
           <li class="nav-item ">
             <a href="/bs/gallery/">
-              <i class="ri-image-fill"></i> Galerija </a>
+              Galerija <i class=""></i></a>
           </li>
-
+        
           <li class="nav-item ">
             <a href="/bs/downloads/">
-              <i class="ri-download-2-fill"></i> Preuzimanja </a>
+              Preuzimanja <i class=""></i></a>
           </li>
-
-          <li class="nav-item ">
-            <a href="/">
-              <i class="ri-global-line"></i> EN </a>
-          </li>
-
+        
         </ul>
       </div></div>
     </nav>
 </div>
 <div class="ms-slidebar " id="ms-slidebar">
     <ul class="ms-slidebar-menu" id="slidebar-menu">
-<br>
+        
+        <li class="nav-item"> <a class=" " href="/bs/">Početna <i class=""></i></a></li>
+        
 
-        <li class="nav-item"> <a class=" " href="/bs/"><i class="ri-home-4-fill"></i>Početna</a></li>
 
-        <li class="nav-item"> <a class=" " href="/bs/project/"><i class="ri-file-info-line"></i>Projekat</a></li>
 
-        <li class="nav-item"> <a class=" active" href="/bs/packages/"><i class="ri-apps-line"></i>Paketi</a></li>
 
-        <li class="nav-item"> <a class=" " href="/bs/wiki/"><i class="ri-book-2-line"></i>Wiki</a></li>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Projekt <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+    
+      <li>
+        <a href="/bs/project/" class="">
+          KDE-Home
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/education/" class="">
+          KDE-Education
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/security/" class="">
+          XFCE-Security
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/core/" class="">
+          Core
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/requirements/" class="">
+          Zahtjevi
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/documentation/" class="">
+          Dokumentacija
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/about/" class="">
+          O projektu
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/project/faq/" class="">
+          Često postavljana pitanja
+        </a>
+      </li>
+    
+  </ul>
+</li>
 
-        <li class="nav-item"> <a class=" " href="/bs/blog/"><i class="ri-news-line"></i>Blog</a></li>
+    
 
-        <li class="nav-item"> <a class=" " href="/bs/gallery/"><i class="ri-image-fill"></i>Galerija</a></li>
+        
+        <li class="nav-item"> <a class=" active" href="/bs/packages/">Paketi<i class=""></i></a></li>
+        
+        <li class="nav-item"> <a class=" " href="/bs/wiki/">Wiki<i class=""></i></a></li>
+        
 
-        <li class="nav-item"> <a class=" " href="/bs/downloads/"><i class="ri-download-2-fill"></i>Preuzimanja</a></li>
 
-        <li class="nav-item"> <a class=" " href="/"><i class="ri-global-line"></i>EN</a></li>
 
-<br>
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle ">Blog <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+    
+      <li>
+        <a href="/bs/blog/" class="">
+          Sve vijesti
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/software/" class="">
+          Softver
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/accessories/" class="">
+          Dodaci
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/tutorials/" class="">
+          Tutorijali
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/education/" class="">
+          Obrazovanje
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/drivers/" class="">
+          Drajveri
+        </a>
+      </li>
+    
+      <li>
+        <a href="/bs/blog/release-notes/" class="">
+          Bilješke o izdanju
+        </a>
+      </li>
+    
+  </ul>
+</li>
+
+    
+        
+        <li class="nav-item"> <a class=" " href="/bs/gallery/">Galerija<i class=""></i></a></li>
+        
+        <li class="nav-item"> <a class=" " href="/bs/downloads/">Preuzimanja<i class=""></i></a></li>
+        
+<li class="nav-item ms-slidebar121">
+  <a href="##" class="ms-slidebar121-toggle">Jezik <i class="ri-arrow-down-fill"></i></a>
+  <ul class="ms-slidebar121-menu list-unstyled">
+      <li>
+        <a href="/">Engleski
+        </a>
+      </li>
+      <li>
+        <a href="/bs/">Bosanski
+        </a>
+      </li>
+  </ul>
+</li>
+
+
+        <li class="nav-item">
+                <p class="text-center mt-1">
+                    <a href="##" class="text-light">Mapa sajta</a>
+                </p>
+       </li> 
     </ul>
 </div>
+
 
 
     <main class="page-content" aria-label="Content">
 
 <div class="bodymargin"></div>
+
 <br>
 
 <div class="container-fluid">
       <section class="bg-light">
-        <div class="container">
+        <div class="container-fluid">
+           <div class="section-title text-start" data-aos="fade-up">
+            <h2>Paketi</h2>
+            <p></p>
+          </div>
           <div class="row justify-content-between align-items-center">
-            <div class="container">
+            <div class="container shadow">
               <h2 class="nunito-dark">Package: <span class="text-info">node-webassemblyjs</span></h2>
               <p class="nunito-dark">Version: <span class="text-info">1.11.4+dfsg+~cs10.11.17-2</span> <span class="text-info">all</span></p>
               <p class="nunito-dark">Source: <span class="text-info"></span></p>
@@ -233,155 +483,181 @@ wast-refmt - WAST refmt
 .
 Node.js is an event-based server-side JavaScript engine.</p>
 
-              <a href="https://raw.githubusercontent.com/tvrtko-linux/core/main/pool/main/n/node-webassemblyjs/node-webassemblyjs_1.11.4+dfsg+~cs10.11.17-2_all.deb"><p class="text-center btn btn-raised btn-info p-3">Download</p></a>
+              <a href="https://raw.githubusercontent.com/tvrtko-linux/core/main/pool/main/n/node-webassemblyjs/node-webassemblyjs_1.11.4+dfsg+~cs10.11.17-2_all.deb"><p class="text-center btn btn-raised btn-info p-3">Preuzmi</p></a>
               <br>
             </div>
           </div>
-        </div>
-      </section>
-</div>
-
-    <div class="container-fluid"><br>
-
-            <div class="pb-2 pt-2">
-                <div class="card-body mt-2 pt-2">
-                    <h2 class="card-title-b text-info-c"><span class="nunito-dark">Nedavni paketi</span></h2>
-                    <p class="nunito-dark p-2 mt-2">
-                        Najnoviji ažurirani paketi. Pogledaj više<a href="packages/index.html"> ovdje</a>.
-                    </p>
-      <p class="nunito-dark">
-        Pronađi pakete pomoću našeg mrežnog preglednika paketa.
-     </p>
-<div class="container shadow">
-<h3>Online Package Viewer</h3>
-<div class="bg-2 shadow">
-<input type="text" id="searchBox" placeholder="  Package Name..." onkeyup="searchPackages()" class="form-control mb-3 pl-2 text-white shadow">
-</div>
-<ul id="searchResults" class="list-group mb-3"></ul>
-</div>
-</div>
-                </div>
-
-                <div class="table-responsive tabela-okvir-1 nunito-dark">
-                    <table class="table table-sm">
-                        <thead class="text-white bg-2">
-                            <tr>
-                                <th scope="col">Arch</th>
-                                <th scope="col">Naziv</th>
-                                <th scope="col">Verzija</th>
-                                <th scope="col">Datum</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">hyperv-daemons</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 17:33:53</td>
-            </tr>
-
-            <tr>
-                <td>all</td>
-                <td><a href="##">linux-libc-dev</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 17:29:38</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">linux-image-6.12.22+bpo-amd64-unsigned</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 06:10:07</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 06:08:16</td>
-            </tr>
-
-            <tr>
-                <td>all</td>
-                <td><a href="##">openbosniana-kernel-bootfiles-unsigned</a></td>
-                <td>2025.05.14</td>
-                <td>2025-05-13 05:39:25</td>
-            </tr>
-
-            <tr>
-                <td>all</td>
-                <td><a href="##">openbosniana-kernel-bootfiles-signed</a></td>
-                <td>2025.05.14</td>
-                <td>2025-05-13 05:35:16</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">openbosniana-kernel-bootfiles-6.12.22+bpo-amd64</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 05:32:38</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">linux-kbuild-6.12.22+bpo</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 05:32:37</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">linux-image-6.12.22+bpo-amd64</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 05:32:37</td>
-            </tr>
-
-            <tr>
-                <td>all</td>
-                <td><a href="##">linux-headers-6.12.22+bpo-common</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 05:32:33</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">linux-headers-6.12.22+bpo-amd64</a></td>
-                <td>6.12.22-1~bpo12+1</td>
-                <td>2025-05-13 05:32:32</td>
-            </tr>
-
-            <tr>
-                <td>amd64</td>
-                <td><a href="##">openbosniana-kernel-bootfiles-6.12.12+bpo-amd64</a></td>
-                <td>6.12.12-1~bpo12+1</td>
-                <td>2025-05-13 02:40:46</td>
-            </tr>
-
-
-                        </tbody>
-                    </table>
-                </div><br>
-                <p class="text-center mb-2 mt-2">
-                    <a href="/bs/packages/" class="btn-raised  shadow p-3">VIDI VIŠE</a>
-                </p>
-            </div>
         </div><br>
+      </section><br>
+</div>
 
-    </main>
+      <div class="container-fluid">
+        <br>
 
-    <div class="linija-footer-gore"></div>
+        <div class="container-fluid">
+          <div class="section-title text-start" data-aos="fade-up">
+            <h2>Paketi</h2>
+            <p>Najnoviji ažurirani paketi</p>
+          </div>
+<p class="nunito-dark"> Ova lista prikazuje najnovije ažurirane pakete. </p>
+<p class="nunito-dark"> Ovo je ograničeni OpenBosniana OS repozitorij i sadrži pakete potrebne za izgradnju sistema.</p>
+<p class="nunito-dark"> Pomoću pretrage paketa i online preglednika paketa možete pratiti, preuzimati i rješavati zavisnosti za sve pakete dostupne u glavnom OpenBosniana OS repozitoriju. </p>
+          <br>
+          <a href="/bs/packages/" class="btn-raised shadow-features p-3">VIDI VIŠE </a>
+        </div>
+        <br>
+        <div class="container">
+          <h3>Online preglednik paketa</h3>
+          <div class="bg-light text-dark">
+            <input type="text" id="searchBox" placeholder=" Naziv paketa..." onkeyup="searchPackages()" class="form-control pl-2 text-dark shadow">
+          </div>
+          <ul id="searchResults" class="pl-0 shadow-features3"></ul>
+        </div>
+      </div>
+      </div>
+      <div class="table-responsive tabela-okvir-1 nunito-dark">
+        <table class="table table-sm">
+          <thead class="text-white bg-2">
+            <tr>
+              <th scope="col">Arch</th>
+              <th scope="col">Name</th>
+              <th scope="col">Version</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux/hyperv-daemons/">hyperv-daemons</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 17:33:53</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux/linux-libc-dev/">linux-libc-dev</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 17:29:38</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux/linux-image-6.12.22+bpo-amd64-unsigned/">linux-image-6.12.22+bpo-amd64-unsigned</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 06:10:07</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/o/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned/">openbosniana-kernel-bootfiles-6.12.22+bpo-amd64-unsigned</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 06:08:16</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/bs/packages/pool/main/o/openbosniana-kernel-bootfiles-unsigned/openbosniana-kernel-bootfiles-unsigned/">openbosniana-kernel-bootfiles-unsigned</a>
+              </td>
+              <td>2025.05.14</td>
+              <td>2025-05-13 05:39:25</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/bs/packages/pool/main/o/openbosniana-kernel-bootfiles-signed/openbosniana-kernel-bootfiles-signed/">openbosniana-kernel-bootfiles-signed</a>
+              </td>
+              <td>2025.05.14</td>
+              <td>2025-05-13 05:35:16</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/o/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64/openbosniana-kernel-bootfiles-6.12.22+bpo-amd64/">openbosniana-kernel-bootfiles-6.12.22+bpo-amd64</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:38</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux/linux-kbuild-6.12.22+bpo/">linux-kbuild-6.12.22+bpo</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:37</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux-signed-amd64/linux-image-6.12.22+bpo-amd64/">linux-image-6.12.22+bpo-amd64</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:37</td>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux/linux-headers-6.12.22+bpo-common/">linux-headers-6.12.22+bpo-common</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:33</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/l/linux/linux-headers-6.12.22+bpo-amd64/">linux-headers-6.12.22+bpo-amd64</a>
+              </td>
+              <td>6.12.22-1~bpo12+1</td>
+              <td>2025-05-13 05:32:32</td>
+            </tr>
+            <tr>
+              <td>amd64</td>
+              <td>
+                <a href="/bs/packages/pool/main/o/openbosniana-kernel-bootfiles-6.12.12+bpo-amd64/openbosniana-kernel-bootfiles-6.12.12+bpo-amd64/">openbosniana-kernel-bootfiles-6.12.12+bpo-amd64</a>
+              </td>
+              <td>6.12.12-1~bpo12+1</td>
+              <td>2025-05-13 02:40:46</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <p class="text-center mb-2 mt-2">
+        <a href="/bs/packages/" class="btn-raised  shadow p-3">VIDI VIŠE</a>
+      </p>
+      <br>
+      </div>
+      </div>
+
+<div class="dd-bg">
 <section class="bg-blog shadow">
   <br>
   <div class="container-fluid">
+    <div class="section-title text-center" data-aos="fade-up">
+          <h2 style="color:#fff">
+OpenBosniana OS repozitoriji</h2>
+          <p style="color:#fff"></p>
+    </div>
+    
+<div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <p style="color:#fff">Svi izvorni kodovi su dostupni u našim repozitorijima:</p>
+          </div>
+          <br>
+</div>
+    
     <div class="row text-center justify-content-center">
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://www.gitlab.com/bosnianaos/" target="_blank">
+        <a href="https://www.gitlab.com/deniosm/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/gl.svg" title=" ">
         </a>
       </div>
       <div class="col-4 col-md-2 mb-5">
-        <a href="https://sourceforge.net/projects/repo-os/" target="_blank">
+        <a href="https://sourceforge.net/projects/openbosniana-os/" target="_blank">
           <img class="gold-main-logo" src="/assets/img/sf.svg" title=" ">
         </a>
       </div>
@@ -409,6 +685,7 @@ Node.js is an event-based server-side JavaScript engine.</p>
       </div>
     </div>
   </div>
+<br>
   <div class="container-fluid">
     <div class="row text-center justify-content-center">
       <div class="col-12 mb-5">
@@ -419,72 +696,99 @@ Node.js is an event-based server-side JavaScript engine.</p>
     </div>
   </div>
 </section>
-<footer>
-  <div class="logo-font">
-    <section id="sponsor">
-      <div class="sponsor">
-        <div class="linija-dole mb-1"></div>
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center">
-													<a href="##">OpenBosniana OS</a> i
-													<a href="##">bosniana.org</a> razvio:
-													<a href="##">Denis Maslo</a>
-        </p>
+</div>
 
-        <p style="letter-spacing:1px;" class="pb-1 pt-1 text-white text-center"><i class="ri-mail-send-line"></i> Kontakt:
-          <span class="text-light ml-1">
-          <a href="mailto:dennios@duck.com">
+
+  <footer id="footer" class="footer">
+
+    <div class="container-fluid" style="background-color:rgba(0,0,0,0.2)">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <br>
+          <div class="footer-contact pt-3" style="text-align:start;">
+            <p>Razvoj: <span class="text-danger"> Denis Maslo</span></p>
+            <p>E-pošta:           <a href="mailto:dennios@duck.com">
              dennios@duck.com
-          </a>
-          </span>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:openbosniana_dev@bosniana.org">
-            <span class="text-light ml-1">Razvojni programeri</span>
-          </a>
-        </p>
-        <p>
-          <i class="ri-mail-send-line"></i>
-          <a href="mailto:info@bosniana.org">
-            <span class="text-light ml-1">Informacije</span>
-          </a>
-        </p>
-        <div class="linija-footer mt-1 mb-1"></div>
+          </a></p>
+            <p>Razvojni programer:           <a href="mailto:openbosniana_dev@bosniana.org">
+             openbosniana_dev [@] bosniana.org
+          </a></p>
+            <p>Informacije:           <a href="mailto:info@bosniana.org">
+             info [@] bosniana.org
+          </a></p><br>
+          <p><a href="/bs/privacy-cookies-policy/">
+             Politika privatnosti i kolačića 
+          </a></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/bs/">Početna</a></li>
+            <li><a href="/bs/project/">Projekt</a></li>
+            <li><a href="/bs/packages/">Paketi</a></li>
+            <li><a href="/bs/wiki/">Wiki</a></li>
+            <li><a href="/bs/blog/">Blog</a></li>
+            <li><a href="/bs/gallery/">Galerija</a></li>
+            <li><a href="/bs/downloads/">Preuzimanja</a></li>
+            <li><a href="https://bosniana.org/">Engleski</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="/bs/project/">KDE-Home</a></li>
+            <li><a href="/bs/project/education/">KDE-Education</a></li>
+            <li><a href="/bs/project/requirements/">Zahtjevi</a></li>
+            <li><a href="/bs/project/documentation/">Dokumentacija</a></li>
+            <li><a href="/bs/project/about/">O nama</a></li>
+            <li><a href="/bs/project/faq/">Često postavljana pitanja</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="https://github.com/deniosm/">GitHub</a></li>
+            <li><a href="https://www.gitlab.com/deniosm/">GitLab</a></li>
+            <li><a href="https://sourceforge.net/projects/openbosniana-os/">SourceForge</a></li>
+            <li><a href="https://www.codeberg.org/deniosm/">Codeberg</a></li>
+            <li><a href="https://kernel.org/">Kernel</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <br>
+          <ul>
+            <li><a href="#">#Debian</a></li>
+            <li><a href="#">#OpenBosniana</a></li>
+            <li><a href="#">#GNU/Linux</a></li>
+            <li><a href="#">#FSF</a></li>
+            <li><a href="#">#SalsaDebian</a></li>
+          </ul>
+        </div>
+
       </div>
-    </section>
-  </div>
-  <div class="footer-content">
-    <ul class="footer-links">
-      <li>
-        <a href="https://bosniana.org/bs/">Početna</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/project">Projekat</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/packages">Paketi</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/wiki">Wiki</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/blog">Blog</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/gallery">Galerija</a>
-      </li>
-      <li>
-        <a href="https://bosniana.org/bs/downloads">Preuzimanja</a>
-      </li>
-    </ul>
-    <div class="linija-footer mb-1"></div>
-    <div id="copyright">
-      <p class="text-center">Linux® je registrovani zaštitni znak Linusa Torvaldsa u SAD-u i drugim zemljama.</p>
-      <p class="text-center"> | &copy; 2022-2025 | openbosniana os | bosniana.org | </p>
     </div>
-  </div>
-</footer><button id="backToTopDugme" title="">↑</button>
-<script src="/bs/packages/packages.js"></script>
+
+    <div class="container copyright text-center" style="border-top:1px solid #222; padding:10px 0">
+
+      <p class="text-center">Linux® je registrovani zaštitni znak Linusa Torvaldsa u SAD-u i drugim zemljama.</p>
+      <p class="text-center"> &copy; 2022-2025 | openbosniana os | bosniana.org </p>
+
+    </div>
+
+  </footer>
+
+<!--
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Back to top</button>
+-->
+<button id="backToTopDugme" title=""><i class="ri-arrow-up-line"></i>Nazad na vrh</button>
+
+<script src="/packages/packages.js"></script>
 <script>
 function searchPackages() {
     const input = document.getElementById("searchBox").value.toLowerCase();
@@ -497,9 +801,28 @@ function searchPackages() {
 
     matches.slice(0, 20).forEach(pkg => {
         const li = document.createElement("li");
-        li.className = "list-group-item";
+        li.className = "list-group-item-a";
         li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
         resultsBox.appendChild(li);
+    });
+}
+</script>
+<script src="/search/searchgeneral.js"></script>
+<script>
+function searchPackagesGeneral() {
+    const input = document.getElementById("searchBoxGeneral").value.toLowerCase();
+    const resultsBoxGeneral = document.getElementById("searchResultsGeneral");
+    resultsBoxGeneral.innerHTML = ""; // Clear previous results
+
+    if (input.length === 0) return;
+
+    const matches = searchgeneral.filter(pkg => pkg.name.toLowerCase().includes(input));
+
+    matches.slice(0, 20).forEach(pkg => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<a href="${pkg.url}">${pkg.name}</a>`;
+        resultsBoxGeneral.appendChild(li);
     });
 }
 </script>
@@ -534,7 +857,7 @@ function searchPackages() {
         overlay.style.display = "none";
       }
     </script>
-    <script src="/assets/js/plugins.min.js"></script><script src="/assets/js/backtotop.js"></script><script src="/assets/js/backtotop.js"><
+    <script src="/assets/js/plugins.min.js"></script><script src="/assets/js/backtotop.js"></script>
 <script>
 function slidebar() {
     var t = $(".ms-slidebar"),
@@ -573,18 +896,13 @@ function slidebar() {
 
     function updateMenuIcon(isOpen) {
         const menuIcon = document.getElementById('menu-icon');
-        const button = document.querySelector('.ms-toggle-left');
 
         if (isOpen) {
             menuIcon.src = '/assets/img/close.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(90deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(90deg)';
         } else {
             menuIcon.src = '/assets/img/menu.svg';
-            button.style.backgroundColor = 'transparent';
-            button.style.transform = 'rotate(0deg)';
-            button.style.transition = 'all ease .40s';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
     }
 }
@@ -593,6 +911,36 @@ $(document).ready(function() {
     slidebar();
 });
 </script>
+<script>
+    const dropdownBtnSearch = document.getElementById('dropdownBtnSearch');
+    const dropdownContentSearch = document.querySelector('.nav-dropdown-content-search');
+    const searchBox = document.getElementById('searchBoxGeneral');
+    const searchResults = document.getElementById('searchResultsGeneral');
+
+    dropdownBtnSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
+            searchBox.focus();
+        }
+    });
+
+    dropdownContentSearch.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        dropdownBtnSearch.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            dropdownBtnSearch.classList.remove('active');
+        }
+    });
+</script>
+
 <script>
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownIcon = document.getElementById('dropdownIcon');
@@ -608,8 +956,109 @@ $(document).ready(function() {
         }
     });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('features-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.features-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('.features-btn');
+      if (btn) {
+        btn.classList.toggle('rotated');
+      }
 
+      // Optional: Toggle any related content if needed
+      const content = this.nextElementSibling;
+      if (content && content.classList.contains('number-content')) {
+        content.classList.toggle('visible');
+      }
+    });
+  });
+});
+</script>
 
-  </body>
+<script>
 
-</html>
+  document.querySelectorAll('.sdropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.sdropdown').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sdropdown')) {
+      document.querySelectorAll('.sdropdown.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+<script>
+
+  document.querySelectorAll('.ms-slidebar121-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      // Close other open dropdowns
+      document.querySelectorAll('.ms-slidebar121').forEach(drop => {
+        if (drop !== parent) drop.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.ms-slidebar121')) {
+      document.querySelectorAll('.ms-slidebar121.open').forEach(drop => {
+        drop.classList.remove('open');
+      });
+    }
+  });
+
+  function stoggleNavbar() {
+    const nav = document.querySelector('.snavbar');
+    const btn = document.getElementById('smenuToggleBtn');
+    const isHidden = nav.style.display === 'none';
+
+    if (isHidden) {
+      nav.style.display = 'flex';
+      btn.textContent = 'Hide';
+    } else {
+      nav.style.display = 'none';
+      btn.textContent = 'Show';
+    }
+  }
+</script>
+

@@ -1,0 +1,151 @@
+/* === SLIDEBAR CONTAINER === */
+.ms-slidebar {
+  background-color: var(--navbar-bg);
+  width: 100%;
+  position: fixed;
+  top: 65px;
+  left: -100%;
+  transition: all ease 0.35s;
+  z-index: 2000;
+  border-top: 1px solid var(--crta-info);
+  border-bottom: 1px solid var(--crta-info);
+  max-height: calc(100vh - 65px);
+  overflow-y: auto;
+}
+
+/* Slidebar open state */
+.ms-slidebar.open {
+  left: 0;
+}
+
+/* Custom scrollbar */
+.ms-slidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ms-slidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ms-slidebar::-webkit-scrollbar-thumb {
+  background: var(--trans-01);
+  border-radius: 4px;
+}
+
+/* === MAIN MENU === */
+.ms-slidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ms-slidebar-menu > li {
+  margin: 0;
+  border: 0;
+  padding-top:4px!important;
+  padding-bottom:4px!important
+}
+
+.ms-slidebar-menu > li > a {
+  display: block;
+  background-color: var(--navbar-bg);
+  font-size: 14px !important;
+  color: var(--bg-features-white) !important;
+  font-weight: 400 !important;
+  font-family: "Nunito Sans"!important;
+  padding: 6px 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.ms-slidebar-menu > li > i > a {
+  margin-right: 11px!important
+}
+
+.ms-slidebar-menu > li > a:hover {
+  background-color: var(--trans-01);
+  color: var(--crta-info);
+}
+
+.ms-slidebar-menu > li > a::after {
+  font-size: 2px;
+  float: left;
+  transition: all ease 0.3s;
+  margin-right:6px!important
+}
+
+/* Active menu item */
+.ms-slidebar-menu .active {
+  color: var(--bg-features-white);
+  font-weight: 500;
+  background-color: var(--trans-01);
+}
+
+.ms-slidebar-menu .active:hover {
+  background-color: var(--trans-01);
+  color: var(--crta-info);
+}
+
+/* === SUBMENU TOGGLE ICON === */
+.ms-slidebar121-toggle a i {
+  transition: transform 0.3s ease;
+}
+
+.ms-slidebar121.open .ms-slidebar121-toggle i {
+  transform: rotate(180deg)!
+}
+
+/* === SUBMENU === */
+.ms-slidebar121-menu {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-left: 4.0rem;
+  border-left: 2px solid color-mix(in srgb, var(--crta-info), transparent 70%);
+  border-bottom: 2px solid color-mix(in srgb, var(--crta-info), transparent 70%);
+/*  border-top: 2px solid color-mix(in srgb, var(--crta-info), transparent 70%);
+*/  background: transparent;
+  visibility: hidden;
+  overflow: hidden;
+  border-radius:8px;
+}
+
+.ms-slidebar121.open .ms-slidebar121-menu {
+  max-height: 1000px; 
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Submenu links */
+.ms-slidebar121-menu li a {
+  display: flex;
+  align-items: start;
+  font-size: 14px !important;
+  color: var(--bg-features-white) !important;
+  font-weight: 400 !important;
+  font-family: "Nunito Sans"!important;
+  padding: 6px 15px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.3s, color 0.3s;
+}
+.ms-slidebar121-menu li {
+  display: block;
+  padding-top:4px!important;
+  padding-bottom:4px!important;
+}
+.ms-slidebar121 li {
+  display: block;
+  padding-top:4px!important;
+  padding-bottom:4px!important
+}
+.ms-slidebar121-menu li a:hover {
+  background-color: var(--trans-01);
+  color: var(--crta-info) !important;
+}
+
+.ms-slidebar121 li.active {
+  color: var(--bg-features-white);
+  background-color: var(--trans-02);
+}

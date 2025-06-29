@@ -60,6 +60,7 @@
   
     
     
+    
 
     
 
@@ -72,6 +73,19 @@
     },
   
     
+    
+    
+
+    
+
+    {
+      "title"    : "Features",
+      "category" : "features",
+      "tags"     : "",
+      "url"      : "/features/",
+      "date"     : ""
+    },
+  
     
     
     
@@ -101,6 +115,7 @@
   
     
     
+    
 
     
 
@@ -115,7 +130,6 @@
     
     
     
-    
 
     
 
@@ -127,6 +141,20 @@
       "date"     : ""
     },
   
+    
+    
+
+    
+
+    {
+      "title"    : "Gallery",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gallery/older/",
+      "date"     : ""
+    },
+  
+    
     
     
     
@@ -152,20 +180,6 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/downloads/openbosniana-home-kde/",
-      "date"     : ""
-    },
-  
-    
-    
-    
-
-    
-
-    {
-      "title"    : "Packages",
-      "category" : "packages",
-      "tags"     : "",
-      "url"      : "/packages/",
       "date"     : ""
     },
   
@@ -301,6 +315,7 @@
   
     
     
+    
 
     
 
@@ -312,7 +327,6 @@
       "date"     : "2024/11/14"
     },
   
-    
     
   {}
 ]
