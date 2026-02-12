@@ -1,0 +1,132 @@
+.denitv_button{
+    width: auto;
+    height: auto;
+    border: 0px solid #000000;
+    padding: 10px 20px;
+    cursor:pointer;
+    background: red;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
+    -ms-box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
+    -o-box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
+    box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
+    font-family: Arial, Tahoma;
+    font-weight: bold;
+    font-size: 13px;
+    color: #3eade0;
+    text-align: center;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.denitv_button:hover{
+    width: auto;
+    height: auto;
+    border: 0px solid #000000;
+    padding: 10px 20px;
+    cursor:pointer;
+    background: #3eade0;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-family: Arial, Tahoma;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.denitv_next{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+
+    background-image: url("/assets/dtvicons/next.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* ⬅ slika ostaje unutar dugmeta */
+
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.12);
+
+    color: #ffffff;
+    text-align: center;
+
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.denitv_next:hover{
+    transform: scale(1.15); /* primjer hover efekta */
+}
+.denitv_prev{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+    background-image: url("/assets/dtvicons/prev.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* ⬅ slika ostaje unutar dugmeta */
+
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.12);
+
+    color: #ffffff;
+    text-align: center;
+
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.denitv_prev:hover{
+    transform: scale(1.15); /* primjer hover efekta */
+}
+.denitv_epg{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+
+    background-image: url("/assets/dtvicons/epg.png");
+    background-repeat: no-repeat;
+
+    background-position: center;
+    background-size: contain; /* ⬅ slika ostaje unutar dugmeta */
+
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.12);
+
+    color: #ffffff;
+    text-align: center;
+
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.denitv_epg:hover{
+    transform: scale(1.15); /* primjer hover efekta */
+}
+

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Light-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: italic;
+    font-weight: 500;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Medium-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-SemiBold-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Ace';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Montserrat Ace'), url('/assets/css/fonts/montserrat-ace/Montserrat-Ace-Bold-Italic.woff') format('woff');
+}
+
+
+
