@@ -1,5 +1,5 @@
 #page-overlay {
-  top:50px!important;
+  top:0px!important;
   position: fixed;
   inset: 0;
   z-index: 99999;
@@ -35,12 +35,13 @@
 /* close dugme */
 #page-overlay-close {
   position: absolute;
-  top: 10px;
+  top: 70px;
   right: 12px;
   z-index: 100000;
-  background: rgba(0,0,0,0.7);
-  color: #fff;
+  background: rgba(255,255,255,0.55);
+  color: red;
   border: 0;
+  border-radius:8px;
   font-size: 22px;
   padding: 6px 12px;
   cursor: pointer;

@@ -1,0 +1,596 @@
+/*@import url('/assets/css/fonts/nunito/nunito.css'); */
+@import url('https://bosniana.org/assets/css/fonts/montserrat-ace/montserrat-ace.css');
+/* -------------------- Chrome, Edge, Safari -------------------- */
+::-webkit-scrollbar {
+  width: 6px;           /* jako tanak */
+  height: 6px;          /* za horizontalni scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* potpuno providno */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(26, 122, 206, 0.25); /* diskretna boja */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 122, 206, 0.35); /* malo vidljiviji na hover */
+}
+
+/* -------------------- Firefox -------------------- */
+* {
+  scrollbar-width: thin;               /* tanak scroll */
+  scrollbar-color: rgba(26,122,206,0.8) transparent; /* thumb + track */
+}
+
+:root{
+  --bg:#0f1115;
+  --panel:#151821;
+  --hover:#1e2230;
+  --accent:#ffcc00;
+  --text:#fff;
+  --muted:#9aa0b3;
+  --newday:rgba(30,144,255,0.6);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+}
+
+body {
+  position: fixed;       /* ⬅ fiksiramo body */
+  overflow: hidden;      /* ⬅ body NEMA scroll */
+  font-family: 'Montserrat Ace', system-ui, sans-serif;
+/*  background-image: url("/assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  color: var(--text);
+}
+
+/* ===== DAYS BAR ===== */
+#days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+
+  height: 60px;
+
+  background: rgba(0,0,0,0.4);
+
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+/* centralni izgled */
+#days {
+  padding-left: max(16px, calc((100vw - 1200px) / 2));
+  padding-right: max(16px, calc((100vw - 1200px) / 2));
+}
+
+
+/* Sakrivanje webkit scrolla, ali da radi scroll */
+#days::-webkit-scrollbar {
+  width: 6px;
+}
+#days::-webkit-scrollbar-thumb {
+  background: rgba(26, 122, 206, 0.25);
+  border-radius: 3px;
+}
+#days::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 122, 206, 0.35);
+}
+#days::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Dnevne kartice */
+.day {
+  height: 44px;
+  margin: 0 4px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.day:hover {
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.day.active {
+  background: linear-gradient(
+    180deg,
+    rgba(255,204,0,0.25),
+    rgba(255,204,0,0.10)
+  );
+  box-shadow: 0 0 0 1px rgba(255,204,0,0.35),
+              0 6px 18px rgba(255,204,0,0.35);
+  transform: scale(1.08);
+}
+
+
+.day.today .name::after {
+  content: " • danas";
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.day .name {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.day .date {
+  font-size: 11px;
+  opacity: 0.65;
+}
+@media (max-width: 700px) {
+	#days{
+	 font-size: 12px;
+	}
+	.day.today .name::after {
+	  display:none
+	}
+	.day .name {
+	  font-weight: 500;
+	 }
+	.day .date {
+	  font-size: 10px;
+	}
+}
+/* Opcionalno: header iznad dana */
+.newday-header {
+  min-width:300px;
+  max-width:300px;
+  background:rgba(0,0,0,0.5);
+  border-radius:10px;
+  margin:0;
+  border-left:1px solid rgba(255,255,255,0.25);
+}
+.newday-header-h3{
+  padding: 0 4px;
+  font-size: 0.95rem;
+  text-align:start;
+  cursor:default;
+  font-weight:600;
+  opacity:.8;
+  transition:background .25s, transform .25s;
+}
+.newday-header-h3 span{
+  font-weight:400;
+  font-style: italic;
+  opacity:.7;
+}
+
+
+#program-list {
+  flex: 1 1 auto;       /* raste da popuni roditelja */
+  overflow-y: auto;     /* scroll kada sadržaja ima više */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;   /* više ne absolute */
+}
+
+#channel-date{
+  font-weight:600;
+  opacity:.9;
+}
+
+/* ===== TABLE ===== */
+#schedule-table{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+}
+
+.row{
+  display:flex;
+  position: relative;
+  align-items:center;
+  padding: 2px 8px;
+  margin:1px 0;
+  background: rgba(0,0,0,0.45);/*
+  backdrop-filter: blur(8px);*/
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  opacity:0;
+  min-height: 42px;
+  box-shadow:
+    0 6px 10px rgba(0,0,0,0.35);
+  animation:fadeIn .35s ease forwards;
+  transition:
+    background .2s,
+    min-height .3s ease,
+    padding .3s ease;
+}
+
+.row:hover{
+
+  box-shadow: 0 0 10px rgba(30,144,255,0.35);
+}
+
+.col.time{
+  width:70px;
+  font-size: 15px;
+  font-weight:600;
+  color:var(--muted);
+  border-right:2px solid #fff;
+  margin-right: 12px;
+  padding-left: 6px;
+}
+
+.col a{
+  font-size: 0.95rem;
+  font-weight:600;
+  color:var(--text);
+  text-decoration:none;
+}
+
+.col small{
+  display:block;
+  font-size: 0.8rem;
+  color:var(--muted);
+}
+
+/* ===== CURRENT PROGRAM – CARD ===== */
+.current-program{
+  position:relative;
+  border:none;
+  z-index: 1;
+
+  min-height: 120px;        /* ← OVDJE POVEĆAVAŠ VISINU */
+  padding: 5px 5px;
+  align-items: flex-end;    /* sadržaj dolje – ljepše za bg sliku */
+  margin: 6px 0;
+  overflow:hidden;
+  border-radius:14px;
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.55)
+}
+
+/* background image */
+.current-program::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.15)),
+    var(--bgimg);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index:0;
+}
+
+/* content wrapper */
+.current-program > *{
+  position:relative;
+  z-index:1;
+}
+
+/* inner layout */
+.current-program .col{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+  margin-bottom: 30px;
+}
+
+.current-program .col.time{
+  font-size:20px;
+  font-weight:600;
+  color:#ffcc00;
+  border-right:2px solid #fff;
+  margin-right:20px;
+  padding-left:10px
+}
+
+/* title */
+.current-program a{
+  font-size:16px;
+  font-weight:600;
+}
+
+/* description */
+.current-program small{
+  font-size:12px;
+  color:#e0e0e0;
+  opacity:.9;
+}
+.epg-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.epg-overlay {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 6px;
+}
+
+.epg-card {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #ccc;
+  opacity: 0.85;
+  border: 2px solid rgba(0,0,0,0.75);
+  box-shadow: 0 0 8px rgba(0,0,0,0.85);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.epg-card:hover {
+  transform: translateY(-4px);
+  opacity: 1;
+}
+.epg-card .info {
+  width: 100%;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.epg-title { flex: 1 1 auto; font-size: 14px; font-weight: 600; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.epg-time  { flex: 0 0 auto; font-size: 14px; font-weight: 600; white-space: nowrap; opacity: 0.85; }
+.epg-desc  { flex: 0 0 100%; font-size: 12px; line-height: 1.2; opacity: 0.85; max-height: 2.4em; overflow: hidden; }
+
+/* Timeline traka */
+.epg-card::after {
+  content: "";
+  position: absolute;
+  left:6px;
+  bottom:6px;
+  height:4px;
+  width: var(--progress, 0%);
+  background: linear-gradient(
+    90deg,
+    #ff9800,
+    #ffc107);
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(255,193,7,0.6);
+
+  transition: width 0.5s linear;
+  z-index: 2;
+}
+.epg-card::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  right:6px;
+  bottom:6px;
+  height:4px;
+
+  background: rgba(255,255,255,0.15);
+  border-radius: 3px;
+
+  z-index:1;
+}
+/* Scroll dugmad */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: red;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.scroll-btn.left { left: 0; }
+.scroll-btn.right { right: 0; }
+.scroll-btn:hover { background: rgba(0,0,0,0.8); }
+/* ===== TIMELAPSE BAR ===== */
+/* ===== TIMELAPSE PROGRESS ===== */
+/* ===== TIMELAPSE (TRACK + PROGRESS) ===== */
+.current-program::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  height:10px;
+
+  /* TRACK + PROGRESS U BACKGROUNDU */
+  background:
+    /* progress */
+    linear-gradient(
+      90deg,
+      #ff9800,
+      #ffc107,
+      #ffe082
+    ) left / var(--progress, 0%) 100% no-repeat,
+
+    /* track */
+    rgba(255,255,255,0.18);
+
+  border-radius: 6px;
+
+  box-shadow:
+    inset 0 1px 2px rgba(0,0,0,0.6),
+    0 0 10px rgba(255,193,7,0.55);
+
+  transition: background-size 1s linear;
+  z-index:2;
+}
+
+/* Timeline traka na dnu epg-card */
+.epg-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: var(--progress, 0%);
+  background: linear-gradient(90deg, #ff9800, #ffc107);
+  border-radius: 0 0 8px 8px;
+  transition: width 0.5s linear;
+  z-index: 2;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn{
+  to{ opacity:1; transform:none; }
+}
+@keyframes pulseGlow {
+  0%   { box-shadow: 0 0 6px rgba(255,193,7,0.4); }
+  50%  { box-shadow: 0 0 14px rgba(255,193,7,0.85); }
+  100% { box-shadow: 0 0 6px rgba(255,193,7,0.4); }
+}
+
+.current-program::after{
+  animation: pulseGlow 2.5s infinite;
+}
+@keyframes livePulse {
+  0%   { box-shadow: 0 0 6px rgba(255,193,7,0.4); }
+  50%  { box-shadow: 0 0 14px rgba(255,193,7,0.85); }
+  100% { box-shadow: 0 0 6px rgba(255,193,7,0.4); }
+}
+
+.current-program::after{
+  animation: livePulse 2.5s infinite;
+}
+/* ===== EPG 2-COLUMN LAYOUT – FINAL ===== */
+#epg-layout{
+  display: grid;
+  min-width: 0;           /* bitno za overflow */
+  max-width:1000px;
+  grid-template-columns: 100% 0%; /* lijevi 65%, desni 35% */
+
+  margin: 60px auto 0;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* Lijevi panel – da popuni cijelu grid kolonu i scroll radi */
+#epg-left {
+  display: flex;
+  flex-direction: column; /* omogućava #program-list da raste */
+  min-width: 500px;           /* bitno za overflow */
+  max-width: 100%;
+  height: calc(100vh - 60px); /* visina ekrana minus #days bar */
+  margin: 0 auto;
+}
+/* Desni panel */
+#epg-right{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;           /* bitno za overflow */
+  max-width: 500px;
+  padding:10px;
+  height:100%
+}
+
+/* box */
+.right-box {
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+/* naslov */
+.right-title {
+  font-size: 0.9rem;
+  margin: 4px 6px 6px;
+  opacity: 0.85;
+}
+
+/* FLEX GRID */
+.right-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+/* ITEM */
+.right-item {
+  width: calc(33.333% - 4px); /* 3 u redu */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* poster */
+.right-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* naziv */
+.right-item span {
+  font-size: 0.75rem;
+  margin-top: 3px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* hover */
+.right-item:hover img {
+  outline: 2px solid rgba(255,255,255,0.3);
+}
+/* Responsivnost */
+@media (max-width: 900px) {
+  #epg-layout {
+      grid-template-columns: 100% 0%; /* lijevi 65%, desni 35% */
+  }
+}
+
+@media (max-width: 500px) {
+  #epg-layout {
+    grid-template-columns: 1fr;
+  }
+/* Lijevi panel – da popuni cijelu grid kolonu i scroll radi */
+    #epg-left {
+      min-width: 300px;           /* bitno za overflow */
+      max-width: 100%;
+    }
+}
+
