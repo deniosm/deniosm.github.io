@@ -109,31 +109,46 @@ function loadStream(url) {
 
 
     hls.on(Hls.Events.ERROR, (e, data) => {
-		if (data?.fatal) {
-		  logDebug("💥 Fatal HLS error");
+        if (data?.fatal) {
+            logDebug("💥 Fatal HLS error");
 
-		  destroyHLS();
+            destroyHLS();
 
-		  if (!fatalRestarted) {
-			fatalRestarted = true;
-			logDebug("🔁 Fatal fallback restart");
+            if (!fatalRestarted) {
+                // Prvi fatal error → standardni retry
+                fatalRestarted = true;
+                logDebug("🔁 Fatal fallback restart");
 
-			setTimeout(() => {
-			  logDebug("🔁 Fatal fallback restart");
-			  hardResetVideo();     // ⛑ OVDJE SMIJE
-			  loadStream(currentSrc);
-			}, 800);
-          } else {
-                logDebug("⛔ Fatal ponovljen – stop");
+                setTimeout(() => {
+                    logDebug("🔁 Fatal fallback restart");
+                    hardResetVideo();
+                    loadStream(currentSrc);
+                }, 800);
 
-                const defaultURL = "https://bosniana.org/assets/genericki/mono.m3u8";
-                fatalRestarted = false;
-                hardResetVideo();
-                loadStream(defaultURL);
+            } else if (fatalRestarted === true) {
+                // Drugi fatal error → još jedan pokušaj originalnog streama odmah
+                logDebug("⛔ Fatal ponovljen – još jedan pokušaj originalnog streama");
+                setTimeout(() => {
+                    hardResetVideo();
+                    loadStream(currentSrc);
+                }, 2000); // ⬅ 2 sekunde čekanja
+                // Označi da je ovo zadnji pokušaj → sljedeći put ide fallback
+                fatalRestarted = "final";
+
+            } else if (fatalRestarted === "final") {
+                // Treći fatal error → fallback, ali sa malim delay-om
+                logDebug("🚑 Prebacujem na fallback stream (malo čekanja)");
+
+                setTimeout(() => {
+                    const defaultURL = "https://bosniana.org/assets/genericki/mono.m3u8";
+                    fatalRestarted = false;
+                    hardResetVideo();
+                    loadStream(defaultURL);
+                }, 1500); // ⬅ 1.5 sekunde čekanja
             }
-		}
-
+        }
     });
+
 
   } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = url;
