@@ -123,9 +123,14 @@ function loadStream(url) {
 			  hardResetVideo();     // ⛑ OVDJE SMIJE
 			  loadStream(currentSrc);
 			}, 800);
-		  } else {
-			logDebug("⛔ Fatal ponovljen – stop");
-		  }
+          } else {
+                logDebug("⛔ Fatal ponovljen – stop");
+
+                const defaultURL = "https://bosniana.org/assets/genericki/mono.m3u8";
+                fatalRestarted = false;
+                hardResetVideo();
+                loadStream(defaultURL);
+            }
 		}
 
     });
