@@ -123,7 +123,7 @@ function loadStream(url) {
                     logDebug("🔁 Fatal fallback restart");
                     hardResetVideo();
                     loadStream(currentSrc);
-                }, 800);
+                }, 2000);
 
             } else if (fatalRestarted === true) {
                 // Drugi fatal error → još jedan pokušaj originalnog streama odmah
