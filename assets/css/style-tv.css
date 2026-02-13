@@ -1,5 +1,5 @@
 /*@import url('/assets/css/fonts/nunito/nunito.css'); */
-@import url('/assets/css/fonts/montserrat-ace/montserrat-ace.css');
+@import url('https://bosniana.org/assets/css/fonts/montserrat-ace/montserrat-ace.css');
 /* -------------------- Chrome, Edge, Safari -------------------- */
 ::-webkit-scrollbar {
   width: 6px;           /* jako tanak */
@@ -56,7 +56,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   object-fit: contain;
-  background: #001c31 url("/assets/loader.gif") center center no-repeat;
+  background: #001c31 url("https://bosniana.org/assets/loader.gif") center center no-repeat;
   background-size: 250px 200px; /* prilagodi veličinu gif-a */
   transform: translate(-50%, -50%);
   transition: background 0.3s ease;
@@ -464,49 +464,49 @@ video::-webkit-media-controls-panel { display: none !important; }
     transform 0.25s ease;
 }
 .icon-prev {
-  -webkit-mask: url("/assets/dtvicons/arrow-left-bold-circle.svg") no-repeat center;
-  mask: url("/assets/dtvicons/arrow-left-bold-circle.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/arrow-left-bold-circle.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/arrow-left-bold-circle.svg") no-repeat center;
 }
 
 .icon-next {
-  -webkit-mask: url("/assets/dtvicons/arrow-right-bold-circle.svg") no-repeat center;
-  mask: url("/assets/dtvicons/arrow-right-bold-circle.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/arrow-right-bold-circle.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/arrow-right-bold-circle.svg") no-repeat center;
 }
 
 .icon-epg {
-  -webkit-mask: url("/assets/dtvicons/dtv-epg.svg") no-repeat center;
-  mask: url("/assets/dtvicons/dtv-epg.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/dtv-epg.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/dtv-epg.svg") no-repeat center;
 }
 .icon-play {
-  -webkit-mask: url("/assets/dtvicons/play.svg") no-repeat center;
-  mask: url("/assets/dtvicons/play.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/play.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/play.svg") no-repeat center;
 }
 .icon-pause {
-  -webkit-mask: url("/assets/dtvicons/pause.svg") no-repeat center;
-  mask: url("/assets/dtvicons/pause.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/pause.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/pause.svg") no-repeat center;
 }
 .icon-sound-on {
-  -webkit-mask: url("/assets/dtvicons/volume-high.svg") no-repeat center;
-  mask: url("/assets/dtvicons/volume-high.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/volume-high.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/volume-high.svg") no-repeat center;
 }
 .icon-sound-off {
-  -webkit-mask: url("/assets/dtvicons/volume-mute.svg") no-repeat center;
-  mask: url("/assets/dtvicons/volume-mute.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/volume-mute.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/volume-mute.svg") no-repeat center;
 }
 .icon-fullscreen {
-  -webkit-mask: url("/assets/dtvicons/fullscreen.svg") no-repeat center;
-  mask: url("/assets/dtvicons/fullscreen.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/fullscreen.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/fullscreen.svg") no-repeat center;
 }
 .icon-close {
-  -webkit-mask: url("/assets/dtvicons/circle-right.svg") no-repeat center;
-  mask: url("/assets/dtvicons/circle-right.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/circle-right.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/circle-right.svg") no-repeat center;
 
   -webkit-mask-size: contain;
   mask-size: contain;
 }
 .icon-closex{
-  -webkit-mask: url("/assets/dtvicons/close-circle.svg") no-repeat center;
-  mask: url("/assets/dtvicons/close-circle.svg") no-repeat center;
+  -webkit-mask: url("https://bosniana.org/assets/dtvicons/close-circle.svg") no-repeat center;
+  mask: url("https://bosniana.org/assets/dtvicons/close-circle.svg") no-repeat center;
 
   -webkit-mask-size: contain;
   mask-size: contain;
@@ -824,7 +824,7 @@ video::-webkit-media-controls-panel { display: none !important; }
   gap: 6px;
   padding: 0;
 
-  background: rgba(0,0,0,0);
+  background: transparent;
   z-index: 9998;
 
   transform: translateX(100%);
@@ -866,9 +866,9 @@ video::-webkit-media-controls-panel { display: none !important; }
   align-items: center;
   justify-content: space-evenly;
   min-width: 0;        /* ← sprečava overflow bugove */
-  background:rgba(0,0,0,0.25);
+  background:transparent;/*
   backdrop-filter: blur(12px);
-  box-shadow: 0 0 2px rgb(0,0,0,0.45);
+  box-shadow: 0 0 2px rgb(0,0,0,0.45);*/
   border-radius:15px;
 }
 
