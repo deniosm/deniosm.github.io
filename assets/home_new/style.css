@@ -101,14 +101,18 @@ html, body {
     display: flex;
     justify-content: space-between;
 }
-
+.logout-buttons {
+    display: flex;
+    justify-content: space-between;
+    width:200px
+}
 .back-button, .next-button {
     flex: 1;
     width: auto;
     height: auto;
     border: 0px solid #000000;
-    padding: 10px 0px;
-    cursor:pointer;
+    padding: 5px 0px;
+    cursor:default;
 	margin: 10px;
     -webkit-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -129,27 +133,11 @@ html, body {
     transition: all 1s ease;
 }
 .back-button:hover, .next-button:hover{
-    width: auto;
-    height: auto;
     border: 0px solid #000000;
-    padding: 10px 0px;
-    cursor:pointer;
     background: #3eade0;
-    -webkit-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius:8px;
-    font-weight: bold;
     color: #ffffff;
-    text-align: center;
-    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
     transition: all 1s ease;
 }
-
 #show-password {
     margin-right: 5px;
 }
