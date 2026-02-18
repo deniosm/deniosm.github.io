@@ -110,33 +110,32 @@ html, body {
     flex: 1;
     width: auto;
     height: auto;
-    border: 0px solid #000000;
     padding: 5px 0px;
     cursor:default;
 	margin: 10px;
-    -webkit-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
     border-radius:8px;
-    -webkit-box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
-    -ms-box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
-    -o-box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
-    box-shadow: 0px 3px 0px 0px rgba(62, 173, 224, 1);
-
+    outline: 0px solid #ffffff;
     color: #000;
+    opacity:0.5;
+    background:#dcdcdc;
     text-align: center;
-    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    transition: all .2s ease;
 }
 .back-button:hover, .next-button:hover{
-    border: 0px solid #000000;
-    background: #3eade0;
-    color: #ffffff;
-    transition: all 1s ease;
+    border: 2px solid #ffffff;
+    outline: 0px solid #ffffff;
+    background:#dcdcdc;
+    color: #000;
+    opacity:1;
+    transition: all .5s ease;
+}
+.back-button.focused, .next-button.focused{
+    border: 2px solid #ffffff;
+    outline: 0px solid #ffffff;
+    background: #dcdcdc;
+    color: #000;
+    opacity:1;
+    transition: all .5s ease;
 }
 #show-password {
     margin-right: 5px;
@@ -356,13 +355,28 @@ label[for="remember-password"] {
     font-weight: 500;
     opacity: 0.85;
     transition: opacity 0.2s ease, transform 0.2s ease;
+    padding:2px
 }
 
 .top-menu a:hover {
     opacity: 1;
-    transform: translateY(-1px);
+    outline: 1px solid #ffffff;
+    border-radius:3px;
+    color: #ffffff;
+}
+.top-menu a.active {
+    color: #ff8c00;
+    opacity: 1;
+    outline: 1px solid #ff8c00;
+    border-radius:3px;
 }
 
+.top-menu a.focused {
+    opacity: 1;
+    outline: 1px solid #ffffff;
+    border-radius:3px;
+    color: #ffffff;
+}
 /* Logo centar */
 .menu-logo {
     display: flex;
