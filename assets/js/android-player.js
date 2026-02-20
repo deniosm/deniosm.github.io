@@ -171,7 +171,7 @@ window.setStream = function (url) {
   currentSrc = url;
   fatalRestarted = false;
   retryCount = 0;
-  stopStallWatchdog();
+//  stopStallWatchdog();
   fadeIn();
 
   // zadrži stari frame ~300ms
@@ -179,7 +179,7 @@ window.setStream = function (url) {
     destroyHLS();
     clearRetry();
     loadStream(url);
-  }, 2250);
+  }, 1500);
 };
 
 
