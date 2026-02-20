@@ -1,6 +1,3 @@
-// player.js
-// Stabilna HLS reprodukcija bez beskonačnih reload petlji
-
 const video = document.getElementById('video');
 const fadeEl = document.getElementById("video-fade");
 const debugBox = document.getElementById('debug');
@@ -165,19 +162,19 @@ window.setStream = function (url) {
   if (!url || url === currentSrc) return;
 
   currentSrc = url;
+  fatalRestarted = true;
+  retryCount = 0;
 
-  fadeIn(); // zadrži fade efekt
+  fadeIn(); // ⬛ zamrači ekran
 
+  // zadrži stari frame ~300ms
   setTimeout(() => {
-
-    if (window.Android && Android.playChannel) {
-      Android.playChannel(url);
-    }
-
-    fadeOut();
-
-  }, 1250); // kratki fade delay
+    destroyHLS();
+    clearRetry();
+    loadStream(url);
+  }, 1250);
 };
+
 
 
 /* ================= FULLSCREEN / UI ================= */
