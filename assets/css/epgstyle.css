@@ -58,14 +58,10 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
-
+  border:1px solid #000;
   height: 60px;
-
-  background: rgba(0,0,0,0.4);
-
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(8px);
-
+  cursor:default;
+  /*backdrop-filter: blur(8px);*/
   position: fixed;
   top: 0;
   left: 0;
@@ -112,9 +108,10 @@ body {
     box-shadow 0.25s ease;
 }
 
-.day:hover {
-  background: rgba(255,255,255,0.06);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+.day:hover, .day:focus {
+  background: rgba(255,255,255,0.15);
+  border:1px solid #fff;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.45);
 }
 
 .day.active {
@@ -225,7 +222,7 @@ body {
     padding .3s ease;
 }
 
-.row:hover{
+.row:hover, .row:focus{
 
   box-shadow: 0 0 10px rgba(30,144,255,0.35);
 }
@@ -256,9 +253,8 @@ body {
 /* ===== CURRENT PROGRAM – CARD ===== */
 .current-program{
   position:relative;
-  border:none;
+  border:2px solid rgba(26, 122, 206, 0.55);
   z-index: 1;
-
   min-height: 120px;        /* ← OVDJE POVEĆAVAŠ VISINU */
   padding: 5px 5px;
   align-items: flex-end;    /* sadržaj dolje – ljepše za bg sliku */
