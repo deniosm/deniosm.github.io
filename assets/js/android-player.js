@@ -81,7 +81,7 @@ function hardResetVideo() {
 function loadStream(url) {
   if (!url) return;
 
-  logDebug("📡 Stream start: " + url);
+  logDebug(" Stream start: " + url);
 
   destroyHLS();
   clearRetry();
@@ -97,7 +97,7 @@ function loadStream(url) {
 
 	hls.on(Hls.Events.MANIFEST_PARSED, () => {
 	  video.play().catch(() => {});
-	  fadeOut(); // 🎬 slika spremna
+	  fadeOut(); //  slika spremna
 	});
 
 	hls.on(Hls.Events.LEVEL_LOADED, () => {
@@ -107,34 +107,34 @@ function loadStream(url) {
 
     hls.on(Hls.Events.ERROR, (e, data) => {
         if (data?.fatal) {
-            logDebug("💥 Fatal HLS error");
+            logDebug(" Fatal HLS error");
 
             destroyHLS();
 
             if (!fatalRestarted) {
                 // Prvi fatal error → standardni retry
                 fatalRestarted = true;
-                logDebug("🔁 Fatal fallback restart");
+                logDebug(" Fatal fallback restart");
 
                 setTimeout(() => {
-                    logDebug("🔁 Fatal fallback restart");
+                    logDebug(" Fatal fallback restart");
                     hardResetVideo();
                     loadStream(currentSrc);
-                }, 2500);
+                }, 2000);
 
             } else if (fatalRestarted === true) {
                 // Drugi fatal error → još jedan pokušaj originalnog streama odmah
-                logDebug("⛔ Fatal ponovljen – još jedan pokušaj originalnog streama");
+                logDebug(" Fatal ponovljen – još jedan pokušaj originalnog streama");
                 setTimeout(() => {
                     hardResetVideo();
                     loadStream(currentSrc);
-                }, 2500); // ⬅ 2 sekunde čekanja
+                }, 2000); // ⬅ 2 sekunde čekanja
                 // Označi da je ovo zadnji pokušaj → sljedeći put ide fallback
                 fatalRestarted = "final";
 
             } else if (fatalRestarted === "final") {
                 // Treći fatal error → fallback, ali sa malim delay-om
-                logDebug("🚑 Prebacujem na fallback stream (malo čekanja)");
+                logDebug(" Prebacujem na fallback stream (malo čekanja)");
 
                 setTimeout(() => {
                     const defaultURL = "https://bosniana.org/assets/genericki/mono.m3u8";
@@ -151,7 +151,7 @@ function loadStream(url) {
     video.src = url;
     video.play().catch(() => {});
   } else {
-    logDebug("❌ HLS nije podržan");
+    logDebug(" HLS nije podržan");
   }
 }
 
@@ -165,7 +165,7 @@ window.setStream = function (url) {
   fatalRestarted = true;
   retryCount = 0;
 
-  fadeIn(); // ⬛ zamrači ekran
+  fadeIn(); //  zamrači ekran
 
   // zadrži stari frame ~300ms
   setTimeout(() => {
