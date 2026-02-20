@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark light">
+
+<title>TV PROGRAM | EPG | DENNI TV | LIVE TV | BOSNIANA.ORG</title>
+<script src="https://bosniana.org/assets/js/block.js"></script>
+<link rel="stylesheet" href="https://bosniana.org/assets/css/epgstyle.css">
+</head>
+
+<body>
+<div id="current-channel-epg" style="display:none"></div>
+<div id="days"></div>
+
+<div id="epg-layout">
+
+  <div id="epg-left">
+    <div id="program-list">
+      <div id="channel-date"></div>
+      <div id="schedule-table"></div>
+    </div>
+  </div>
+
+</div>
+<script>
+  // Dohvati kanal iz URL query
+  const params = new URLSearchParams(window.location.search);
+  const channel = params.get('channel') || "default";
+  document.getElementById("current-channel-epg").textContent = channel;
+</script>
+<script src="https://bosniana.org/assets/epg/tolocaldate.js"></script>
+
+</body>
+</html>
+
