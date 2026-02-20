@@ -140,7 +140,7 @@ function loadStream(url) {
                 logDebug("🚑 Prebacujem na fallback stream (malo čekanja)");
 
                 setTimeout(() => {
-                    const defaultURL = "/assets/genericki/mono.m3u8";
+                    const defaultURL = "https://bosniana.org/assets/genericki/mono.m3u8";
                     fatalRestarted = false;
                     hardResetVideo();
                     loadStream(defaultURL);
