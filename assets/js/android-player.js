@@ -123,7 +123,7 @@ function loadStream(url) {
                     logDebug("🔁 Fatal fallback restart");
                     hardResetVideo();
                     loadStream(currentSrc);
-                }, 2000);
+                }, 2500);
 
             } else if (fatalRestarted === true) {
                 // Drugi fatal error → još jedan pokušaj originalnog streama odmah
@@ -131,7 +131,7 @@ function loadStream(url) {
                 setTimeout(() => {
                     hardResetVideo();
                     loadStream(currentSrc);
-                }, 2000); // ⬅ 2 sekunde čekanja
+                }, 2500); // ⬅ 2 sekunde čekanja
                 // Označi da je ovo zadnji pokušaj → sljedeći put ide fallback
                 fatalRestarted = "final";
 
@@ -140,7 +140,7 @@ function loadStream(url) {
                 logDebug("🚑 Prebacujem na fallback stream (malo čekanja)");
 
                 setTimeout(() => {
-                    const defaultURL = "https://bosniana.org/assets/genericki/mono.m3u8";
+                    const defaultURL = "/assets/genericki/mono.m3u8";
                     fatalRestarted = false;
                     hardResetVideo();
                     loadStream(defaultURL);
@@ -165,19 +165,19 @@ window.setStream = function (url) {
   if (!url || url === currentSrc) return;
 
   currentSrc = url;
-  fatalRestarted = true;
-  retryCount = 0;
 
-  fadeIn(); // ⬛ zamrači ekran
+  fadeIn(); // zadrži fade efekt
 
-  // zadrži stari frame ~300ms
   setTimeout(() => {
-    destroyHLS();
-    clearRetry();
-    loadStream(url);
-  }, 1250);
-};
 
+    if (window.Android && Android.playChannel) {
+      Android.playChannel(url);
+    }
+
+    fadeOut();
+
+  }, 1250); // kratki fade delay
+};
 
 
 /* ================= FULLSCREEN / UI ================= */
