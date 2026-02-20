@@ -39,10 +39,10 @@ html, body {
 #video-fade {
   position: fixed;
   inset: 0;
-  background: black;
+  background: rgba(0,0,0,0.55)!important;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 2s ease;
 /*  z-index: 9999; */
 }
 
@@ -147,13 +147,15 @@ video::-webkit-media-controls-panel { display: none !important; }
   height: calc(100% - 50px);
   background: rgba(0,0,0,0.00);
   color: white;
+  opacity:0;
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: opacity 0.2s ease;
   overflow:hidden;
 /*  backdrop-filter: blur(5px); z-index: 9999;*/
 }
 #sidebar-overlay.open {
   transform: translateX(0);
+  opacity:1;
 }
 #sidebar-logo{
   display:none;
@@ -320,18 +322,20 @@ video::-webkit-media-controls-panel { display: none !important; }
   padding:0;
   background: rgba(0,0,0,0.00);
   display: flex;
+  opacity:0;
   flex-direction: column;
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition: opacity 0.2s ease;
   z-index: 9998;
 }
 #control-bar.open {
   transform: translateX(0);
+  opacity:1;
 }
 #control-bar.hidden {
   transform: translate(-50%);
-  transition: transform 0.3s ease;
   opacity: 0;
+  transition: transform 0.2s ease;
   pointer-events: none;
 }
 @media (max-width: 721px) {
@@ -540,7 +544,7 @@ video::-webkit-media-controls-panel { display: none !important; }
   overflow-x: hidden;
   list-style: none;
   background: rgba(0,0,0,0.00);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 /* Lista kanala */
 #channel-list {
@@ -569,12 +573,12 @@ video::-webkit-media-controls-panel { display: none !important; }
   backdrop-filter: blur(5px);
   height: 42px;
   opacity: 0.65;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 #channel-list li img {
   width: 70%;
   height: 70%;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 #channel-list li:hover,
@@ -598,7 +602,7 @@ video::-webkit-media-controls-panel { display: none !important; }
   width: 85%;
   height: 85%;/*
   transform: scale(1.2);*/
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .epg-wrapper {
   position: relative;
@@ -730,7 +734,7 @@ video::-webkit-media-controls-panel { display: none !important; }
 
 .scroll-btn:hover {
   background: rgba(0,0,0,0.55);
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
 }
 
 #current-channel-epg {
@@ -823,16 +827,17 @@ video::-webkit-media-controls-panel { display: none !important; }
   align-items: center;
   gap: 6px;
   padding: 0;
-
+  pointer-events: none;
   background: transparent;
   z-index: 9998;
-
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
+  opacity:0;
+  transition: opacity 0.2s ease;
 }
 
 #control-bar2.open {
   transform: translateX(0);
+  opacity:1;
+  pointer-events: auto;
 }
 
 #control-bar2.hidden {
@@ -1017,9 +1022,9 @@ video::-webkit-media-controls-panel { display: none !important; }
   border-radius: 10px;
   border: 1px solid rgba(26,122,206,0.25);
   box-shadow: 0 3px 12px rgba(0,0,0,0.35);
-  transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateX(-50px);
   opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
   pointer-events: none;
   z-index: 9999;
 }
@@ -1049,7 +1054,7 @@ video::-webkit-media-controls-panel { display: none !important; }
   font-size: 15px;
   font-weight:500;
   padding: 6px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   border-radius: 6px;
   margin: 4px;
 }
@@ -1100,7 +1105,7 @@ video::-webkit-media-controls-panel { display: none !important; }
   pointer-events: none;
   z-index: 9998;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
   transform: translateX(-50px);
   opacity: 0;
 }
@@ -1120,12 +1125,12 @@ body.categories-open #channels {
     body.categories-open #control-bar {
       transform: translateX(205px);
       left:0;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     }
 }
 
 #channels {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 /* ============================= */
 /* GORNJI BLOK */
