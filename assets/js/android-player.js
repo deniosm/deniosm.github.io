@@ -171,7 +171,6 @@ window.setStream = function (url) {
   currentSrc = url;
   fatalRestarted = false;
   retryCount = 0;
-//  stopStallWatchdog();
   fadeIn();
 
   // zadrži stari frame ~300ms
@@ -224,7 +223,7 @@ if (fullscreenOverlay) {
   });
 }
 video?.addEventListener('click', () => {
-  if (!firstClickDone) return;
+//  if (!firstClickDone) return;
   sidebar?.classList.toggle('open');
   controlBar?.classList.toggle('open');
   controlBar2?.classList.toggle('open');
