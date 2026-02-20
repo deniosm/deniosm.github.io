@@ -179,7 +179,7 @@ window.setStream = function (url) {
     destroyHLS();
     clearRetry();
     loadStream(url);
-  }, 1250);
+  }, 2250);
 };
 
 
