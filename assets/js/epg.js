@@ -54,7 +54,7 @@ function loadEPGForCurrentChannel(){
   offsets.forEach(offset=>{
     const file = getFileForDay(offset);
     const s = document.createElement("script");
-    s.src = `/bih/epg/${folder}/${file}.js`;
+    s.src = `https://bosniana.org/assets/test/${folder}/${file}.js`;
     s.async = true;
     s.dataset.epg = "1";
 
