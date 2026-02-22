@@ -1,0 +1,287 @@
+@import url('https://bosniana.org/assets/css/fonts/montserrat-ace/montserrat-ace.css');
+* {
+    touch-action: manipulation;
+}
+
+/* -------------------- Chrome, Edge, Safari -------------------- */
+::-webkit-scrollbar {
+  width: 6px;           /* jako tanak */
+  height: 6px;          /* za horizontalni scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* potpuno providno */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(26, 122, 206, 0.25); /* diskretna boja */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 122, 206, 0.35); /* malo vidljiviji na hover */
+}
+
+/* -------------------- Firefox -------------------- */
+* {
+  scrollbar-width: thin;               /* tanak scroll */
+  scrollbar-color: rgba(26,122,206,0.8) transparent; /* thumb + track */
+}
+
+html, body {
+    background: url("https://bosniana.org/assets/home_new/bckg.jpg") no-repeat center fixed;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Montserrat Ace', sans-serif;
+  margin: 0;
+
+  color:#fff;
+  -webkit-tap-highlight-color: transparent!important;
+}
+/* box */
+.right-box {
+  margin-top:55px;
+  height: calc(100% - 55px);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* naslov */
+.right-title {
+  color:#fff;
+  border-bottom:2px solid #000;
+  width:100%;
+  max-width:165px;
+  padding:5px;
+  font-weight:500;
+  font-size: 15px;
+}
+
+/* GRID container */
+.right-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.right-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+  border: 2px solid rgba(0,0,0,0.00)
+}
+.right-item:hover, .right-item:focus{
+  transform:scale(1.10);
+  transition: transform 0.5s ease;
+}
+
+/* poster */
+.right-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* naziv */
+.right-item span {
+  margin-top: 4px;
+  text-align: center;
+  line-height: 1;font-size: 12px; font-weight:500
+}
+
+/* hover */
+.right-item:hover img {
+  outline: 2px solid #fff;
+}
+.poster-wrap {
+  position: relative;
+}
+
+.genre-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background:#1a7ace;
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 3px;
+  border-radius: 3px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+.right-item .title {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width:100%;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.15;
+  background:rgba(0,0,0,0.8);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#film-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+
+  display: flex;                 /* ⬅ uvijek flex */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: scale(1.02);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+#film-overlay.active {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.overlay-box {
+  background:rgba(255,255,255,0.15);
+  max-width: 60vw;
+  width: 90%;
+  max-height: 60vh;
+  height: 90%;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  transition: transform .3s ease, opacity .3s ease;  outline: 1px solid rgba(255,255,255,0.25)
+}
+
+#film-overlay.active .overlay-box {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.overlay-info{
+  display:block;
+  padding:10px;
+  backdrop-filter: blur(4px);
+  background:rgba(0,0,0,0.35);
+  border-radius: 8px;
+}
+.overlay-serije{
+  display:block;
+  padding:10px;
+  backdrop-filter: blur(4px);
+  background:rgba(0,0,0,0.35);
+  border-radius: 8px;
+}
+.overlay-box h3 {
+  margin: 0 0 6px;  color:#fff
+}
+
+.overlay-box span {
+  font-size: 0.7rem;
+  opacity: 0.7;  color:#fff
+}
+
+.overlay-box p {
+  font-size: 0.8rem;
+  margin: 10px 0 14px;
+  color:#fff
+}
+
+.play-btn {
+  padding: 8px 18px;
+    background: rgba(0,0,0,0.55);
+    border: 1px solid #ffff;
+  color: #fff;
+  border-radius: 12px;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+.play-btn:hover {
+    opacity: 1;
+    color:#1a7ace;
+    border-color:#1a7ace;
+    background: rgba(0,0,0,0.95);
+}
+
+.play-btn.focused {
+    opacity: 1;
+    color:#1a7ace;
+    background: rgba(0,0,0,0.95);
+    border-color: #1a7ace;
+    box-shadow: 0 0 8px rgba(62,173,224,0.8);
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: default;
+}
+#overlay-player {
+  display: none;
+  margin-top: 10px;
+}
+
+#overlay-player video,
+#overlay-player iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: #000;
+}
+.bar-item .bar-link {
+  display: flex;
+  color: white;
+  cursor: default;
+  flex-direction: column; /* slika iznad teksta */
+  align-items: center;
+  justify-content: center;
+  text-decoration:none
+}
+@media (max-width: 768px) {
+    .right-flex {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .right-item .title {
+        font-size: 0.75rem;
+    }
+    .genre-badge {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      font-size: 0.50rem;
+      padding: 2px;
+    }
+    .right-item:hover, .right-item:focus{
+      transform:scale(1.05);
+    }
+    .overlay-box {
+      max-width: 90vw;
+      width: 90%;
+      max-height: 60vh;
+      height: 90%;
+    }
+}
