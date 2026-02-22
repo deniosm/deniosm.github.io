@@ -473,4 +473,38 @@ label[for="remember-password"] {
 .login-container.show .login-box {
     outline: 2px solid rgba(62,173,224,0.6);
 }
+/* ===== TV MODE BUTTONS ===== */
 
+.tv-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px; /* omogućava više dugmadi kasnije */
+    z-index: 200;
+}
+
+.tv-control-btn {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(255,255,255,0.4);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+}
+
+.tv-control-btn:hover {
+    opacity: 1;
+    border-color: #ffffff;
+}
+
+.tv-control-btn.focused {
+    opacity: 1;
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(62,173,224,0.9);
+}
