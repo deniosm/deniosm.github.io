@@ -36,17 +36,32 @@
 #page-overlay-close {
   position: absolute;
   top: 70px;
-  right: 12px;
+  right: calc(50% - 338px)!important; /*calc(50% - 80px); */
   z-index: 100000;
-  background: rgba(255,255,255,0.55);
-  color: red;
+  background: rgba(255, 255, 255, 0.75);
+  width:auto!important;
+  max-width:100px!important;
+  color: #000;
   border: 0;
-  border-radius:8px;
-  font-size: 22px;
-  padding: 6px 12px;
-  cursor: pointer;
+  height:30px;
+  border-radius:5px;
+  font-size: 18px;
+  display:flex;
+  padding:0px 5px;
+  align-items: center;    /* horizontalno centriranje */
+  justify-content: center; /* vertikalno centriranje */
+  cursor: default;
+}
+#page-overlay-close:hover,#page-overlay-close:focus{
+  background:rgba(26, 122, 206, 0.70);
+  color:#fff;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
+#zatvoriText{
+  padding-right:8px;
+  font-size: 16px;
+}
 #page-overlay-fotter {
   background: #fff;
   left:0;
@@ -101,4 +116,15 @@
 .page-overlay-fotter-item:hover img {
   outline: 2px solid rgba(255,255,255,0.3);
 }
-
+@media (max-width: 660px) {
+  #page-overlay-close {
+    position:fixed;
+    right: 10px!important; /*calc(50% - 80px); */
+    max-width:50px!important;
+    width:auto!important;
+    padding:8px;
+  }
+  #zatvoriText{
+    display:none
+  }
+}
