@@ -250,7 +250,7 @@ video::-webkit-media-controls-panel { display: none !important; }
 }
 #close3 {
   position: fixed;
-  top: 65px;
+  top: 10px;
   right: 15px;
   width: 34px;
   height: 34px;
@@ -258,6 +258,9 @@ video::-webkit-media-controls-panel { display: none !important; }
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  border: 1px solid rgba(26, 122, 206, 1);
+  border-radius:50%;
+  background:rgba(0,0,0,0.75)
 }
 
 #close3 a {
@@ -338,13 +341,7 @@ video::-webkit-media-controls-panel { display: none !important; }
   transition: transform 0.2s ease;
   pointer-events: none;
 }
-@media (max-width: 721px) {
- #control-bar{left:0}
-/* Sidebar */
- #sidebar-overlay {
-  height: calc(100% - 250px);
- }
-}
+
 
 .control-buttons {
   display: grid;
@@ -353,12 +350,13 @@ video::-webkit-media-controls-panel { display: none !important; }
     1fr                  /* SREDINA – kontrole */
     minmax(140px, 25%);  /* DESNO – dugmad */
   align-items: center;
+  margin-top:10px;
   width: 100%;/*
-  padding: 3px 0; */
-  background:rgba(0, 0, 0, 0.70);/*
+  padding: 3px 0;
+  background:rgba(0, 0, 0, 0.70);
   backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(26, 122, 206, 0.45);*/
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.65);
+  border-top: 1px solid rgba(26, 122, 206, 0.45);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.65);*/
 }
 
 /* BLOKOVI */
@@ -387,10 +385,10 @@ video::-webkit-media-controls-panel { display: none !important; }
 .btn-center-up {
   position:fixed;
   display: flex;
-  left:calc(50% - 50px);
+  left:calc(50% - 100px);
   justify-content: center;
   gap: 20px;
-  top:-50px;
+  top:10px;
   width:100px;
 }
 .btn-right-up {
@@ -399,50 +397,21 @@ video::-webkit-media-controls-panel { display: none !important; }
   right:8px!important;
   justify-content: flex-end;
   gap: 20px;
-  top:-50px;
+  top:10px;
   width:100px;
 }
 .btn-center-epg{
   position:fixed;
   display: flex;
-  right:70px!important;
+  left:8px!important;
+  border-radius: 10px;
   justify-content: flex-end;
+  border:1px solid rgba(255, 255, 255, 0.65);
   }
-@media (min-width: 880px) {
- .btn-center-up{
-    top:0px;
+.btn-center-epg:hover, .btn-center-epg:focus {
+  border:1px solid rgba(26, 122, 206, 0.65);
+  border-radius: 10px;
   }
-
- .btn-right-up {
-    top:0px;
-  }
-.btn-center-epg{
-  right:180px!important;
-  }
-}
-@media (min-width: 600px) {
- .btn-right-up {
-    top:0px;
-  }
-.btn-center-epg{
-  right:180px!important;
-  }
-}
-.btn-right-epg {
-  position:fixed;
-  display: flex;
-  right:8px!important;
-  gap: 20px;
-  top:0;
-  width:50px;
-}
-.btn-right {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding-right:8px;
-}
-
 /* dugmad – statična */
 .control-buttons button {
   max-width: 40px;
@@ -451,9 +420,10 @@ video::-webkit-media-controls-panel { display: none !important; }
   border: 1px solid rgba(26, 122, 206, 0.00);
   background: rgba(0, 0, 0, 0.0);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.00);
-  cursor: pointer;
-  padding-top:4px
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.60);
+  background:rgba(0,0,0,0.35);
+  cursor: default;
+  padding-top:4px;
 }
 
 /* hover samo na ikonama */
@@ -524,7 +494,7 @@ video::-webkit-media-controls-panel { display: none !important; }
 /* hover */
 .control-buttons button:hover .icon {
   background-color: rgba(26, 122, 206, 1);
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 /* ==================== FOKUS ==================== */
@@ -751,12 +721,17 @@ video::-webkit-media-controls-panel { display: none !important; }
   pointer-events: none;
   display: flex;
   position:fixed;
-  left:0px;
+  left:140px;
   align-items: center;
-  border-left: 4px solid rgba(26, 122, 206, 0.85);
+  border-left: 4px solid rgba(26, 122, 206, 0.99);
   height: 40px;
   overflow: hidden;
-  width: 100%;
+  width: auto;
+  max-width:250px;
+  background:rgba(0,0,0,0.65);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.55);
+  border-radius:5px;
+  padding-right: 10px;
 }
 
 /* TEKST NAZIVA */
@@ -768,31 +743,34 @@ video::-webkit-media-controls-panel { display: none !important; }
   -webkit-line-clamp:1;
 
   overflow: hidden;
-  line-height: 1; white-space: nowrap;
+  line-height: 1;
+  white-space: nowrap;
   font-weight: 500;
   line-height: 1;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
 }
 #currentDatetime {
   display: flex;
-  right: 7px; /*calc(50% - 80px); */
+  left: calc(50% - 330px)!important; /*calc(50% - 80px); */
   flex-direction: column;
   align-items: center;    /* horizontalno centriranje */
   justify-content: center; /* vertikalno centriranje */
   color: #fff;
   pointer-events: none;
-  width:120px!important;
+  width:auto!important;
+  max-width:50px!important;
   position:fixed;
-  top:1px!important;
+  top:70px!important;
   border-radius:5px;/*
   backdrop-filter: blur(8px);*/
 }
 
 #time {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   display: flex;
+  color: #000;
   height:30px;
   top:0;
   padding:0px 5px;
@@ -800,10 +778,10 @@ video::-webkit-media-controls-panel { display: none !important; }
   opacity: 1;
   align-items: center;    /* horizontalno centriranje */
   justify-content: center; /* vertikalno centriranje */
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.75);
   border-radius:5px;
   border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow:0 0 8px rgba(0, 0, 0, 0.65);
+/*  box-shadow:0 0 8px rgba(0, 0, 0, 0.65);*/
 }
 
 #date {
@@ -1315,4 +1293,24 @@ body.logout-open .logout-overlay {
     box-shadow: initial;
     transform: initial;
   }
+}
+/* Responsivnost */
+@media (max-width: 660px) {
+  #currentDatetime {
+    left: 10px!important; /*calc(50% - 80px); */
+    max-width:25px!important;
+  }
+  #time{
+    font-size:14px
+  }
+}
+@media (max-width: 721px) {
+ #control-bar{left:0}
+ .btn-center-up{
+     left:calc(50% - 50px);
+ }
+/* Sidebar */
+ #sidebar-overlay {
+  height: calc(100% - 250px);
+ }
 }
