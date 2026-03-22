@@ -755,16 +755,16 @@ video::-webkit-media-controls-panel {
         no-repeat center;
 }
 .icon-up {
-    -webkit-mask: url("/assets/dtvicons/up.svg") no-repeat center;
-    mask: url("/assets/dtvicons/up.svg") no-repeat center;
+    -webkit-mask: url("https://bosniana.org/assets/dtvicons/up.svg") no-repeat center;
+    mask: url("https://bosniana.org/assets/dtvicons/up.svg") no-repeat center;
 }
 .icon-down {
-    -webkit-mask: url("/assets/dtvicons/down.svg") no-repeat center;
-    mask: url("/assets/dtvicons/down.svg") no-repeat center;
+    -webkit-mask: url("https://bosniana.org/assets/dtvicons/down.svg") no-repeat center;
+    mask: url("https://bosniana.org/assets/dtvicons/down.svg") no-repeat center;
 }
 .icon-ok {
-    -webkit-mask: url("/assets/dtvicons/ok.svg") no-repeat center;
-    mask: url("/assets/dtvicons/ok.svg") no-repeat center;
+    -webkit-mask: url("https://bosniana.org/assets/dtvicons/ok.svg") no-repeat center;
+    mask: url("https://bosniana.org/assets/dtvicons/ok.svg") no-repeat center;
 }
 .icon-epg {
     -webkit-mask: url("https://bosniana.org/assets/dtvicons/epg.svg") no-repeat
