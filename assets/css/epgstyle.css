@@ -2,8 +2,8 @@
 @import url('https://bosniana.org/assets/css/fonts/montserrat-ace/montserrat-ace.css');
 /* -------------------- Chrome, Edge, Safari -------------------- */
 ::-webkit-scrollbar {
-  width: 6px;           /* jako tanak */
-  height: 6px;          /* za horizontalni scroll */
+  width: 10px;           /* jako tanak */
+  height: 10px;          /* za horizontalni scroll */
 }
 
 ::-webkit-scrollbar-track {
@@ -21,7 +21,7 @@
 
 /* -------------------- Firefox -------------------- */
 * {
-  scrollbar-width: thin;               /* tanak scroll */
+  scrollbar-width: 10px;               /* tanak scroll */
   scrollbar-color: rgba(26,122,206,0.8) transparent; /* thumb + track */
 }
 
@@ -78,7 +78,7 @@ body {
 
 /* Sakrivanje webkit scrolla, ali da radi scroll */
 #days::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 #days::-webkit-scrollbar-thumb {
   background: rgba(26, 122, 206, 0.25);
@@ -93,7 +93,7 @@ body {
 
 /* Dnevne kartice */
 .day {
-  height: 44px;
+  height: 32px;
   margin: 0 4px;
   border-radius: 10px;
 
@@ -122,14 +122,13 @@ body {
   );
   box-shadow: 0 0 0 1px rgba(255,204,0,0.35),
               0 6px 18px rgba(255,204,0,0.35);
-  transform: scale(1.08);
 }
 
 
 .day.today .name::after {
   content: " • danas";
   color: var(--accent);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .day .name {
@@ -182,10 +181,9 @@ body {
 
 #program-list {
   flex: 1 1 auto;       /* raste da popuni roditelja */
-  overflow-y: auto;     /* scroll kada sadržaja ima više */
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
-  padding: 0;
+  padding: 15px;
   position: relative;   /* više ne absolute */
 }
 
@@ -198,6 +196,7 @@ body {
 #schedule-table{
   display:flex;
   flex-direction:column;
+  margin:10px 20px;
   gap: 6px;
 }
 
@@ -314,109 +313,7 @@ body {
   color:#e0e0e0;
   opacity:.9;
 }
-.epg-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
 
-.epg-overlay {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 6px;
-}
-
-.epg-card {
-  flex: 0 0 auto;
-  width: 120px;
-  height: 140px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  color: #ccc;
-  opacity: 0.85;
-  border: 2px solid rgba(0,0,0,0.75);
-  box-shadow: 0 0 8px rgba(0,0,0,0.85);
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-.epg-card:hover {
-  transform: translateY(-4px);
-  opacity: 1;
-}
-.epg-card .info {
-  width: 100%;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(6px);
-  border-radius: 8px;
-  padding: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-}
-
-.epg-title { flex: 1 1 auto; font-size: 14px; font-weight: 600; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.epg-time  { flex: 0 0 auto; font-size: 14px; font-weight: 600; white-space: nowrap; opacity: 0.85; }
-.epg-desc  { flex: 0 0 100%; font-size: 12px; line-height: 1.2; opacity: 0.85; max-height: 2.4em; overflow: hidden; }
-
-/* Timeline traka */
-.epg-card::after {
-  content: "";
-  position: absolute;
-  left:6px;
-  bottom:6px;
-  height:4px;
-  width: var(--progress, 0%);
-  background: linear-gradient(
-    90deg,
-    #ff9800,
-    #ffc107);
-  border-radius: 3px;
-  box-shadow: 0 0 6px rgba(255,193,7,0.6);
-
-  transition: width 0.5s linear;
-  z-index: 2;
-}
-.epg-card::before{
-  content:"";
-  position:absolute;
-  left:6px;
-  right:6px;
-  bottom:6px;
-  height:4px;
-
-  background: rgba(255,255,255,0.15);
-  border-radius: 3px;
-
-  z-index:1;
-}
-/* Scroll dugmad */
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background: red;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.scroll-btn.left { left: 0; }
-.scroll-btn.right { right: 0; }
-.scroll-btn:hover { background: rgba(0,0,0,0.8); }
-/* ===== TIMELAPSE BAR ===== */
-/* ===== TIMELAPSE PROGRESS ===== */
 /* ===== TIMELAPSE (TRACK + PROGRESS) ===== */
 .current-program::after{
   content:"";
@@ -447,20 +344,6 @@ body {
 
   transition: background-size 1s linear;
   z-index:2;
-}
-
-/* Timeline traka na dnu epg-card */
-.epg-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  width: var(--progress, 0%);
-  background: linear-gradient(90deg, #ff9800, #ffc107);
-  border-radius: 0 0 8px 8px;
-  transition: width 0.5s linear;
-  z-index: 2;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -496,81 +379,54 @@ body {
   padding-left: 14px;
   padding-right: 14px;
 }
-
+#epg-controls{
+position:fixed;bottom:10px
+}
 /* Lijevi panel – da popuni cijelu grid kolonu i scroll radi */
 #epg-left {
   display: flex;
   flex-direction: column; /* omogućava #program-list da raste */
   min-width: 500px;           /* bitno za overflow */
-  max-width: 100%;
-  height: calc(100vh - 60px); /* visina ekrana minus #days bar */
-  margin: 0 auto;
+  max-width: 900px;
+  height: calc(100vh - 120px); /* visina ekrana minus #days bar */
+  margin: 60px auto 60px auto;
+  padding: 15px
 }
-/* Desni panel */
-#epg-right{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 0;           /* bitno za overflow */
-  max-width: 500px;
-  padding:10px;
-  height:100%
+#epg-scroll-controls{
+  display:flex;
+  position:fixed;
+  bottom:0;
+  width:400px;
+  height:60px;
+  left:calc(50% - 200px);
 }
-
-/* box */
-.right-box {
-  background: rgba(0,0,0,0.25);
-  border-radius: 12px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-}
-
-/* naslov */
-.right-title {
-  font-size: 0.9rem;
-  margin: 4px 6px 6px;
-  opacity: 0.85;
+#scroll-up, #scroll-down {
+  width: 200px;
+  padding:5px 0;
+  height: 50px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
 }
 
-/* FLEX GRID */
-.right-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  overflow-y: auto;
-  padding-right: 2px;
+#scroll-up:hover, #scroll-down:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
-/* ITEM */
-.right-item {
-  width: calc(33.333% - 4px); /* 3 u redu */
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: inherit;
+#scroll-up {
+  top: 10px;
 }
 
-/* poster */
-.right-item img {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* naziv */
-.right-item span {
-  font-size: 0.75rem;
-  margin-top: 3px;
-  text-align: center;
-  line-height: 1.1;
-}
-
-/* hover */
-.right-item:hover img {
-  outline: 2px solid rgba(255,255,255,0.3);
+#scroll-down {
+  bottom: 10px;
 }
 /* Responsivnost */
 @media (max-width: 900px) {
