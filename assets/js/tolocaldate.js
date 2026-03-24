@@ -1,5 +1,31 @@
 let allowScrollToCurrent = true; // scroll samo prvi put
+const VISIBLE_COUNT = 8; // koliko itema prikazuje DOM
+let visibleStart = 0;
 
+let visibleRows = []; // trenutno prikazane stavke u DOM-u
+
+function appendRows(start, count, direction = "replace") {
+  const slice = allRows.slice(start, start + count);
+
+  if (direction === "replace") {
+    scheduleEl.innerHTML = "";
+    slice.forEach(r => scheduleEl.appendChild(r));
+    scheduleWrapper.scrollTop = 0;
+  }
+  else if (direction === "down") {
+    slice.forEach(r => scheduleEl.appendChild(r));
+    // scroll na posljednji dodani element
+    const lastNew = slice[slice.length - 1];
+    if (lastNew) lastNew.scrollIntoView({ block: "end", behavior: "smooth" });
+  }
+  else if (direction === "up") {
+    // ubaci sve nove elemente na početak
+    slice.reverse().forEach(r => scheduleEl.insertBefore(r, scheduleEl.firstChild));
+    // scroll na prvi od upravo dodanih (koji je sada na vrhu)
+    const firstNew = slice[slice.length - 1]; // jer smo slice okrenuli
+    if (firstNew) firstNew.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+}
 /* ===== FUNKCIJA ZA LOKALNO VRIJEME +2h ===== */
 function toLocalDate(ts){
 
@@ -9,8 +35,8 @@ let loadIndex = 0;
 let allRows = [];
 /* ===== DAYS DATA ===== */
 const months = [
-  "januar","februar","mart","april","maj","juni",
-  "juli","avgust","septembar","oktobar","novembar","decembar"
+  "01.", "02.", "03.", "04.", "05.", "06.",
+  "07.", "08.", "09.", "10.", "11.", "12."
 ];
 
 /* ===== DINAMIČKI EPG DAYS SA FOLDEROM IZ CURRENT CHANNEL ===== */
@@ -69,7 +95,10 @@ function loadAllEPG(){
   allRows = [];
   loadNextDay();
 }
-
+function scrollToCurrentNow(){
+  allowScrollToCurrent = true;
+  markCurrent(allRows);
+}
 function loadNextDay(){
   if(loadIndex >= epgDays.length) return;
 
@@ -99,37 +128,46 @@ epgDays.forEach((d,i)=>{
     <div class="date">${dd}. ${months[m-1]}</div>
   `;
 
-	div.onclick = () => {
-	  document.querySelectorAll(".day").forEach(x => x.classList.remove("active"));
-	  div.classList.add("active");
-	  currentDay = i;
+div.onclick = () => {
+  document.querySelectorAll(".day").forEach(x => x.classList.remove("active"));
+  div.classList.add("active");
+  currentDay = i;
 
-	  // reload od izabranog dana
-	  loadIndex = i;
-	  lastDayKey = null;
-	  scheduleEl.innerHTML = "";
-	  loadNextDay();
+  // pronađi index first visible element za taj dan
+  let targetIndex = 0;
 
-	  // scroll na taj dan
-	  setTimeout(() => {
-		const target = document.querySelector(`.newday-header[data-date="${d.label}"]`);
-		if (target) {
-		  target.scrollIntoView({ behavior: "smooth", block: "start" });
-		}
-	  }, 200);
+  if (d.label === todayStr) {
+    // TODAY → scroll na current program
+    const now = Math.floor(Date.now()/1000);
+    targetIndex = allRows.findIndex(r=>{
+      const ts = +r.dataset?.ts;
+      const len = +r.dataset?.len;
+      return ts && len && now >= ts && now < ts + len;
+    });
+    if(targetIndex === -1) targetIndex = 0;
+  } else {
+    // ostali dani → scroll na prvi header/program za taj dan
+    targetIndex = allRows.findIndex(r => r.dataset?.date === d.label);
+    if(targetIndex === -1) targetIndex = 0;
+  }
 
-	  // scroll u days baru
-	  div.scrollIntoView({
-		behavior: "smooth",
-		inline: "center",
-		block: "nearest"
-	  });
-	};
+  visibleStart = Math.max(0, targetIndex);  // prvi item tog dana na vrh
+  appendRows(visibleStart, VISIBLE_COUNT);
 
+  // sada označi current unutar vidljivih i scrollaj na vrh ako treba
+  markCurrent(scheduleEl.children);
+};
 
   daysEl.appendChild(div);
 });
+const scheduleWrapper = document.createElement("div");
+scheduleWrapper.id = "schedule-wrapper";
+scheduleWrapper.style.position = "relative";
+scheduleWrapper.style.maxHeight = "600px"; // ili koliko želiš
+scheduleWrapper.style.overflowY = "auto"; // dopušta vertikalni scroll
 
+scheduleEl.parentNode.insertBefore(scheduleWrapper, scheduleEl);
+scheduleWrapper.appendChild(scheduleEl);
 /* ===== RENDER EPG ===== */
 function renderEPG(data){
   const wrapper = document.createElement("div");
@@ -142,10 +180,9 @@ function renderEPG(data){
     if(!ts) return;
 
     const d = toLocalDate(ts);
-
     const dayKey = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
 
-    /* ===== UBACI HEADER TAČNO U 00:00 ===== */
+    // HEADER
     if(dayKey !== lastDayKey){
       const dayName = [
         "Nedjelja","Ponedjeljak","Utorak",
@@ -154,6 +191,7 @@ function renderEPG(data){
 
       const header = document.createElement("div");
       header.className = "newday-header";
+      header.dataset.date = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
       header.innerHTML = `
         <h3 class="newday-header-h3"><span><i class="ri-calendar-2-line"></i></span>
           ${dayName}, <span>
@@ -163,26 +201,35 @@ function renderEPG(data){
         </h3>
       `;
 
-      scheduleEl.appendChild(header);
-      lastDayKey = dayKey; // ažuriramo globalno
+      allRows.push(header);
+      lastDayKey = dayKey;
     }
 
-    scheduleEl.appendChild(r);
     allRows.push(r);
   });
 
-  /* ===== LOAD NEXT DAY FILE ===== */
   loadIndex++;
-  loadNextDay();
-
-  /* ===== OZNAČI TRENUTNI PROGRAM ===== */
-  markCurrent(allRows);
+  if(loadIndex < epgDays.length){
+    loadNextDay(); // nastavi učitavati druge dane
+  } else {
+    // tek sada append i markCurrent — nema više treperenja
+    const now = Math.floor(Date.now()/1000);
+    let currentIndex = allRows.findIndex(r=>{
+      const ts = +r.dataset?.ts;
+      const len = +r.dataset?.len;
+      return ts && len && now >= ts && now < ts + len;
+    });
+    if(currentIndex === -1) currentIndex = 0;
+    visibleStart = Math.max(0, currentIndex);
+    appendRows(visibleStart, VISIBLE_COUNT);
+    markCurrent(scheduleEl.children);
+  }
 }
 /* ===== CURRENT + TIMELAPSE ===== */
 function markCurrent(rows){
   const now = Math.floor(Date.now()/1000);
 
-  rows.forEach(r=>{
+  [...rows].forEach(r=>{
     r.classList.remove("current-program");
     r.style.removeProperty("--progress");
     r.style.removeProperty("--bgimg");
@@ -195,104 +242,37 @@ function markCurrent(rows){
 
     if(now >= ts && now < ts + len){
       r.classList.add("current-program");
-
       const passed = now - ts;
       const percent = Math.min(100, (passed / len) * 100);
       r.style.setProperty("--progress", percent + "%");
-
       if(r.dataset.image){
         r.style.setProperty("--bgimg", `url("${r.dataset.image}")`);
       } else {
         r.style.setProperty("--bgimg", "linear-gradient(135deg,#2a2f45,#151821)");
       }
 
-      // scroll samo ako je dozvoljeno (prvi put)
       if(allowScrollToCurrent){
         r.scrollIntoView({ block:"start", behavior:"smooth" });
-        allowScrollToCurrent = false; // više ne scrolla automatski
+        allowScrollToCurrent = false;
       }
 
       break;
     }
   }
 }
+document.getElementById("scroll-up").onclick = () => {
+  const newStart = Math.max(0, visibleStart - VISIBLE_COUNT);
+  appendRows(newStart, VISIBLE_COUNT, "up");
+  visibleStart = newStart;
+  markCurrent(scheduleEl.children);
+};
 
-/* ===== FUNKCIJA ZA RENDER U EPG OVERLAY ===== */
-function renderEPGOverlay(data) {
-  const overlay = document.querySelector(".epg-overlay");
-  if (!overlay) return;
-
-  overlay.innerHTML = ""; // očistimo prethodne kartice
-
-  const programs = data.data.program; // raw HTML iz JSONP
-  const wrapper = document.createElement("div");
-  wrapper.innerHTML = programs;
-  const rows = [...wrapper.children];
-
-  const now = Math.floor(Date.now() / 1000);
-
-  rows.forEach((r, index) => {
-    const ts = +r.dataset.ts;
-    const len = +r.dataset.len;
-    if (!ts || !len) return;
-
-    // Kreiramo karticu
-    const card = document.createElement("div");
-    card.className = "epg-card";
-
-    // Background slika ili default gradijent
-    if (r.dataset.image) {
-      card.style.backgroundImage = `url("${r.dataset.image}")`;
-    } else {
-      card.style.backgroundImage = "linear-gradient(135deg,#2a2f45,#151821)";
-    }
-
-    // Info
-    const info = document.createElement("div");
-    info.className = "info";
-
-    // Naslov
-    const title = document.createElement("div");
-    title.className = "epg-title";
-    title.textContent = r.querySelector(".title")?.textContent || "";
-
-    // Vrijeme
-    const timeDiv = document.createElement("div");
-    timeDiv.className = "epg-time";
-
-    const d = toLocalDate(ts);
-    const hh = String(d.getHours()).padStart(2, "0");
-    const mm = String(d.getMinutes()).padStart(2, "0");
-    timeDiv.textContent = `${hh}:${mm}`;
-
-    // Opis
-    const desc = document.createElement("div");
-    desc.className = "epg-desc";
-    desc.textContent = r.querySelector(".desc")?.textContent || "";
-
-    info.appendChild(title);
-    info.appendChild(timeDiv);
-    info.appendChild(desc);
-    card.appendChild(info);
-
-    // Timeline progres
-    if (now >= ts && now < ts + len) {
-      const passed = now - ts;
-      const percent = Math.min(100, (passed / len) * 100);
-      card.style.setProperty("--progress", percent + "%");
-      card.classList.add("current-program");
-    }
-
-    overlay.appendChild(card);
-  });
-}
-
-
-/* ===== CALLBACK za JSONP ===== */
-function tvprogrambsb49(obj) {
-  window.currentEPG = obj;
-  renderEPGOverlay(obj);
-}
+document.getElementById("scroll-down").onclick = () => {
+  const newStart = Math.min(allRows.length - VISIBLE_COUNT, visibleStart + VISIBLE_COUNT);
+  appendRows(newStart, VISIBLE_COUNT, "down");
+  visibleStart = newStart;
+  markCurrent(scheduleEl.children);
+};
 
 /* ===== JSONP CALLBACK ===== */
 function tvprogrambsb49(obj){
