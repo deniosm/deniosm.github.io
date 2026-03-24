@@ -404,9 +404,10 @@ position:fixed;bottom:10px
   width: 200px;
   padding:5px 0;
   height: 50px;
-  background-color: #000;
+  background: rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.35);
   color: white;
-  border: none;
+
   border-radius: 50%;
   cursor: pointer;
   font-size: 20px;
