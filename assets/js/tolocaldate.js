@@ -1,8 +1,8 @@
-let allowScrollToCurrent = true; // scroll samo prvi put
-const VISIBLE_COUNT = 8; // koliko itema prikazuje DOM
+let allowScrollToCurrent = true;
+const VISIBLE_COUNT = 8;
 let visibleStart = 0;
 let initialClickDone = false;
-let visibleRows = []; // trenutno prikazane stavke u DOM-u
+let visibleRows = [];
 
 function appendRows(start, count, direction = "replace") {
   const slice = allRows.slice(start, start + count);
@@ -14,15 +14,12 @@ function appendRows(start, count, direction = "replace") {
   }
   else if (direction === "down") {
     slice.forEach(r => scheduleEl.appendChild(r));
-    // scroll na posljednji dodani element
     const lastNew = slice[slice.length - 1];
     if (lastNew) lastNew.scrollIntoView({ block: "end", behavior: "smooth" });
   }
   else if (direction === "up") {
-    // ubaci sve nove elemente na početak
     slice.reverse().forEach(r => scheduleEl.insertBefore(r, scheduleEl.firstChild));
-    // scroll na prvi od upravo dodanih (koji je sada na vrhu)
-    const firstNew = slice[slice.length - 1]; // jer smo slice okrenuli
+    const firstNew = slice[slice.length - 1];
     if (firstNew) firstNew.scrollIntoView({ block: "start", behavior: "smooth" });
   }
 }
@@ -54,9 +51,8 @@ function generateEPGDays(backDays = 1, forwardDays = 5) {
   const today = new Date();
   const epgDays = [];
 
-  // Dohvati ime foldera iz div-a
   const folderEl = document.getElementById("current-channel-epg");
-  const folder = folderEl?.textContent?.trim() || ""; // fallback na prazan string
+  const folder = folderEl?.textContent?.trim() || "";
 
   for (let i = -backDays; i <= forwardDays; i++) {
     const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
@@ -68,7 +64,6 @@ function generateEPGDays(backDays = 1, forwardDays = 5) {
     const name = dayNames[d.getDay()];
     const fileName = `${String(m).padStart(2,"0")}${String(dd).padStart(2,"0")}.js`;
 
-    // Dodaj folder ispred imena fajla
     const file = folder ? `https://bosniana.org/assets/test/${folder}/${fileName}` : fileName;
 
     epgDays.push({ label, name, file });
@@ -77,9 +72,9 @@ function generateEPGDays(backDays = 1, forwardDays = 5) {
   return epgDays;
 }
 
-// Kreiranje epgDays automatski
+
 const epgDays = generateEPGDays(1, 5);
-console.log(epgDays); // provjeriti ispis u konzoli
+//console.log(epgDays);
 
 
 const daysEl = document.getElementById("days");
@@ -133,11 +128,9 @@ div.onclick = () => {
   div.classList.add("active");
   currentDay = i;
 
-  // pronađi index first visible element za taj dan
   let targetIndex = 0;
 
   if (d.label === todayStr) {
-    // TODAY → scroll na current program
     const now = Math.floor(Date.now()/1000);
     targetIndex = allRows.findIndex(r=>{
       const ts = +r.dataset?.ts;
@@ -146,15 +139,14 @@ div.onclick = () => {
     });
     if(targetIndex === -1) targetIndex = 0;
   } else {
-    // ostali dani → scroll na prvi header/program za taj dan
+
     targetIndex = allRows.findIndex(r => r.dataset?.date === d.label);
     if(targetIndex === -1) targetIndex = 0;
   }
 
-  visibleStart = Math.max(0, targetIndex);  // prvi item tog dana na vrh
+  visibleStart = Math.max(0, targetIndex);
   appendRows(visibleStart, VISIBLE_COUNT);
 
-  // sada označi current unutar vidljivih i scrollaj na vrh ako treba
   markCurrent(scheduleEl.children);
 };
 
@@ -163,8 +155,8 @@ div.onclick = () => {
 const scheduleWrapper = document.createElement("div");
 scheduleWrapper.id = "schedule-wrapper";
 scheduleWrapper.style.position = "relative";
-scheduleWrapper.style.maxHeight = "600px"; // ili koliko želiš
-scheduleWrapper.style.overflowY = "auto"; // dopušta vertikalni scroll
+scheduleWrapper.style.maxHeight = "600px";
+scheduleWrapper.style.overflowY = "auto";
 
 scheduleEl.parentNode.insertBefore(scheduleWrapper, scheduleEl);
 scheduleWrapper.appendChild(scheduleEl);
@@ -210,9 +202,9 @@ function renderEPG(data){
 
   loadIndex++;
   if(loadIndex < epgDays.length){
-    loadNextDay(); // nastavi učitavati druge dane
+    loadNextDay();
   } else {
-    // tek sada append i markCurrent — nema više treperenja
+
     const now = Math.floor(Date.now()/1000);
     let currentIndex = allRows.findIndex(r=>{
       const ts = +r.dataset?.ts;
@@ -224,7 +216,7 @@ function renderEPG(data){
     appendRows(visibleStart, VISIBLE_COUNT);
     markCurrent(scheduleEl.children);
   }
-        // nakon što se sve učita (u else bloku gdje već imaš appendRows)
+
     if (!initialClickDone) {
       initialClickDone = true;
 
