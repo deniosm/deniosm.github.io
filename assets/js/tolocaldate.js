@@ -1,7 +1,7 @@
 let allowScrollToCurrent = true; // scroll samo prvi put
 const VISIBLE_COUNT = 8; // koliko itema prikazuje DOM
 let visibleStart = 0;
-
+let initialClickDone = false;
 let visibleRows = []; // trenutno prikazane stavke u DOM-u
 
 function appendRows(start, count, direction = "replace") {
@@ -224,11 +224,15 @@ function renderEPG(data){
     appendRows(visibleStart, VISIBLE_COUNT);
     markCurrent(scheduleEl.children);
   }
-    // nakon što se sve učita (u else bloku gdje već imaš appendRows)
-    setTimeout(() => {
-      const activeDay = document.querySelector(".day.active");
-      if (activeDay) activeDay.click();
-    }, 0);
+        // nakon što se sve učita (u else bloku gdje već imaš appendRows)
+    if (!initialClickDone) {
+      initialClickDone = true;
+
+      setTimeout(() => {
+        const activeDay = document.querySelector(".day.active");
+        if (activeDay) activeDay.click();
+      }, 150);
+    }
 }
 /* ===== CURRENT + TIMELAPSE ===== */
 function markCurrent(rows){
