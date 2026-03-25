@@ -33,20 +33,20 @@
 
 /* close dugme */
 #page-overlay-close {
-  position: absolute;
-  top: 70px;
-  right: calc(50% - 338px)!important; /*calc(50% - 80px); */
+  position: fixed;
+  top: 65px;
+  left:calc(50% + 390px);
   z-index: 100000;
-  background: rgba(255, 255, 255, 0.75);
-  width:auto!important;
-  max-width:100px!important;
-  color: #000;
-  border: 0;
-  height:30px;
-  border-radius:5px;
+  background: #000;
+  border:1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  width: 80px;
+  height: 40px;
+  border-radius:10px;
   font-size: 18px;
+  font-weight:500px;
   display:flex;
-  padding:0px 5px;
+  padding:0;
   align-items: center;    /* horizontalno centriranje */
   justify-content: center; /* vertikalno centriranje */
   cursor: default;
@@ -115,15 +115,34 @@
 .page-overlay-fotter-item:hover img {
   outline: 2px solid rgba(255,255,255,0.3);
 }
-@media (max-width: 660px) {
+@media (max-width: 900px) {
   #page-overlay-close {
-    position:fixed;
-    right: 10px!important; /*calc(50% - 80px); */
-    max-width:50px!important;
-    width:auto!important;
-    padding:8px;
+      left:auto;
+      right:15px
   }
   #zatvoriText{
-    display:none
+     font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  #page-overlay-close {
+      left:auto;
+      right:10px;
+      width: 60px;
+  }
+  #zatvoriText{
+     font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  #page-overlay-close {
+    width: 55px;
+    left:auto;
+    right:10px
+  }
+  #zatvoriText{
+     font-size: 12px;
   }
 }
