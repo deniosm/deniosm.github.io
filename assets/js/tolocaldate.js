@@ -224,6 +224,11 @@ function renderEPG(data){
     appendRows(visibleStart, VISIBLE_COUNT);
     markCurrent(scheduleEl.children);
   }
+    // nakon što se sve učita (u else bloku gdje već imaš appendRows)
+    setTimeout(() => {
+      const activeDay = document.querySelector(".day.active");
+      if (activeDay) activeDay.click();
+    }, 0);
 }
 /* ===== CURRENT + TIMELAPSE ===== */
 function markCurrent(rows){
