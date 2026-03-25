@@ -39,7 +39,6 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-size: 14px;
 }
 
 body {
@@ -67,12 +66,13 @@ body {
   left: 0;
   right: 0;
   z-index: 50;
+  font-size: 12px;
 }
 
 /* centralni izgled */
 #days {
-  padding-left: max(16px, calc((100vw - 1200px) / 2));
-  padding-right: max(16px, calc((100vw - 1200px) / 2));
+  padding-left: max(16px, calc((100vw - 800px) / 2));
+  padding-right: max(16px, calc((100vw - 800px) / 2));
 }
 
 
@@ -93,8 +93,8 @@ body {
 
 /* Dnevne kartice */
 .day {
-  height: 32px;
-  margin: 0 4px;
+  height: 38px;
+  margin: 0 2px;
   border-radius: 10px;
 
   display: flex;
@@ -138,11 +138,11 @@ body {
 
 .day .date {
   font-size: 11px;
-  opacity: 0.65;
+  opacity: 0.85;
 }
 @media (max-width: 700px) {
 	#days{
-	 font-size: 12px;
+	 font-size: 11px;
 	}
 	.day.today .name::after {
 	  display:none
@@ -183,7 +183,7 @@ body {
   flex: 1 1 auto;       /* raste da popuni roditelja */
   overflow: hidden;
   margin: 0;
-  padding: 15px;
+  padding: 15px 30px;
   position: relative;   /* više ne absolute */
 }
 
@@ -211,28 +211,32 @@ body {
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 10px;
   opacity:0;
-  min-height: 42px;
+  min-height: 40px;
   box-shadow:
     0 6px 10px rgba(0,0,0,0.35);
   animation:fadeIn .35s ease forwards;
   transition:
-    background .2s,
-    min-height .3s ease,
-    padding .3s ease;
+    background .25s,
+    transform .2s,
+    box-shadow .25s;
 }
 
 .row:hover, .row:focus{
 
-  box-shadow: 0 0 10px rgba(30,144,255,0.35);
+  transform: translateY(-2px);
+  background: rgba(30,144,255,0.08);
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.6),
+    0 0 12px rgba(30,144,255,0.25);
 }
 
 .col.time{
   width:70px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight:600;
   color:var(--muted);
   border-right:2px solid #fff;
-  margin-right: 12px;
+  margin-right: 10px;
   padding-left: 6px;
 }
 
@@ -245,6 +249,7 @@ body {
 
 .col small{
   display:block;
+  text-transform: capitalize;
   font-size: 0.8rem;
   color:var(--muted);
 }
@@ -254,12 +259,13 @@ body {
   position:relative;
   border:2px solid rgba(26, 122, 206, 0.55);
   z-index: 1;
-  min-height: 120px;        /* ← OVDJE POVEĆAVAŠ VISINU */
+  min-height: 100px;        /* ← OVDJE POVEĆAVAŠ VISINU */
   padding: 5px 5px;
   align-items: flex-end;    /* sadržaj dolje – ljepše za bg sliku */
   margin: 6px 0;
   overflow:hidden;
   border-radius:14px;
+  font-weight:600;
   box-shadow:
     0 10px 40px rgba(0,0,0,0.55)
 }
@@ -270,14 +276,14 @@ body {
   position:absolute;
   inset:0;
   background-image:
-    linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.15)),
+    linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.2)),
     var(--bgimg);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   z-index:0;
 }
-
+.current-program::marker { display:none; }
 /* content wrapper */
 .current-program > *{
   position:relative;
@@ -293,11 +299,11 @@ body {
 }
 
 .current-program .col.time{
-  font-size:20px;
+  font-size:15px;
   font-weight:600;
   color:#ffcc00;
   border-right:2px solid #fff;
-  margin-right:20px;
+  margin-right:15px;
   padding-left:10px
 }
 
@@ -309,7 +315,8 @@ body {
 
 /* description */
 .current-program small{
-  font-size:12px;
+  font-size:13px;
+  text-transform: capitalize;
   color:#e0e0e0;
   opacity:.9;
 }
@@ -321,7 +328,7 @@ body {
   left:12px;
   right:12px;
   bottom:12px;
-  height:10px;
+  height: 8px;
 
   /* TRACK + PROGRESS U BACKGROUNDU */
   background:
@@ -345,7 +352,19 @@ body {
   transition: background-size 1s linear;
   z-index:2;
 }
-
+.current-program .col a::after {
+  content: " LIVE";
+  margin-left: 8px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255,0,0,0.8);
+  color: #fff;
+  font-weight: 700;
+}
+#schedule-wrapper {
+  scroll-behavior: smooth;
+}
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn{
   to{ opacity:1; transform:none; }
@@ -368,82 +387,104 @@ body {
 .current-program::after{
   animation: livePulse 2.5s infinite;
 }
-/* ===== EPG 2-COLUMN LAYOUT – FINAL ===== */
-#epg-layout{
-  display: grid;
-  min-width: 0;           /* bitno za overflow */
-  max-width:1000px;
-  grid-template-columns: 100% 0%; /* lijevi 65%, desni 35% */
 
-  margin: 60px auto 0;
-  padding-left: 14px;
-  padding-right: 14px;
-}
-#epg-controls{
-position:fixed;bottom:10px
-}
 /* Lijevi panel – da popuni cijelu grid kolonu i scroll radi */
 #epg-left {
   display: flex;
   flex-direction: column; /* omogućava #program-list da raste */
-  min-width: 500px;           /* bitno za overflow */
-  max-width: 900px;
-  height: calc(100vh - 120px); /* visina ekrana minus #days bar */
-  margin: 60px auto 60px auto;
-  padding: 15px
-}
-#epg-scroll-controls{
-  display:flex;
+  min-width: 800px;           /* bitno za overflow */
+  max-width: 800px;
+  height: calc(100vh - 70px); /* visina ekrana minus #days bar */
+  margin-top: 60px;
   position:fixed;
-  bottom:0;
-  width:400px;
-  height:60px;
-  left:calc(50% - 200px);
+  left:calc(50% - 400px)
 }
-#scroll-up, #scroll-down {
-  width: 200px;
-  padding:5px 0;
-  height: 50px;
-  background: rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.35);
-  color: white;
 
-  border-radius: 12px;
+#scroll-up,
+#scroll-down {
+  position: absolute;
+  left: 0;
+  width: 42px;
+  height: 90px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(30,144,255,0.25),
+    rgba(30,144,255,0.08)
+  );
+
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+
+  border-radius: 14px;
   cursor: pointer;
-  font-size: 20px;
-  display: inline-flex;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  transition: background 0.2s;
-}
 
-#scroll-up:hover, #scroll-down:hover {
-  background-color: rgba(0,0,0,0.8);
+  font-size: 18px;
+  font-weight: 600;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(255,255,255,0.05);
+
+  transition: all .25s ease;
+  z-index: 20;
 }
 
 #scroll-up {
-  top: 10px;
+  top: 30px;
 }
 
 #scroll-down {
-  bottom: 10px;
-}
-/* Responsivnost */
-@media (max-width: 900px) {
-  #epg-layout {
-      grid-template-columns: 100% 0%; /* lijevi 65%, desni 35% */
-  }
+  bottom: 30px;
 }
 
+#scroll-up:hover,
+#scroll-down:hover {
+  transform: scale(1.05);
+  background: linear-gradient(
+    180deg,
+    rgba(30,144,255,0.4),
+    rgba(30,144,255,0.15)
+  );
+  box-shadow:
+    0 0 15px rgba(30,144,255,0.6),
+    0 10px 30px rgba(0,0,0,0.6);
+}
+
+#scroll-up:active,
+#scroll-down:active {
+  transform: scale(0.95);
+}
+
+/* Responsivnost */
+@media (max-width: 900px) {
+    #epg-left {
+      min-width: 600px;           /* bitno za overflow */
+      max-width: 600px;
+      left:calc(50% - 300px)
+    }
+}
+@media (max-width: 700px) {
+    #epg-left {
+      min-width: 520px;           /* bitno za overflow */
+      max-width: 520px;
+      left:calc(50% - 260px)
+    }
+}
 @media (max-width: 500px) {
   #epg-layout {
     grid-template-columns: 1fr;
   }
 /* Lijevi panel – da popuni cijelu grid kolonu i scroll radi */
     #epg-left {
-      min-width: 300px;           /* bitno za overflow */
-      max-width: 100%;
+      min-width: 420px;           /* bitno za overflow */
+      max-width: 420px;
+      left:10px
     }
 }
 
