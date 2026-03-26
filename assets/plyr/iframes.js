@@ -103,4 +103,9 @@ Object.entries(barPages).forEach(([id, url]) => {
 
 setActiveItem("item-tv");
 
+const observer = new MutationObserver(() => {
+leftItems.style.display = overlay.classList.contains('hidden') ? 'flex' : 'none';
+});
+
+
 observer.observe(overlay, { attributes: true, attributeFilter: ['class'] });
