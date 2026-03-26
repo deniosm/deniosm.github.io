@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     portraitOverlay.style.background = 'none';
 
     const iframe = document.createElement('iframe');
-    iframe.src = '/portrait/index.html';
+    iframe.src = 'https://bosniana.org/portrait/index.html';
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframe.style.border = 'none';
