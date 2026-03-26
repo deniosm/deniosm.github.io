@@ -100,14 +100,6 @@ body {
 #video-fade.active {
     opacity: 1;
 }
-#player-container{
-  width:100%;
-  height:100%;
-  margin:0;
-  padding:0;
-  top:0;
-  left:0
-}
 #video {
     position: absolute;
     top: 50%;
@@ -296,19 +288,7 @@ video::-webkit-media-controls-panel {
 .right-items .bar-item.active img {
     filter: brightness(1.2);
 }
-.left-items .bar-item.active {
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-    outline: 1px solid #1a7ace;
-}
 
-.left-items .bar-item.active .text {
-    opacity: 1;
-}
-
-.left-items .bar-item.active img {
-    filter: brightness(1.2);
-}
 /* Sadržaj (kanali) */
 #sidebar-content {
     flex: 1;
@@ -1705,25 +1685,54 @@ body.logout-open .logout-overlay {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     width: 60px;
     height: 60px;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top: 4px solid #4285f4;
-    animation: spin 1s linear infinite;
+    z-index: 9999;
 }
+
+/* show/hide ostaje ISTO */
 #loading-spinner.active {
     display: block;
 }
 #loading-spinner.hidden {
     display: none;
 }
-@keyframes spin {
+
+/* SVG stil */
+#loading-spinner svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* animirani krug */
+#loading-spinner svg circle:first-child {
+    stroke: rgba(255,255,255,0.75);
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    animation: spin-infinite 1.8s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+/* drugi krug (pozadina) */
+#loading-spinner svg circle:last-child {
+    fill: transparent;
+}
+
+/* animacija */
+@keyframes spin-infinite {
     0% {
-        transform: translate(-50%, -50%) rotate(0deg);
+        stroke-dasharray: .01px, 43.97px;
+        transform: rotate(0deg);
+    }
+    50% {
+        stroke-dasharray: 21.99px, 21.99px;
+        transform: rotate(450deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(360deg);
+        stroke-dasharray: .01px, 43.97px;
+        transform: rotate(1080deg);
     }
 }
 /* Portrait → rotiraj video i sidebar*/
