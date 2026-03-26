@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portrait error || denniTV || denitv.bosniana.org</title>
+<meta name="description" content="">
+<style>
+  @import url('https://bosniana.org/assets/css/fonts/montserrat-ace/montserrat-ace.css');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: url("https://bosniana.org/assets/css/home.jpg") no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    position:fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    backdrop-filter:blur(8px)
+  }
+  .overlay-content {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter:blur(4px);
+    padding: 30px 20px;
+    border-radius: 16px;
+    max-width: 90%;
+    width: 400px;
+    max-height:200px;
+    height:auto;
+    position:absolute;
+    top:calc(50% - 140px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .overlay-content h1 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .overlay-content p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .card-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card-btn {
+    flex: 1 1 45%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  .card-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  @media (max-width: 480px) {
+    .overlay-content h1 { font-size: 14px; }
+    .overlay-content p { font-size: 13px; }
+    .card-btn { font-size: 12px; padding: 10px 12px; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="overlay-content">
+  <h1>Portrait prikaz više nije podržan !</h1>
+  <p>Rotiraj uređaj u landscape ili koristi FullScreen za nastavak</p>
+
+  <div class="card-container">
+    <button class="card-btn" id="exitPortrait">Nazad</button>
+    <button class="card-btn" id="fsBtnPortrait">FullScreen</button>
+  </div>
+</div>
+
+<script>
+  const fsBtn = document.getElementById('fsBtnPortrait');
+  const exitBtn = document.getElementById('exitPortrait');
+
+  fsBtn.addEventListener('click', () => {
+    const realFs = parent.document.getElementById('appFullscreenBtn');
+    if(realFs) realFs.click();
+  });
+
+  exitBtn.addEventListener('click', () => {
+    window.location.href = '/';
+  });
+</script>
+
+</body>
+</html>
