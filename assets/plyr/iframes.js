@@ -8,7 +8,7 @@ let currentPage = null;
 
 // NEMA redeklaracije
 const rightItems = document.querySelectorAll(".right-items .bar-item");
-
+const leftItems = document.querySelectorAll(".left-items .bar-item");
 function setActiveItem(activeId) {
   rightItems.forEach(item => item.classList.remove("active"));
 
