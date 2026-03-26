@@ -82,7 +82,7 @@ body {
     flex-shrink: 0;
     font-size: 16px;
     font-weight: 500;
-    margin-right: -45px;
+    margin-right: -50px;
 }
 
 #player-timeline-progress {
@@ -96,6 +96,7 @@ body {
     margin: 1px; /* malo prostora za start/end spanove */
     border-radius: 4px;
 }
+
 #video-fade.active {
     opacity: 1;
 }
@@ -106,8 +107,6 @@ body {
     width: 100vw;
     height: 100vh;
     object-fit: contain;
-    /*  background: #001c31 url("https://bosniana.org/assets/loader.gif") center center no-repeat;
-  background-size: 250px 200px; /* prilagodi veličinu gif-a */
     transform: translate(-50%, -50%);
     transition: background 0.3s ease;
 }
@@ -568,7 +567,7 @@ video::-webkit-media-controls-panel {
 /* Kontrolna traka */
 #control-bar {
     position: fixed;
-    left: 100px;
+    width: calc(100% - 100px);
     right: 0;
     bottom: 0;
     height: 210px;
@@ -577,26 +576,25 @@ video::-webkit-media-controls-panel {
     display: flex;
     opacity: 0;
     flex-direction: column;
-    transform: translateX(100%);
     transition: opacity 0.2s ease;
     z-index: 9998;
+    pointer-events: none;
 }
 #control-bar.open {
-    transform: translateX(0);
+    pointer-events: auto;
     opacity: 1;
 }
 #control-bar.hidden {
-    transform: translate(-50%);
     opacity: 0;
     transition: transform 0.2s ease;
     pointer-events: none;
 }
 
 .cbr {
-    position: fixed;
+    position: absolute;
     right: 0;
+    width:100%;
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     height: 20px;
@@ -615,12 +613,6 @@ video::-webkit-media-controls-panel {
     background-color: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(0, 0, 0, 0.95);
     height: 36px;
-    /*
-  padding: 3px 0;
-  background:rgba(0, 0, 0, 0.70);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(26, 122, 206, 0.45);
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.65);*/
 }
 
 /* BLOKOVI */
@@ -646,13 +638,13 @@ video::-webkit-media-controls-panel {
     gap: 7px;
 }
 .btn-center-up {
-    position: fixed;
+    position: absolute;
     left: calc(50% - 100px);
     align-items: center;
     display: flex;
     justify-content: center;
     gap: 12px;
-    top: -40px;
+    top: -70px;
     width: 100px;
 }
 
@@ -680,15 +672,14 @@ video::-webkit-media-controls-panel {
     height: 44px;
     align-items: center;
     border-left: 4px solid rgba(26, 122, 206, 0.99);
-    /*  background:rgba(0,0,0,0.65); */
 }
 .btn-tv-uzivo {
-    position: fixed;
+    position: absolute;
     display: flex;
-    left: 10px !important;
-    top: 18px;
+    left: 12px !important;
+    top: -12px;
     height: 17px;
-    width: 58px;
+    width: 56px;
     justify-content: center;
     background-color: rgba(26, 122, 206, 1);
     align-items: center;
@@ -698,6 +689,7 @@ video::-webkit-media-controls-panel {
     color: #fff;
     font-size: 11px;
     font-weight: 600;
+    padding-bottom:1px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -837,7 +829,7 @@ video::-webkit-media-controls-panel {
 }
 
 .epg-wrapper {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -868,7 +860,7 @@ video::-webkit-media-controls-panel {
     background-size: 100% 100%;
     background-position: center;
     position: relative;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -1348,11 +1340,11 @@ body.categories-open .btn-center-epg {
 }
 
 #categories {
-    position: fixed;
-    bottom: 50px; /* visina iznad dugmeta */
+    position: absolute;
+    bottom: 40px; /* visina iznad dugmeta */
     right: 0;
 
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     min-width: 300px;
     max-width: 300px;
 
@@ -1364,8 +1356,8 @@ body.categories-open .btn-center-epg {
     border-radius: 10px;
     border: 1px solid rgba(26, 122, 206, 0.25);
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
-
-    transform: translateY(0);
+/*
+    transform: translateY(0); */
     opacity: 0;
     transition: transform 0.2s ease, opacity 0.2s ease;
 
@@ -1378,7 +1370,6 @@ body.categories-open .btn-center-epg {
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(8px);
     pointer-events: auto;
-    transform: translateY(-145px);
 }
 /* lista unutar categories */
 #category-list {
@@ -1463,78 +1454,16 @@ body.categories-open .btn-center-epg {
 #categories::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.4);
 }
-/* side kontejner – NEMA vizuelni stil */
-#categories-side {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: -2px;
-    height: 100vh;
-    width: 99px;
-    pointer-events: none;
-    z-index: 9998;
 
-    transition: transform 0.2s ease;
-    transform: translateX(-50px);
-    opacity: 0;
-}
-
-/* prati categories.open */
-#categories.open + #categories-side {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-}
-/* kada su categories otvorene, pomjeri channels
-body.categories-open #channels {
-  transform: translateX(-500px);
-  left:0
-}*/
 body.categories-open #control-bar {
     transform: translateY(140px);
     transition: all 0.2s ease;
-}
-@media (min-width: 721px) {
-    #categories {
-        height: calc(100vh - 90px);
-    }
-    body.categories-open #control-bar {
-        transform: translateY(140px);
-        /*left:0;*/
-        transition: all 0.2s ease;
-    }
 }
 
 #channels {
     transition: transform 0.2s ease;
 }
-/* ============================= */
-/* GORNJI BLOK */
-#categories-side .side-top {
-    display: none;
-    position: absolute;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    height: 35px; /*
-  background: rgba(0, 0, 0, 0.35);*/
-    backdrop-filter: blur(2px); /*
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);*/
-}
 
-/* ============================= */
-/* DONJI BLOK */
-#categories-side .side-bottom {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35px;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
 .settings-dropdown {
     position: absolute;
     top: 50px;
@@ -1705,18 +1634,7 @@ body.logout-open .logout-overlay {
         font-size: 14px;
     }
 }
-@media (max-width: 721px) {
-    #control-bar {
-        left: 0;
-    }
-    .btn-center-up {
-        left: calc(50% - 50px);
-    }
-    /* Sidebar */
-    #sidebar-overlay {
-        height: calc(100% - 190px);
-    }
-}
+
 .sound-wrapper {
     position: relative;
     display: inline-flex;
@@ -1788,7 +1706,7 @@ body.logout-open .logout-overlay {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-/* Portrait → rotiraj video i sidebar */
+/* Portrait → rotiraj video i sidebar*/
 @media screen and (orientation: portrait) {
     #video {
         transform: translate(-50%, -50%) rotate(90deg);
@@ -1797,4 +1715,17 @@ body.logout-open .logout-overlay {
         object-fit: contain;
     }
 }
-
+.tv-control-btn{display:none}
+/* PORTRAIT MODE */
+#player-container.portraitMode #video {
+  display: none;
+}
+#player-container.portraitMode #sidebar-overlay {
+  display: none;
+}
+#player-container.portraitMode #control-bar {
+  display: none;
+}
+#player-container.blockklick #control-bar {
+  pointer-events:none
+}
