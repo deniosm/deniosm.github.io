@@ -44,7 +44,7 @@ function fadeIn() {
   clearTimeout(fadeTimeout);
   fadeTimeout = setTimeout(() => {
     fadeOut();
-  }, 2500);
+  }, 1500);
 }
 
 function fadeOut() {
@@ -113,6 +113,7 @@ function destroyHLS() {
   if (hls) {
     try { hls.destroy(); } catch (e) {}
     hls = null;
+    video.src = "";
   }
 }
 
@@ -143,9 +144,6 @@ function loadStream(url) {
     loadingSpinner?.classList.add("active");
   logDebug("Stream start: " + url);
 
-  destroyHLS();
-  clearRetry();
-
   if (Hls.isSupported()) {
     hls = new Hls({
       liveSyncDuration: 3,
@@ -159,6 +157,7 @@ function loadStream(url) {
     });
 
     hls.attachMedia(video);
+    video.currentTime = 0;
     hls.loadSource(url);
 
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
@@ -169,7 +168,7 @@ function loadStream(url) {
     hls.on(Hls.Events.ERROR, (e, data) => {
         if (data?.fatal) {
             logDebug(" Fatal HLS error");
-
+            isStreamLoading = false;
             destroyHLS();
 
             if (!fatalRestarted) {
@@ -202,7 +201,7 @@ function loadStream(url) {
                     fatalRestarted = false;
                     hardResetVideo();
                     loadStream(defaultURL);
-                }, 1500); // ⬅ 1.5 sekunde čekanja
+                }, 500); // ⬅ 1.5 sekunde čekanja
             }
         }
     });
@@ -220,25 +219,31 @@ function loadStream(url) {
 // ================= PUBLIC API =================
 
 window.setStream = function (url) {
-  if (!url || url === currentSrc) return;
+  if (!url) return;
 
+  // uvijek resetuj, čak i ako je isti URL
   currentSrc = url;
   fatalRestarted = false;
   retryCount = 0;
+
+  // FULL HARD RESET (SAMO OVDJE!)
+  destroyHLS();
+  clearRetry();
+
+  video.pause();
+  video.src = "";
+  video.load();
+
   fadeIn();
 
-  // zadrži stari frame ~300ms
+  // mali delay da browser stvarno očisti buffer
   setTimeout(() => {
-    destroyHLS();
-    clearRetry();
     loadStream(url);
-  }, 350);
+  }, 150);
 };
 video.addEventListener("playing", () => {
   fadeOut();
 });
-
-
 /* ================= FULLSCREEN / UI ================= */
 
 async function forceLandscape() {
