@@ -103,9 +103,6 @@ Object.entries(barPages).forEach(([id, url]) => {
 
 setActiveItem("item-tv");
 
-const leftItems = document.querySelector('#control-bar2 .left-items');
-
-
 const observer = new MutationObserver(() => {
 leftItems.style.display = overlay.classList.contains('hidden') ? 'flex' : 'none';
 });
