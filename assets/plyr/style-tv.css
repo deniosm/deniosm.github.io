@@ -1719,7 +1719,7 @@ body.logout-open .logout-overlay {
 #loading-spinner svg circle:last-child {
     fill: transparent;
 }
-
+#global-loading-container #control-bar{display:none}
 /* animacija */
 @keyframes spin-infinite {
     0% {
@@ -1744,7 +1744,9 @@ body.logout-open .logout-overlay {
         object-fit: contain;
     }
 }
-
+#player-container.initHide{
+  opacity:0;
+}
 /* PORTRAIT MODE */
 #player-container.portraitMode #video {
   display: none;
