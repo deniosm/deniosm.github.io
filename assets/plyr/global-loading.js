@@ -1,9 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loadingFile = 'https://bosniana.org/loading/index.html';
     let container = null;
+    let fallbackTimer = null;
+
+    const playerContainerInit = document.getElementById('player-container');
 
     function showLoading() {
         if (container) return;
+
+        if (playerContainerInit) {
+            playerContainerInit.classList.add('initHide');
+        }
+        clearTimeout(fallbackTimer);
+        fallbackTimer = setTimeout(() => {
+            console.warn('Fallback: loading timeout');
+            hideLoading();
+        }, 6000);
 
         container = document.createElement('div');
         container.id = 'global-loading-container';
@@ -40,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideLoading() {
         if (!container) return;
 
+        clearTimeout(fallbackTimer);
+
         const backdrop = container.querySelector('#backdrop');
         const ld = container.querySelector('#ld');
         const ldt = container.querySelector('#ldt');
@@ -52,15 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             container?.remove();
             container = null;
+
+            if (playerContainerInit) {
+                playerContainerInit.classList.remove('initHide');
+            }
+
         }, 300);
     }
 
     // ================= TRIGGER =================
 
-    // pokaži odmah
     showLoading();
 
-    // sakrij kad video stvarno krene
     video.addEventListener('playing', () => {
         hideLoading();
     });
