@@ -26,13 +26,19 @@ let isLoading = false;
 
 video.addEventListener('waiting', () => {
   isLoading = true;
+  fadeEl?.classList.add("active");
+  loadingSpinner?.classList.remove("hidden");
+  loadingSpinner?.classList.add("active");
+  playerContainer?.classList.add("blockklick");
   updateSpinner();
 });
 
 video.addEventListener('playing', () => {
   isLoading = false;
+  fadeEl?.classList.remove("active");
   loadingSpinner?.classList.remove("active");
   loadingSpinner?.classList.add("hidden");
+  playerContainer?.classList.remove("blockklick");
   updateSpinner();
   tryStartAutoClose();
 });
@@ -44,7 +50,7 @@ function fadeIn() {
   clearTimeout(fadeTimeout);
   fadeTimeout = setTimeout(() => {
     fadeOut();
-  }, 1500);
+  }, 2500);
 }
 
 function fadeOut() {
@@ -450,6 +456,42 @@ function tryStartAutoClose() {
     resetUiAutoClose();
   }
 }
+window.killVideo = function () {
+  logDebug("KILL VIDEO");
+
+  // zaustavi sve procese
+  stopStallWatchdog();
+  clearRetry();
+
+  // reset state
+  fatalRestarted = false;
+  retryCount = 0;
+  isStreamLoading = false;
+  isLoading = false;
+
+  // uništi HLS + buffer
+  destroyHLS();
+
+  // HARD reset video elementa
+  video.pause();
+  video.removeAttribute("src");
+  video.load();
+
+  // makni vizualne stvari
+  fadeEl?.classList.remove("active");
+  playerContainer?.classList.remove("blockklick");
+
+  loadingSpinner?.classList.remove("active");
+  loadingSpinner?.classList.add("hidden");
+
+  // očisti timer-e
+  if (fadeTimeout) {
+    clearTimeout(fadeTimeout);
+    fadeTimeout = null;
+  }
+
+  updateSpinner();
+};
 const params = new URLSearchParams(window.location.search);
 if (params.get("src")) {
   currentSrc = params.get("src");
