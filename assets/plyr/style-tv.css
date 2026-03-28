@@ -139,9 +139,10 @@ video::-webkit-media-controls-panel {
     opacity: 0;
     transition: opacity 0.2s ease;
     overflow: hidden;
-    /*  backdrop-filter: blur(5px); z-index: 9999;*/
+    pointer-events:none;
 }
 #sidebar-overlay.open {
+    pointer-events:auto;
     opacity: 1;
 }
 
@@ -1753,6 +1754,7 @@ body.logout-open .logout-overlay {
 }
 #player-container.portraitMode #sidebar-overlay {
   display: none;
+  pointer-events:none
 }
 #player-container.portraitMode #control-bar {
   display: none;
