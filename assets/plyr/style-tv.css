@@ -1762,6 +1762,9 @@ body.logout-open .logout-overlay {
 #player-container.blockklick #control-bar {
   pointer-events:none
 }
+#player-container.blockklick #sidebar-overlay {
+  pointer-events:none
+}
 .tv-controls {
     position:fixed;
     z-index: 9999;
