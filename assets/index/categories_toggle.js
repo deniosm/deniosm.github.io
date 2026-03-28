@@ -29,19 +29,31 @@
 
   updateButtonText();
 
-  // kad korisnik klikne na kategoriju, zatvori sidebar i update button
-  categoryList.querySelectorAll("li").forEach(li => {
-    li.addEventListener("click", () => {
-      categories.classList.remove("open");
-      syncBodyClass();            // <-- DODANO
+    categoryList.querySelectorAll("li").forEach(li => {
+      li.addEventListener("click", (e) => {
 
-      // makni prethodni active
-      categoryList.querySelectorAll("li").forEach(el => el.classList.remove("active"));
-      li.classList.add("active");
 
-      updateButtonText();
+        if (li.classList.contains("active")) {
+          e.stopPropagation();
+          return;
+        }
+
+        const selected = li.textContent.trim();
+
+        categories.classList.remove("open");
+        syncBodyClass();
+
+        // active UI
+        categoryList.querySelectorAll("li").forEach(el => el.classList.remove("active"));
+        li.classList.add("active");
+
+        updateButtonText();
+
+        if (window.renderChannels) {
+          window.renderChannels(selected);
+        }
+      });
     });
-  });
 
   // klik bilo gdje van menu-a zatvara categories ako je otvoren
   document.addEventListener("click", (e) => {
