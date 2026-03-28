@@ -640,13 +640,13 @@ video::-webkit-media-controls-panel {
 }
 .btn-center-up {
     position: absolute;
-    left: calc(50% - 100px);
+    left: calc(50% - 132px);
     align-items: center;
     display: flex;
     justify-content: center;
     gap: 12px;
     top: -70px;
-    width: 100px;
+    width: 164px;
 }
 
 .btn-center-all {
