@@ -28,8 +28,8 @@ function appendRows(start, count, direction = "replace") {
 }
 /* ===== FUNKCIJA ZA LOKALNO VRIJEME +2h ===== */
 function toLocalDate(ts){
-  return new Date(ts * 1000);
-  //return new Date((ts + 1*3600) * 1000); //Zimsko vrijeme
+  return new Date((ts - 3600) * 1000);
+  //return new Date((ts + 1*3600) * 1000);
 }
 let loadIndex = 0;
 let allRows = [];
