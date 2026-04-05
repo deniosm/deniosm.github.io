@@ -1,3 +1,4 @@
+// android-player.js
 const video = document.getElementById('video');
 const fadeEl = document.getElementById("video-fade");
 const debugBox = document.getElementById('debug');
@@ -23,7 +24,7 @@ let fadeTimeout = null;
 let isStreamLoading = false;
 // Loading state
 let isLoading = false;
-
+let streamRequestId = 0;
 video.addEventListener('waiting', () => {
   isLoading = true;
   fadeEl?.classList.add("active");
@@ -145,6 +146,7 @@ function hardResetVideo() {
 
 function loadStream(url) {
   if (!url) return;
+  const myId = streamRequestId;
     isStreamLoading = true;
     loadingSpinner?.classList.remove("hidden");
     loadingSpinner?.classList.add("active");
@@ -167,11 +169,13 @@ function loadStream(url) {
     hls.loadSource(url);
 
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      if (myId !== streamRequestId) return;
       video.play().catch(() => {});
       isStreamLoading = false;
     });
 
     hls.on(Hls.Events.ERROR, (e, data) => {
+        if (myId !== streamRequestId) return;
         if (data?.fatal) {
             logDebug(" Fatal HLS error");
             isStreamLoading = false;
@@ -227,12 +231,12 @@ function loadStream(url) {
 window.setStream = function (url) {
   if (!url) return;
 
-  // uvijek resetuj, čak i ako je isti URL
+  const myId = ++streamRequestId;
+
   currentSrc = url;
   fatalRestarted = false;
   retryCount = 0;
 
-  // FULL HARD RESET (SAMO OVDJE!)
   destroyHLS();
   clearRetry();
 
@@ -242,8 +246,8 @@ window.setStream = function (url) {
 
   fadeIn();
 
-  // mali delay da browser stvarno očisti buffer
   setTimeout(() => {
+    if (myId !== streamRequestId) return; // 🔴 IGNORIŠI STARI
     loadStream(url);
   }, 150);
 };
