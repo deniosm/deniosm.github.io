@@ -112,7 +112,11 @@ function loadNextDay(){
 }
 
 /* ===== RENDER DAYS ===== */
-const todayStr = new Date().toISOString().slice(0,10);
+const now = new Date();
+const todayStr =
+  now.getFullYear() + "-" +
+  String(now.getMonth() + 1).padStart(2, "0") + "-" +
+  String(now.getDate()).padStart(2, "0");
 
 epgDays.forEach((d,i)=>{
   const div=document.createElement("div");
@@ -180,7 +184,7 @@ function renderEPG(data){
     if(!ts) return;
 
     const d = toLocalDate(ts);
-    const dayKey = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+    const dayKey = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 
     // HEADER
     if(dayKey !== lastDayKey){
