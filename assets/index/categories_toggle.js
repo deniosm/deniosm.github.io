@@ -14,52 +14,85 @@
     );
   };
 
-  // dugme toggle
-  btn.addEventListener("click", (e) => {
-    categories.classList.toggle("open");
-    syncBodyClass();              // <-- DODANO
-    e.stopPropagation(); // sprječava da klik na dugme odmah zatvori menu
+  /* 🔹 AUTOMATSKI POSTAVI data-category NA SVE LI */
+  categoryList.querySelectorAll("li").forEach(li => {
+    const text = li.textContent.trim();
+    if (text && getComputedStyle(li).pointerEvents !== "none") {
+      li.dataset.category = text;
+    }
   });
 
-  // inicijalno postavi tekst na aktivnu kategoriju
+  /* 🔹 helper – update dugmeta + sigurni active */
   const updateButtonText = () => {
-    const activeLi = categoryList.querySelector("li.active");
-    btnText.textContent = activeLi ? activeLi.textContent.trim() : "Kanali";
+    let activeLi = categoryList.querySelector("li.active");
+
+    // ako nema active → postavi prvi validan
+    if (!activeLi) {
+      const first = Array.from(categoryList.querySelectorAll("li"))
+        .find(li => li.dataset.category);
+      if (first) {
+        first.classList.add("active");
+        activeLi = first;
+      }
+    }
+
+    if (activeLi) {
+      btnText.textContent = activeLi.dataset.category || activeLi.textContent.trim();
+    }
   };
+
+  /* 🔹 dugme toggle */
+  btn.addEventListener("click", (e) => {
+    categories.classList.toggle("open");
+    syncBodyClass();
+
+    // ⬅ svaki put kad otvoriš → sync active (VAŽNO za tvoj bug)
+    updateButtonText();
+
+    e.stopPropagation();
+  });
 
   updateButtonText();
 
-    categoryList.querySelectorAll("li").forEach(li => {
-      li.addEventListener("click", (e) => {
+  /* 🔹 klik na kategoriju */
+  categoryList.querySelectorAll("li").forEach(li => {
+    li.addEventListener("click", (e) => {
 
+      if (!li.dataset.category && !li.textContent.trim()) return;
 
-        if (li.classList.contains("active")) {
-          e.stopPropagation();
-          return;
-        }
+      if (li.classList.contains("active")) {
+        e.stopPropagation();
+        return;
+      }
 
-        const selected = li.textContent.trim();
+    const selected = li.dataset.category || li.textContent.trim();
 
-        categories.classList.remove("open");
-        syncBodyClass();
-
-        // active UI
-        categoryList.querySelectorAll("li").forEach(el => el.classList.remove("active"));
-        li.classList.add("active");
-
-        updateButtonText();
-
-        if (window.renderChannels) {
-          window.renderChannels(selected);
-        }
-      });
-    });
-
-  // klik bilo gdje van menu-a zatvara categories ako je otvoren
-  document.addEventListener("click", (e) => {
-    if (categories.classList.contains("open") && !categories.contains(e.target) && !btn.contains(e.target)) {
+      // zatvori menu
       categories.classList.remove("open");
-      syncBodyClass();            // <-- DODANO
+      syncBodyClass();
+
+      // UI active
+      categoryList.querySelectorAll("li").forEach(el => el.classList.remove("active"));
+      li.classList.add("active");
+
+      updateButtonText();
+
+      if (window.renderChannels) {
+        window.renderChannels(selected);
+      }
+    });
+  });
+
+  /* 🔹 klik vani zatvara */
+  document.addEventListener("click", (e) => {
+    if (
+      categories.classList.contains("open") &&
+      !categories.contains(e.target) &&
+      !btn.contains(e.target)
+    ) {
+      categories.classList.remove("open");
+      syncBodyClass();
     }
   });
+
 })();
