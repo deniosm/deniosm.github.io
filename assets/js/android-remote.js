@@ -168,6 +168,10 @@ document.addEventListener("keydown", function (e) {
     case "ArrowLeft":
     case "MediaTrackPrevious":
       e.preventDefault();
+      // Otvori UI samo ako nije otvoren
+      if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
+      if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
+      resetUiAutoClose();
       if (!uiBlocked) click("prevChannelBtn");
       break;
 
@@ -175,6 +179,10 @@ document.addEventListener("keydown", function (e) {
     case "ArrowRight":
     case "MediaTrackNext":
       e.preventDefault();
+      // Otvori UI samo ako nije otvoren
+      if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
+      if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
+      resetUiAutoClose();
       if (!uiBlocked) click("nextChannelBtn");
       break;
 
