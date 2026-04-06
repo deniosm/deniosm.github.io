@@ -214,20 +214,38 @@ function handleCategories(e) {
         syncCategoriesOpen();
         break;
 
-      // Sidebar
-      case "ArrowUp":
-        e.preventDefault();
-        if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
-        if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
-        resetUiAutoClose();
-        break;
-      case "ArrowDown":
-        e.preventDefault();
-        if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
-        if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
-        resetUiAutoClose();
-        break;
-      // Ostale tipke ostaju iste...
+  case "ArrowUp":
+    if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
+    if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
+    resetUiAutoClose();
+
+    // samo ako UI nije blokiran i categories NIJE otvoren → trigger btnUp
+    if (!uiBlocked && !categories.classList.contains('open')) {
+      btnUp?.click();
+    }
+    e.preventDefault();
+    break;
+
+  case "ArrowDown":
+    if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
+    if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
+    resetUiAutoClose();
+
+    // samo ako UI nije blokiran i categories NIJE otvoren → trigger btnDown
+    if (!uiBlocked && !categories.classList.contains('open')) {
+      btnDown?.click();
+    }
+    e.preventDefault();
+    break;
+
+  case "Enter":
+    // samo ako UI nije blokiran i categories NIJE otvoren → trigger playBtn
+    if (!uiBlocked && !categories.classList.contains('open')) {
+      playBtn?.click();
+      e.preventDefault();
+    }
+    break;
+
       case "Insert":
       case "Info":
         e.preventDefault();
