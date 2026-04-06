@@ -62,54 +62,56 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	  });
 	}
+// ================= GLOBAL SOUND CONTROL =================
+if (video && soundBtnIcon && volumeSlider) {
+  let lastVolume = video.volume || 1;
 
-    let lastVolume = 1;
+  function updateSoundIcon() {
+    const icon = soundBtnIcon.querySelector("span");
+    if (!icon) return;
 
-    // Klik na dugme (mute / unmute)
-    soundBtnIcon.addEventListener('click', () => {
-      if (!video) return;
+    icon.className = (video.muted || video.volume === 0)
+      ? "icon icon-sound-off"
+      : "icon icon-sound-on";
+  }
 
-      if (video.muted || video.volume === 0) {
-        // unmute
-        video.muted = false;
-        video.volume = lastVolume || 1;
-        volumeSlider.value = video.volume;
-      } else {
-        // mute
-        lastVolume = video.volume;
-        video.muted = true;
-        volumeSlider.value = 0;
-      }
+  function setVolume(vol) {
+    video.volume = vol;
+    video.muted = vol === 0;
+    if (vol > 0) lastVolume = vol;
+    volumeSlider.value = vol;
+    updateSoundIcon();
+  }
 
-      updateSoundIcon();
-    });
-
-    // Slider kontrola
-    volumeSlider.addEventListener('input', function() {
-      if (!video) return;
-
-      const vol = parseFloat(this.value);
-
-      video.volume = vol;
-      video.muted = vol === 0;
-
-      if (vol > 0) {
-        lastVolume = vol;
-      }
-
-      updateSoundIcon();
-    });
-
-    // Update ikone
-    function updateSoundIcon() {
-      const icon = soundBtnIcon.querySelector("span");
-      if (!icon) return;
-
-      icon.className = (video.muted || video.volume === 0)
-        ? "icon icon-sound-off"
-        : "icon icon-sound-on";
+  function toggleMute() {
+    if (video.muted || video.volume === 0) {
+      video.muted = false;
+      setVolume(lastVolume || 1);
+    } else {
+      lastVolume = video.volume;
+      setVolume(0);
     }
+  }
 
+  // Klik na dugme
+  soundBtnIcon.addEventListener('click', toggleMute);
+
+  // Slider kontrola
+  volumeSlider.addEventListener('input', () => {
+    setVolume(parseFloat(volumeSlider.value));
+  });
+
+  // inicijalno postavi ikonu i slider
+  updateSoundIcon();
+  volumeSlider.value = video.volume;
+
+  // globalna referenca
+  window.SoundControl = {
+    setVolume,
+    toggleMute,
+    updateSoundIcon
+  };
+}
 
   // Close (close overlays)
   if (closeBtn) {
