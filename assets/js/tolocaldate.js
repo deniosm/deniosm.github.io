@@ -28,8 +28,8 @@ function appendRows(start, count, direction = "replace") {
 }
 /* ===== FUNKCIJA ZA LOKALNO VRIJEME +2h ===== */
 function toLocalDate(ts){
-  return new Date((ts - 3600) * 1000);
-  //return new Date((ts + 1*3600) * 1000);
+
+  return new Date((ts + 2*3600) * 1000)
 }
 let loadIndex = 0;
 let allRows = [];
@@ -112,11 +112,8 @@ function loadNextDay(){
 }
 
 /* ===== RENDER DAYS ===== */
-const now = new Date();
-const todayStr =
-  now.getFullYear() + "-" +
-  String(now.getMonth() + 1).padStart(2, "0") + "-" +
-  String(now.getDate()).padStart(2, "0");
+const now = toLocalDate(Math.floor(Date.now()/1000));
+const todayStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
 
 epgDays.forEach((d,i)=>{
   const div=document.createElement("div");
@@ -183,7 +180,7 @@ function renderEPG(data){
     const ts = +r.dataset.ts;
     if(!ts) return;
 
-    const d = toLocalDate(ts);
+    const d = toLocalDate(ts); // +2h
     const dayKey = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 
     // HEADER
