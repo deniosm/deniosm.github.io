@@ -51,6 +51,11 @@ function handleCategories(e) {
       e.preventDefault();
 
       const selected = items[index];
+      const currentCategory = window.currentChannelList[0]?.category || "";
+
+      if (selected.textContent.trim() === currentCategory) {
+        return;
+      }
 
       items.forEach(li => li.classList.remove("active"));
       selected.classList.add("active");
