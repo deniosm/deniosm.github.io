@@ -12,7 +12,16 @@
     const categoriesBtn = document.getElementById("categories-toggle");
     categoriesOpen = categoriesBtn?.classList.contains("open") || false;
   };
+    const clearFocusedCategories = () => {
+      const categoriesEl = document.getElementById("categories");
+      if (!categoriesEl || categoriesEl.classList.contains("open")) return;
 
+      const items = document.querySelectorAll("#category-list li");
+      items.forEach(li => li.classList.remove("focused"));
+
+      const active = Array.from(items).find(li => li.classList.contains("active"));
+      if (active) active.classList.add("focused");
+    };
 function handleCategories(e) {
   const categoriesEl = document.getElementById("categories");
   const isOpen = categoriesEl && categoriesEl.classList.contains("open");
@@ -26,27 +35,26 @@ function handleCategories(e) {
 
   if (!items.length) return false;
 
-  let index = items.findIndex(li => li.classList.contains("active"));
+  let index = items.findIndex(li => li.classList.contains("focused"));
   if (index === -1) index = 0;
 
   if (e.key === "ArrowDown") {
     e.preventDefault();
-    items[index].classList.remove("active");
+    items[index].classList.remove("focused");
     index = (index + 1) % items.length;
-    items[index].classList.add("active");
+    items[index].classList.add("focused");
     items[index].scrollIntoView({ block: "nearest" });
     return true;
   }
 
   if (e.key === "ArrowUp") {
     e.preventDefault();
-    items[index].classList.remove("active");
+    items[index].classList.remove("focused");
     index = (index - 1 + items.length) % items.length;
-    items[index].classList.add("active");
+    items[index].classList.add("focused");
     items[index].scrollIntoView({ block: "nearest" });
     return true;
   }
-
     if (e.key === "Enter" || e.key === "OK") {
       e.preventDefault();
 
@@ -54,7 +62,10 @@ function handleCategories(e) {
       const currentCategory = window.currentChannelList[0]?.category || "";
 
       if (selected.textContent.trim() === currentCategory) {
-        return;
+        // samo prebaci focused na ovu active stavku
+        items.forEach(li => li.classList.remove("focused"));
+        selected.classList.add("focused");
+        return true;
       }
 
       items.forEach(li => li.classList.remove("active"));
@@ -172,7 +183,7 @@ function handleCategories(e) {
 
   document.addEventListener("keydown", function (e) {
     syncCategoriesOpen(); // svaki keydown sinhronizira stanje
-
+    clearFocusedCategories();
     if (handleCategories(e)) return;
     if (handleSettings(e)) return;
     if (handleLogoutOverlay(e)) return;
@@ -217,6 +228,7 @@ function handleCategories(e) {
         resetUiAutoClose();
         click("categories-toggle");
         syncCategoriesOpen();
+        clearFocusedCategories();
         break;
 
   case "ArrowUp":
@@ -325,6 +337,7 @@ function handleCategories(e) {
             return;
           }
         syncCategoriesOpen(); // update prije zatvaranja
+        clearFocusedCategories();
         click("closeBtn");
         closeUI();
         break;
