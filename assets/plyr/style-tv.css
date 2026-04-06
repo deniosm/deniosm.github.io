@@ -1372,6 +1372,7 @@ body.categories-open .btn-center-epg {
     backdrop-filter: blur(8px);
     pointer-events: auto;
 }
+
 /* lista unutar categories */
 #category-list {
     margin: 0;
@@ -1433,7 +1434,11 @@ body.categories-open .btn-center-epg {
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
-
+#category-list li.focused {
+    color: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+}
 /* opcionalno: slika iznad teksta ako se koristi */
 #category-list li img {
     width: 24px;
