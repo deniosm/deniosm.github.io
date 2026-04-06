@@ -152,147 +152,147 @@
     }
 
 
-  document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", function (e) {
 
-    /* categories hvataju tipke SAMO dok su otvorene */
-    if (handleCategories(e)) return;
-    if (handleSettings(e)) return;
-    if (handleLogoutOverlay(e)) return;
-    switch (e.key) {
+  /* categories hvataju tipke SAMO dok su otvorene */
+  if (handleCategories(e)) return;
+  if (handleSettings(e)) return;
+  if (handleLogoutOverlay(e)) return;
 
-      // Prethodni kanal
-      case "ArrowLeft":
-      case "MediaTrackPrevious":
-        e.preventDefault();
-        click("prevChannelBtn");
-        break;
+  // provjera blockklick-a
+  const uiBlocked = playerContainer?.classList.contains('blockklick') || fadeEl?.classList.contains('active');
 
-      // Sljedeći kanal
-      case "ArrowRight":
-      case "MediaTrackNext":
-        e.preventDefault();
-        click("nextChannelBtn");
-        break;
+  switch (e.key) {
 
-      // Play/Pause
-      case " ":
-      case "MediaPlayPause":
-        e.preventDefault();
-        click("play-pause-btn");
-        break;
+    // Prethodni kanal
+    case "ArrowLeft":
+    case "MediaTrackPrevious":
+      e.preventDefault();
+      if (!uiBlocked) click("prevChannelBtn");
+      break;
 
-      // Categories toggle
-      case "ContextMenu":
-      case "Menu":
-      case "Delete":
-        e.preventDefault();
-        categoriesOpen = !categoriesOpen;
-        click("categories-toggle");
-        break;
+    // Sljedeći kanal
+    case "ArrowRight":
+    case "MediaTrackNext":
+      e.preventDefault();
+      if (!uiBlocked) click("nextChannelBtn");
+      break;
 
-      // Sidebar
-      case "ArrowUp":
-        e.preventDefault();
-        click("sidebar-toggle");
-        break;
+    // Play/Pause
+    case " ":
+    case "MediaPlayPause":
+      e.preventDefault();
+      click("play-pause-btn");
+      break;
 
-      // EPG
-      case "Insert":
-      case "Info":
-        e.preventDefault();
-        click("epgBtn");
-        break;
-      // Volume control
-      case "VolumeUp":
-      case "PageUp":
-        e.preventDefault();
-        const video1 = document.getElementById("video");
-        if(video1) {
-            video1.volume = Math.min(video1.volume + 0.1, 1);
-        }
-        break;
+    // Categories toggle
+    case "ContextMenu":
+    case "Menu":
+    case "Delete":
+      e.preventDefault();
+      categoriesOpen = !categoriesOpen;
+      click("categories-toggle");
+      break;
 
-      case "VolumeDown":
-      case "PageDown":
-        e.preventDefault();
-        const video2 = document.getElementById("video");
-        if(video2) {
-            video2.volume = Math.max(video2.volume - 0.1, 0);
-        }
-        break;
+    // Sidebar
+    case "ArrowUp":
+      e.preventDefault();
+      click("sidebar-toggle");
+      break;
+
+    // EPG
+    case "Insert":
+    case "Info":
+      e.preventDefault();
+      click("epgBtn");
+      break;
+
+    // Volume control
+    case "VolumeUp":
+    case "PageUp":
+      e.preventDefault();
+      const video1 = document.getElementById("video");
+      if(video1) video1.volume = Math.min(video1.volume + 0.1, 1);
+      break;
+
+    case "VolumeDown":
+    case "PageDown":
+      e.preventDefault();
+      const video2 = document.getElementById("video");
+      if(video2) video2.volume = Math.max(video2.volume - 0.1, 0);
+      break;
 
     case "VolumeMute":
-    case "m":   // tastatura 'm' za mute
-        e.preventDefault();
-        click("soundBtnIcon");
-        break;
+    case "m":
+      e.preventDefault();
+      click("soundBtnIcon");
+      break;
+
     // Bar-item sigurne tipke
     case "Home":
-    case "h":   // tastatura
-        e.preventDefault();
-        click("item-tv");
-        break;
+    case "h":
+      e.preventDefault();
+      click("item-tv");
+      break;
 
     case "Settings":
     case "s":
-        e.preventDefault();
-        click("item-settings");
-        settingsOpen = true;
+      e.preventDefault();
+      click("item-settings");
+      settingsOpen = true;
 
-        // dodaj active klasu samo na item-settings dok je dropdown otvoren
-        const settingsBar = document.getElementById("item-settings");
-        if(settingsBar) settingsBar.classList.add("active");
+      const settingsBar = document.getElementById("item-settings");
+      if(settingsBar) settingsBar.classList.add("active");
 
-        // inicijalno označi prvu stavku u dropdownu
-        const items = document.querySelectorAll("#settings-dropdown li");
-        items.forEach(li => li.classList.remove("active"));
-        if(items.length) items[0].classList.add("active");
-
-        break;
+      const items = document.querySelectorAll("#settings-dropdown li");
+      items.forEach(li => li.classList.remove("active"));
+      if(items.length) items[0].classList.add("active");
+      break;
 
     case "Red":
-    case "r":   // tastatura
-        e.preventDefault();
-        click("item-filmovi");
-        break;
+    case "r":
+      e.preventDefault();
+      click("item-filmovi");
+      break;
 
     case "Green":
-    case "g":   // tastatura
-        e.preventDefault();
-        click("item-program");
-        break;
+    case "g":
+      e.preventDefault();
+      click("item-program");
+      break;
 
     case "Blue":
-    case "b":   // tastatura
-        e.preventDefault();
-        click("item-radio");
-        break;
-      // Back / Close
-      case "Backspace":
-      case "Escape":
-      case "Back":
-        e.preventDefault();
-        categoriesOpen = false;
+    case "b":
+      e.preventDefault();
+      click("item-radio");
+      break;
 
-        if (!document.getElementById("page-overlay")?.classList.contains("hidden")) {
-          click("page-overlay-close");
-          return;
-        }
+    // Back / Close
+    case "Backspace":
+    case "Escape":
+    case "Back":
+      e.preventDefault();
+      categoriesOpen = false;
 
-        const settings = document.getElementById("settings-dropdown");
-        if (settings && !settings.classList.contains("hidden")) {
-          settings.classList.add("hidden");
-          return;
-        }
+      if (!document.getElementById("page-overlay")?.classList.contains("hidden")) {
+        click("page-overlay-close");
+        return;
+      }
 
-        click("closeBtn");
-        break;
+      const settings = document.getElementById("settings-dropdown");
+      if (settings && !settings.classList.contains("hidden")) {
+        settings.classList.add("hidden");
+        return;
+      }
 
-      // Enter / OK – globalno, bez default akcije
-      case "Enter":
-      case "OK":
-        break;
-    }
-  });
+      click("closeBtn");
+      break;
+
+    // Enter / OK – globalno, bez default akcije
+    case "Enter":
+    case "OK":
+      break;
+  }
+});
 })();
 
