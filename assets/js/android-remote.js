@@ -91,6 +91,8 @@
         if (e.key === "Backspace" || e.key === "Escape") {
             e.preventDefault();
             settingsOpen = false;
+            if (!sidebar?.classList.contains('open')) sidebar?.classList.remove('open');
+            if (!controlBar?.classList.contains('open')) controlBar?.classList.remove('open');
             const dropdown = document.getElementById("settings-dropdown");
             if(dropdown) dropdown.classList.add("hidden");
 
@@ -144,6 +146,8 @@
 
         if (e.key === "Escape" || e.key === "Backspace" || e.key === "Back") {
             e.preventDefault();
+            if (!sidebar?.classList.contains('open')) sidebar?.classList.remove('open');
+            if (!controlBar?.classList.contains('open')) controlBar?.classList.remove('open');
             overlay.classList.add("hidden"); // zatvori modal
             return true;
         }
@@ -205,7 +209,9 @@ document.addEventListener("keydown", function (e) {
     // Sidebar
     case "ArrowUp":
       e.preventDefault();
-      click("sidebar-toggle");
+      if (!sidebar?.classList.contains('open')) sidebar?.classList.add('open');
+      if (!controlBar?.classList.contains('open')) controlBar?.classList.add('open');
+      resetUiAutoClose();
       break;
 
     // EPG
@@ -294,6 +300,7 @@ document.addEventListener("keydown", function (e) {
       }
 
       click("closeBtn");
+      closeUI();
       break;
 
     // Enter / OK – globalno, bez default akcije
